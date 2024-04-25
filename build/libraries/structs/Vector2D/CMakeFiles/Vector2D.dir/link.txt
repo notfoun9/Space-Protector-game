@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libVector2D.a CMakeFiles/Vector2D.dir/Vector2D.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libVector2D.a

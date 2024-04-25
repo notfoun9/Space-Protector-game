@@ -1,4 +1,4 @@
-# Install script for directory: /Users/maksim/Study/C++/game2/libraries
+# Install script for directory: /Users/maksim/Study/C++/game2/libraries/structs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,21 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/maksim/Study/C++/game2/build/libraries/ECS/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/maksim/Study/C++/game2/build/libraries/utilities/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/maksim/Study/C++/game2/build/libraries/components/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/maksim/Study/C++/game2/build/libraries/structs/cmake_install.cmake")
+  include("/Users/maksim/Study/C++/game2/build/libraries/structs/Vector2D/cmake_install.cmake")
 endif()
 

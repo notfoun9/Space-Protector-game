@@ -19,6 +19,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/maksim/Study/C++/game2/libraries/components/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/components/position/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/components/simpleTexture/CMakeLists.txt"
+  "/Users/maksim/Study/C++/game2/libraries/structs/CMakeLists.txt"
+  "/Users/maksim/Study/C++/game2/libraries/structs/Vector2D/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/utilities/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/utilities/mouse/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/utilities/short_names/CMakeLists.txt"
@@ -83,6 +85,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "libraries/components/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/components/position/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/components/simpleTexture/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libraries/structs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libraries/structs/Vector2D/CMakeFiles/CMakeDirectoryInformation.cmake"
   "assets/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -99,4 +103,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "libraries/components/CMakeFiles/components.dir/DependInfo.cmake"
   "libraries/components/position/CMakeFiles/position.dir/DependInfo.cmake"
   "libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/DependInfo.cmake"
+  "libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/DependInfo.cmake"
   )

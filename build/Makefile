@@ -304,6 +304,19 @@ simpleTexture/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build
 .PHONY : simpleTexture/fast
 
+#=============================================================================
+# Target rules for targets named Vector2D
+
+# Build rule for target.
+Vector2D: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Vector2D
+.PHONY : Vector2D
+
+# fast build rule for target.
+Vector2D/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build.make libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build
+.PHONY : Vector2D/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -317,6 +330,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ECS"
+	@echo "... Vector2D"
 	@echo "... components"
 	@echo "... game"
 	@echo "... main"

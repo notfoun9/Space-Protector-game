@@ -138,18 +138,21 @@ game/clean: game/CMakeFiles/game.dir/clean
 libraries/all: libraries/ECS/all
 libraries/all: libraries/utilities/all
 libraries/all: libraries/components/all
+libraries/all: libraries/structs/all
 .PHONY : libraries/all
 
 # Recursive "preinstall" directory target.
 libraries/preinstall: libraries/ECS/preinstall
 libraries/preinstall: libraries/utilities/preinstall
 libraries/preinstall: libraries/components/preinstall
+libraries/preinstall: libraries/structs/preinstall
 .PHONY : libraries/preinstall
 
 # Recursive "clean" directory target.
 libraries/clean: libraries/ECS/clean
 libraries/clean: libraries/utilities/clean
 libraries/clean: libraries/components/clean
+libraries/clean: libraries/structs/clean
 .PHONY : libraries/clean
 
 #=============================================================================
@@ -216,6 +219,36 @@ libraries/components/simpleTexture/preinstall:
 # Recursive "clean" directory target.
 libraries/components/simpleTexture/clean: libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/clean
 .PHONY : libraries/components/simpleTexture/clean
+
+#=============================================================================
+# Directory level rules for directory libraries/structs
+
+# Recursive "all" directory target.
+libraries/structs/all: libraries/structs/Vector2D/all
+.PHONY : libraries/structs/all
+
+# Recursive "preinstall" directory target.
+libraries/structs/preinstall: libraries/structs/Vector2D/preinstall
+.PHONY : libraries/structs/preinstall
+
+# Recursive "clean" directory target.
+libraries/structs/clean: libraries/structs/Vector2D/clean
+.PHONY : libraries/structs/clean
+
+#=============================================================================
+# Directory level rules for directory libraries/structs/Vector2D
+
+# Recursive "all" directory target.
+libraries/structs/Vector2D/all: libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
+.PHONY : libraries/structs/Vector2D/all
+
+# Recursive "preinstall" directory target.
+libraries/structs/Vector2D/preinstall:
+.PHONY : libraries/structs/Vector2D/preinstall
+
+# Recursive "clean" directory target.
+libraries/structs/Vector2D/clean: libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/clean
+.PHONY : libraries/structs/Vector2D/clean
 
 #=============================================================================
 # Directory level rules for directory libraries/utilities
@@ -375,7 +408,7 @@ executables/CMakeFiles/main.dir/all: libraries/utilities/CMakeFiles/utilities.di
 executables/CMakeFiles/main.dir/all: libraries/components/CMakeFiles/components.dir/all
 	$(MAKE) $(MAKESILENT) -f executables/CMakeFiles/main.dir/build.make executables/CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f executables/CMakeFiles/main.dir/build.make executables/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=5,6 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=7,8 "Built target main"
 .PHONY : executables/CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -401,7 +434,7 @@ executables/CMakeFiles/main.dir/clean:
 game/CMakeFiles/game.dir/all: libraries/ECS/CMakeFiles/ECS.dir/all
 	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/depend
 	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=3,4 "Built target game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=5,6 "Built target game"
 .PHONY : game/CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
@@ -479,7 +512,7 @@ libraries/utilities/CMakeFiles/utilities.dir/clean:
 libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all: libraries/utilities/time/CMakeFiles/time.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=15,16 "Built target texture_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=17,18 "Built target texture_manager"
 .PHONY : libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all
 
 # Build rule for subdir invocation for target.
@@ -505,7 +538,7 @@ libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/clean:
 libraries/utilities/time/CMakeFiles/time.dir/all: libraries/utilities/short_names/CMakeFiles/short_names.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/time/CMakeFiles/time.dir/build.make libraries/utilities/time/CMakeFiles/time.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/time/CMakeFiles/time.dir/build.make libraries/utilities/time/CMakeFiles/time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=17,18 "Built target time"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=19,20 "Built target time"
 .PHONY : libraries/utilities/time/CMakeFiles/time.dir/all
 
 # Build rule for subdir invocation for target.
@@ -531,7 +564,7 @@ libraries/utilities/time/CMakeFiles/time.dir/clean:
 libraries/utilities/short_names/CMakeFiles/short_names.dir/all: libraries/components/position/CMakeFiles/position.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/short_names/CMakeFiles/short_names.dir/build.make libraries/utilities/short_names/CMakeFiles/short_names.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/short_names/CMakeFiles/short_names.dir/build.make libraries/utilities/short_names/CMakeFiles/short_names.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=11,12 "Built target short_names"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=13,14 "Built target short_names"
 .PHONY : libraries/utilities/short_names/CMakeFiles/short_names.dir/all
 
 # Build rule for subdir invocation for target.
@@ -559,7 +592,7 @@ libraries/utilities/mouse/CMakeFiles/mouse.dir/all: libraries/utilities/CMakeFil
 libraries/utilities/mouse/CMakeFiles/mouse.dir/all: libraries/components/CMakeFiles/components.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/mouse/CMakeFiles/mouse.dir/build.make libraries/utilities/mouse/CMakeFiles/mouse.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/mouse/CMakeFiles/mouse.dir/build.make libraries/utilities/mouse/CMakeFiles/mouse.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=7,8 "Built target mouse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=9,10 "Built target mouse"
 .PHONY : libraries/utilities/mouse/CMakeFiles/mouse.dir/all
 
 # Build rule for subdir invocation for target.
@@ -611,7 +644,7 @@ libraries/components/CMakeFiles/components.dir/clean:
 libraries/components/position/CMakeFiles/position.dir/all: libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/position/CMakeFiles/position.dir/build.make libraries/components/position/CMakeFiles/position.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/position/CMakeFiles/position.dir/build.make libraries/components/position/CMakeFiles/position.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=9,10 "Built target position"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=11,12 "Built target position"
 .PHONY : libraries/components/position/CMakeFiles/position.dir/all
 
 # Build rule for subdir invocation for target.
@@ -638,7 +671,7 @@ libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all: libraries/u
 libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all: libraries/components/CMakeFiles/components.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=13,14 "Built target simpleTexture"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=15,16 "Built target simpleTexture"
 .PHONY : libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all
 
 # Build rule for subdir invocation for target.
@@ -656,6 +689,34 @@ simpleTexture: libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/r
 libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/clean:
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/clean
 .PHONY : libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/clean
+
+#=============================================================================
+# Target rules for target libraries/structs/Vector2D/CMakeFiles/Vector2D.dir
+
+# All Build rule for target.
+libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all: game/CMakeFiles/game.dir/all
+libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all: libraries/utilities/CMakeFiles/utilities.dir/all
+libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all: libraries/components/CMakeFiles/components.dir/all
+	$(MAKE) $(MAKESILENT) -f libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build.make libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/depend
+	$(MAKE) $(MAKESILENT) -f libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build.make libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=3,4 "Built target Vector2D"
+.PHONY : libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
+
+# Build rule for subdir invocation for target.
+libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 16
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
+.PHONY : libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/rule
+
+# Convenience name for target.
+Vector2D: libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/rule
+.PHONY : Vector2D
+
+# clean rule for target.
+libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build.make libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/clean
+.PHONY : libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
