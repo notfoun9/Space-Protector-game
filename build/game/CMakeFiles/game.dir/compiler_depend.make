@@ -809,6 +809,7 @@ game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/game2/game/game.cpp
   /Users/maksim/Study/C++/game2/libraries/utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp \
@@ -822,6 +823,8 @@ game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/game2/game/game.cpp
 /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/utilities/mouse/mouse.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp:
 

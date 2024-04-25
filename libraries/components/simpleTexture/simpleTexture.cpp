@@ -23,8 +23,8 @@ void SimpleTexture::SetShape(int w, int h) {
         std::cerr << "Position component must be set";
     }
     else {
-        destRect.x = owner->GetComponent<PositionComponent>().X();
-        destRect.y = owner->GetComponent<PositionComponent>().Y();
+        destRect.x = (int)owner->GetComponent<PositionComponent>().X();
+        destRect.y = (int)owner->GetComponent<PositionComponent>().Y();
     }
     destRect.w = w;
     destRect.h = h;

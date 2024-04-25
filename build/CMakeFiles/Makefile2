@@ -413,7 +413,7 @@ executables/CMakeFiles/main.dir/all: libraries/components/CMakeFiles/components.
 
 # Build rule for subdir invocation for target.
 executables/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 executables/CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : executables/CMakeFiles/main.dir/rule
@@ -439,7 +439,7 @@ game/CMakeFiles/game.dir/all: libraries/ECS/CMakeFiles/ECS.dir/all
 
 # Build rule for subdir invocation for target.
 game/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : game/CMakeFiles/game.dir/rule
@@ -465,7 +465,7 @@ libraries/ECS/CMakeFiles/ECS.dir/all: libraries/utilities/texture_manager/CMakeF
 
 # Build rule for subdir invocation for target.
 libraries/ECS/CMakeFiles/ECS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/ECS/CMakeFiles/ECS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/ECS/CMakeFiles/ECS.dir/rule
@@ -517,7 +517,7 @@ libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all: librarie
 
 # Build rule for subdir invocation for target.
 libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/rule
@@ -543,7 +543,7 @@ libraries/utilities/time/CMakeFiles/time.dir/all: libraries/utilities/short_name
 
 # Build rule for subdir invocation for target.
 libraries/utilities/time/CMakeFiles/time.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/time/CMakeFiles/time.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/time/CMakeFiles/time.dir/rule
@@ -569,7 +569,7 @@ libraries/utilities/short_names/CMakeFiles/short_names.dir/all: libraries/compon
 
 # Build rule for subdir invocation for target.
 libraries/utilities/short_names/CMakeFiles/short_names.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/short_names/CMakeFiles/short_names.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/short_names/CMakeFiles/short_names.dir/rule
@@ -597,7 +597,7 @@ libraries/utilities/mouse/CMakeFiles/mouse.dir/all: libraries/components/CMakeFi
 
 # Build rule for subdir invocation for target.
 libraries/utilities/mouse/CMakeFiles/mouse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/mouse/CMakeFiles/mouse.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/mouse/CMakeFiles/mouse.dir/rule
@@ -649,7 +649,7 @@ libraries/components/position/CMakeFiles/position.dir/all: libraries/components/
 
 # Build rule for subdir invocation for target.
 libraries/components/position/CMakeFiles/position.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/position/CMakeFiles/position.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/components/position/CMakeFiles/position.dir/rule
@@ -667,8 +667,7 @@ libraries/components/position/CMakeFiles/position.dir/clean:
 # Target rules for target libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir
 
 # All Build rule for target.
-libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all: libraries/utilities/CMakeFiles/utilities.dir/all
-libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all: libraries/components/CMakeFiles/components.dir/all
+libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all: libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=15,16 "Built target simpleTexture"
@@ -676,7 +675,7 @@ libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all: libraries/c
 
 # Build rule for subdir invocation for target.
 libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/rule
@@ -694,7 +693,6 @@ libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/clean:
 # Target rules for target libraries/structs/Vector2D/CMakeFiles/Vector2D.dir
 
 # All Build rule for target.
-libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all: game/CMakeFiles/game.dir/all
 libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all: libraries/utilities/CMakeFiles/utilities.dir/all
 libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all: libraries/components/CMakeFiles/components.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build.make libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/depend
@@ -704,7 +702,7 @@ libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all: libraries/components/CMa
 
 # Build rule for subdir invocation for target.
 libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/rule

@@ -99,6 +99,7 @@ executables/bin/main: libraries/utilities/short_names/libshort_names.a
 executables/bin/main: libraries/utilities/time/libtime.a
 executables/bin/main: libraries/components/position/libposition.a
 executables/bin/main: libraries/components/simpleTexture/libsimpleTexture.a
+executables/bin/main: libraries/structs/Vector2D/libVector2D.a
 executables/bin/main: libraries/utilities/texture_manager/libtexture_manager.a
 executables/bin/main: game/libgame.a
 executables/bin/main: libraries/ECS/libECS.a
@@ -106,6 +107,7 @@ executables/bin/main: libraries/utilities/short_names/libshort_names.a
 executables/bin/main: libraries/utilities/time/libtime.a
 executables/bin/main: libraries/components/position/libposition.a
 executables/bin/main: libraries/components/simpleTexture/libsimpleTexture.a
+executables/bin/main: libraries/structs/Vector2D/libVector2D.a
 executables/bin/main: libraries/utilities/texture_manager/libtexture_manager.a
 executables/bin/main: executables/CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/main"

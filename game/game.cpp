@@ -1,7 +1,6 @@
 #include <game/game.hpp>
 #include <components/components.hpp>
 #include <utilities/utilities.hpp>
-
 SDL_Renderer* Game::renderer = nullptr;
 
 

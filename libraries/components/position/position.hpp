@@ -2,17 +2,19 @@
 
 #include <ECS/ECS.hpp>
 
+#include <Vector2D/Vector2D.hpp>
 
 class PositionComponent : public Component {
 public:
-    int X() noexcept;
-    int Y() noexcept;
+    PositionComponent() = default;
+    PositionComponent(float x, float y) noexcept ;
+    ~PositionComponent() = default;
 
-    void SetPos(int x, int y); 
-    void Move(int x, int y);
+    float X() noexcept;
+    float Y() noexcept;
 
-    void Init() noexcept override;
+    void SetPos(float x, float y); 
+    void Move(float x, float y);
 private:
-    int xPos = 0;
-    int yPos = 0;
+    Vector2D position;
 } ;

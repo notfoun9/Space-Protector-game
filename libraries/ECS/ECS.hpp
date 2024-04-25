@@ -32,6 +32,7 @@ public:
     virtual void Update() {};
     virtual void Draw() {};
 
+    Component() = default;
     virtual ~Component() = default;
 } ;
 

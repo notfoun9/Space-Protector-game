@@ -805,6 +805,7 @@ game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/ECS/../components/components.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../position/position.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../simpleTexture/simpleTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../mouse/mouse.hpp \

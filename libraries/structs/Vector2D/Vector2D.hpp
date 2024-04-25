@@ -1,3 +1,4 @@
+#pragma once
 #include <game/game.hpp>
 
 struct Vector2D {
