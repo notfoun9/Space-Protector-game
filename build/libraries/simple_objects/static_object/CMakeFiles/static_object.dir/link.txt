@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libstatic_object.a CMakeFiles/static_object.dir/static_object.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libstatic_object.a

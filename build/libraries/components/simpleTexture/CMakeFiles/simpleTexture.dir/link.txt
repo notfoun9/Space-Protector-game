@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libsimpleTexture.a CMakeFiles/simpleTexture.dir/simpleTexture.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libsimpleTexture.a
