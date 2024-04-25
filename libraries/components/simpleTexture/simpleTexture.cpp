@@ -13,6 +13,10 @@ SimpleTexture::~SimpleTexture() {
 void SimpleTexture::Draw() {
     TextureManager::Draw(tex, &srcRect, &destRect);
 }
+void SimpleTexture::Update() {
+    destRect.x = (int)owner->GetComponent<PositionComponent>().X();
+    destRect.y = (int)owner->GetComponent<PositionComponent>().Y();
+}
 
 void SimpleTexture::SetBoarders(int x, int y, int w, int h) {
     srcRect = {x, y, w, h};

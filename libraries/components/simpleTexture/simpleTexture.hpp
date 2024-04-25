@@ -8,6 +8,8 @@ public:
     ~SimpleTexture();
 
     void Draw() override;
+    void Update() override;
+    
     void SetBoarders(int x, int y, int w, int h);
     void SetShape(int w, int h);
 
