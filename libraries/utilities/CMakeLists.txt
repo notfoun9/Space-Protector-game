@@ -1,5 +1,6 @@
 add_subdirectory(texture_manager)
 add_subdirectory(time)
+add_subdirectory(keyboardController)
 add_subdirectory(short_names)
 add_subdirectory(mouse)
 

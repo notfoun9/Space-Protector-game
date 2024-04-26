@@ -1,5 +1,6 @@
 add_subdirectory(position)
 add_subdirectory(simpleTexture)
+add_subdirectory(animatedTexture)
 
 add_library(components INTERFACE components.hpp)
 set_property(TARGET components PROPERTY CXX_STANDARD 20)

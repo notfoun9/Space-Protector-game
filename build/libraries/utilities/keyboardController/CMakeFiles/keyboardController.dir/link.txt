@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libkeyboardController.a CMakeFiles/keyboardController.dir/keyboardController.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libkeyboardController.a

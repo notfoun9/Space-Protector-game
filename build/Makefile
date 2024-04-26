@@ -240,6 +240,19 @@ time/fast:
 .PHONY : time/fast
 
 #=============================================================================
+# Target rules for targets named keyboardController
+
+# Build rule for target.
+keyboardController: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 keyboardController
+.PHONY : keyboardController
+
+# fast build rule for target.
+keyboardController/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/build.make libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/build
+.PHONY : keyboardController/fast
+
+#=============================================================================
 # Target rules for targets named short_names
 
 # Build rule for target.
@@ -305,6 +318,19 @@ simpleTexture/fast:
 .PHONY : simpleTexture/fast
 
 #=============================================================================
+# Target rules for targets named animatedTexture
+
+# Build rule for target.
+animatedTexture: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 animatedTexture
+.PHONY : animatedTexture
+
+# fast build rule for target.
+animatedTexture/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/build.make libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/build
+.PHONY : animatedTexture/fast
+
+#=============================================================================
 # Target rules for targets named Vector2D
 
 # Build rule for target.
@@ -316,6 +342,19 @@ Vector2D: cmake_check_build_system
 Vector2D/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build.make libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build
 .PHONY : Vector2D/fast
+
+#=============================================================================
+# Target rules for targets named animation
+
+# Build rule for target.
+animation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 animation
+.PHONY : animation
+
+# fast build rule for target.
+animation/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/structs/animation/CMakeFiles/animation.dir/build.make libraries/structs/animation/CMakeFiles/animation.dir/build
+.PHONY : animation/fast
 
 # Help Target
 help:
@@ -331,8 +370,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ECS"
 	@echo "... Vector2D"
+	@echo "... animatedTexture"
+	@echo "... animation"
 	@echo "... components"
 	@echo "... game"
+	@echo "... keyboardController"
 	@echo "... main"
 	@echo "... mouse"
 	@echo "... position"

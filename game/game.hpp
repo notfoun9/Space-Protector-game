@@ -32,9 +32,9 @@ public:
     void ToggleFullscreen();
     
     static SDL_Renderer *renderer;
+    static SDL_Event event;
 private:
     SDL_Window *window;
-
     bool isRunning = 1;
     bool fullscreen_ = 0;
 } ;

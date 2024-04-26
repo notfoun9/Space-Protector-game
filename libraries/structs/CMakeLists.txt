@@ -1,1 +1,2 @@
 add_subdirectory(Vector2D)
+add_subdirectory(animation)
