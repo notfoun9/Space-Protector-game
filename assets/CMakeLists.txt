@@ -1,2 +1,5 @@
 file(COPY testTex.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY meteor.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY scope_15x15.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY back.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY base_22x11.png DESTINATION ${CMAKE_BINARY_DIR}/assets)

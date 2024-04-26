@@ -810,6 +810,7 @@ game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/game2/game/game.cpp
   /Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp \
+  /Users/maksim/Study/C++/game2/libraries/states/menu/menu.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/animation/animation.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/keyboardController/keyboardController.hpp \
@@ -832,6 +833,8 @@ game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/game2/game/game.cpp
 /Users/maksim/Study/C++/game2/libraries/structs/animation/animation.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/states/menu/menu.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp:
 

@@ -10,6 +10,6 @@
     return textureFromSurface;
 }
 
-void TextureManager::Draw(SDL_Texture* texture, const SDL_Rect* src, const SDL_Rect *dest) {
-    SDL_RenderCopy(Game::renderer, texture, src, dest);
+void TextureManager::Draw(SDL_Texture* texture, const SDL_Rect* src, const SDL_Rect *dest, SDL_RendererFlip flip) {
+    SDL_RenderCopyEx(Game::renderer, texture, src, dest, NULL, NULL, flip);
 }

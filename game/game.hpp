@@ -33,6 +33,8 @@ public:
     
     static SDL_Renderer *renderer;
     static SDL_Event event;
+
+    bool inMenu = 1;
 private:
     SDL_Window *window;
     bool isRunning = 1;

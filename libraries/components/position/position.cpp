@@ -12,7 +12,6 @@ PositionComponent::PositionComponent(float x, float y, float w, float h) noexcep
 
 
 float PositionComponent::X() noexcept {
-    std::cout << "entered" << '\n';
     return position.x;
 }
 float PositionComponent::Y() noexcept {

@@ -1,12 +1,11 @@
 #include <game/game.hpp>
 #include <components/components.hpp>
 #include <utilities/utilities.hpp>
+#include <menu/menu.hpp>
+
 SDL_Renderer* Game::renderer = nullptr;
 
 SDL_Event Game::event;
-
-
-
 Game::Game() {
 
 
@@ -57,21 +56,14 @@ void Game::Quit() {
 }
 
 void Game::Run() {
-    std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
+    std::shared_ptr<Game> g { this };
+    Menu menu(g , window, renderer);
 
-    SDL_Event event;
-    SDL_PollEvent(&event);
+    while (inMenu) {
+        menu.Run();
+    }
     SDL_RenderClear(renderer);
-
-    Entity meteor;
-    meteor.AddComponent<PositionComponent>(100,100,100,200);
-    meteor.AddComponent<AnimatedTexture>(ShortNames::animatedMeteor);
-    meteor.GetComponent<AnimatedTexture>().AddAnimation("fall", 0, 4, 200);
-    meteor.GetComponent<AnimatedTexture>().Play("fall");
-    meteor.GetComponent<AnimatedTexture>().SetBoarders(0,0,11,19);
-
-    meteor.Update();
-    meteor.Draw();
+    
 
     SDL_RenderPresent(renderer);
 }

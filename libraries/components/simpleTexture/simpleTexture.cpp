@@ -18,7 +18,7 @@ SimpleTexture::~SimpleTexture() {
 }
 
 void SimpleTexture::Draw() {
-    TextureManager::Draw(tex, &srcRect, &destRect);
+    TextureManager::Draw(tex, &srcRect, &destRect, flip);
 }
 void SimpleTexture::Update() {
     destRect.x = (int)owner->GetComponent<PositionComponent>().X();
@@ -27,4 +27,13 @@ void SimpleTexture::Update() {
 
 void SimpleTexture::SetBoarders(int x, int y, int w, int h) {
     srcRect = {x, y, w, h};
+}
+
+
+void SimpleTexture::Flip() {
+    flip = SDL_FLIP_HORIZONTAL;
+}
+
+void SimpleTexture::Unflip() {
+    flip = SDL_FLIP_NONE;
 }

@@ -356,6 +356,32 @@ animation/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/structs/animation/CMakeFiles/animation.dir/build.make libraries/structs/animation/CMakeFiles/animation.dir/build
 .PHONY : animation/fast
 
+#=============================================================================
+# Target rules for targets named states
+
+# Build rule for target.
+states: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 states
+.PHONY : states
+
+# fast build rule for target.
+states/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/states/CMakeFiles/states.dir/build.make libraries/states/CMakeFiles/states.dir/build
+.PHONY : states/fast
+
+#=============================================================================
+# Target rules for targets named menu
+
+# Build rule for target.
+menu: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 menu
+.PHONY : menu
+
+# fast build rule for target.
+menu/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/states/menu/CMakeFiles/menu.dir/build.make libraries/states/menu/CMakeFiles/menu.dir/build
+.PHONY : menu/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -376,10 +402,12 @@ help:
 	@echo "... game"
 	@echo "... keyboardController"
 	@echo "... main"
+	@echo "... menu"
 	@echo "... mouse"
 	@echo "... position"
 	@echo "... short_names"
 	@echo "... simpleTexture"
+	@echo "... states"
 	@echo "... texture_manager"
 	@echo "... time"
 	@echo "... utilities"

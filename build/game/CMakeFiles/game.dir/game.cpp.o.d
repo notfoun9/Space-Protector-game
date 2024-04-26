@@ -814,4 +814,5 @@ game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../time/time.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../short_names/short_names.hpp \
-  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../keyboardController/keyboardController.hpp
+  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../keyboardController/keyboardController.hpp \
+  /Users/maksim/Study/C++/game2/libraries/states/menu/../menu/menu.hpp

@@ -7,7 +7,7 @@ public:
     FPSController() noexcept;
     ~FPSController() noexcept;
 private:
-    const int FPS = 60;
+    const int FPS = 120;
     const int frameDelay = 1000 / FPS;
     uint32_t frameStart = 0;
     int frameTime = 0;

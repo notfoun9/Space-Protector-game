@@ -20,6 +20,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/maksim/Study/C++/game2/libraries/components/animatedTexture/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/components/position/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/components/simpleTexture/CMakeLists.txt"
+  "/Users/maksim/Study/C++/game2/libraries/states/CMakeLists.txt"
+  "/Users/maksim/Study/C++/game2/libraries/states/menu/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/structs/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/structs/Vector2D/CMakeLists.txt"
   "/Users/maksim/Study/C++/game2/libraries/structs/animation/CMakeLists.txt"
@@ -93,6 +95,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "libraries/structs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/structs/Vector2D/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/structs/animation/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libraries/states/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libraries/states/menu/CMakeFiles/CMakeDirectoryInformation.cmake"
   "assets/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -113,4 +117,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/DependInfo.cmake"
   "libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/DependInfo.cmake"
   "libraries/structs/animation/CMakeFiles/animation.dir/DependInfo.cmake"
+  "libraries/states/CMakeFiles/states.dir/DependInfo.cmake"
+  "libraries/states/menu/CMakeFiles/menu.dir/DependInfo.cmake"
   )
