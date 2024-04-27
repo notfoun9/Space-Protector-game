@@ -810,8 +810,9 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/components/position/../simpleTexture/simpleTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../animatedTexture/animatedTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../animation/animation.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/../mouse/mouse.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/../follower/follower.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../utilities/utilities.hpp \
-  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../time/time.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../short_names/short_names.hpp \

@@ -804,13 +804,17 @@ libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/texture_manag
   /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_video.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/close_code.h \
-  /Users/maksim/Study/C++/game2/libraries/utilities/mouse/mouse.hpp \
+  /Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp
 
 
 /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
 
-/Users/maksim/Study/C++/game2/libraries/utilities/mouse/mouse.hpp:
+/Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_version.h:
 
@@ -1075,6 +1079,8 @@ libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/texture_manag
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stdlib.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stdio.h:
+
+/Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stdint.h:
 

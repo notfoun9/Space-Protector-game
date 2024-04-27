@@ -1,4 +1,7 @@
 add_subdirectory(position)
+add_subdirectory(shooter)
+add_subdirectory(mouse)
+add_subdirectory(follower)
 add_subdirectory(simpleTexture)
 add_subdirectory(animatedTexture)
 

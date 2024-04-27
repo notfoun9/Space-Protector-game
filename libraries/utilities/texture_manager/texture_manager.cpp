@@ -13,3 +13,7 @@
 void TextureManager::Draw(SDL_Texture* texture, const SDL_Rect* src, const SDL_Rect *dest, SDL_RendererFlip flip) {
     SDL_RenderCopyEx(Game::renderer, texture, src, dest, NULL, NULL, flip);
 }
+
+void TextureManager::Draw(SDL_Texture* texture, const SDL_Rect* src, const SDL_Rect* dest, double angle, SDL_Point* center, SDL_RendererFlip flip) {
+    SDL_RenderCopyEx(Game::renderer, texture, src, dest, angle, center, flip);
+}

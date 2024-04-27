@@ -58,8 +58,8 @@ void Game::Quit() {
 void Game::Run() {
     std::shared_ptr<Game> g { this };
     Menu menu(g , window, renderer);
-
     while (inMenu) {
+        std::cout << "cycle << '\n";
         menu.Run();
     }
     SDL_RenderClear(renderer);

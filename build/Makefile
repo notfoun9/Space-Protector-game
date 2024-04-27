@@ -266,19 +266,6 @@ short_names/fast:
 .PHONY : short_names/fast
 
 #=============================================================================
-# Target rules for targets named mouse
-
-# Build rule for target.
-mouse: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mouse
-.PHONY : mouse
-
-# fast build rule for target.
-mouse/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/utilities/mouse/CMakeFiles/mouse.dir/build.make libraries/utilities/mouse/CMakeFiles/mouse.dir/build
-.PHONY : mouse/fast
-
-#=============================================================================
 # Target rules for targets named components
 
 # Build rule for target.
@@ -303,6 +290,32 @@ position: cmake_check_build_system
 position/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/components/position/CMakeFiles/position.dir/build.make libraries/components/position/CMakeFiles/position.dir/build
 .PHONY : position/fast
+
+#=============================================================================
+# Target rules for targets named mouse
+
+# Build rule for target.
+mouse: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mouse
+.PHONY : mouse
+
+# fast build rule for target.
+mouse/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/mouse/CMakeFiles/mouse.dir/build.make libraries/components/mouse/CMakeFiles/mouse.dir/build
+.PHONY : mouse/fast
+
+#=============================================================================
+# Target rules for targets named follower
+
+# Build rule for target.
+follower: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 follower
+.PHONY : follower
+
+# fast build rule for target.
+follower/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/follower/CMakeFiles/follower.dir/build.make libraries/components/follower/CMakeFiles/follower.dir/build
+.PHONY : follower/fast
 
 #=============================================================================
 # Target rules for targets named simpleTexture
@@ -399,6 +412,7 @@ help:
 	@echo "... animatedTexture"
 	@echo "... animation"
 	@echo "... components"
+	@echo "... follower"
 	@echo "... game"
 	@echo "... keyboardController"
 	@echo "... main"

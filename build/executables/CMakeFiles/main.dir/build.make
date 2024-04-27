@@ -98,8 +98,10 @@ executables/bin/main: libraries/ECS/libECS.a
 executables/bin/main: libraries/utilities/short_names/libshort_names.a
 executables/bin/main: libraries/utilities/time/libtime.a
 executables/bin/main: libraries/components/position/libposition.a
+executables/bin/main: libraries/components/follower/libfollower.a
 executables/bin/main: libraries/components/animatedTexture/libanimatedTexture.a
 executables/bin/main: libraries/states/menu/libmenu.a
+executables/bin/main: libraries/components/mouse/libmouse.a
 executables/bin/main: libraries/components/simpleTexture/libsimpleTexture.a
 executables/bin/main: libraries/structs/Vector2D/libVector2D.a
 executables/bin/main: libraries/utilities/texture_manager/libtexture_manager.a
@@ -108,8 +110,10 @@ executables/bin/main: libraries/ECS/libECS.a
 executables/bin/main: libraries/utilities/short_names/libshort_names.a
 executables/bin/main: libraries/utilities/time/libtime.a
 executables/bin/main: libraries/components/position/libposition.a
+executables/bin/main: libraries/components/follower/libfollower.a
 executables/bin/main: libraries/components/animatedTexture/libanimatedTexture.a
 executables/bin/main: libraries/states/menu/libmenu.a
+executables/bin/main: libraries/components/mouse/libmouse.a
 executables/bin/main: libraries/components/simpleTexture/libsimpleTexture.a
 executables/bin/main: libraries/structs/Vector2D/libVector2D.a
 executables/bin/main: libraries/utilities/texture_manager/libtexture_manager.a
