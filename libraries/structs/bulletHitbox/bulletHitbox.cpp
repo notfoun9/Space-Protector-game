@@ -1,13 +1,14 @@
 #include <bulletHitbox/bulletHitbox.hpp>
 
 BulletHitbox::BulletHitbox(Bullet* bul) : owner(bul), box({0,0,0,0}) {
-    int len = owner->owner->GetCenter()->y;
+    float len = owner->owner->GetCenter()->y;
     float angle = owner->GetAngle() * (3.14f / 180);
-    difX = (len - 10) * SDL_cos(angle);
-    difY = len * (1.0f - SDL_sin(angle)) + 10 * SDL_sin(angle);
+    box.w = owner->GetDest().w;
+    box.h = owner->GetDest().w;
+    
+    difX = (len - box.w / 2) * SDL_cos(angle);
+    difY = len * (1.0f - SDL_sin(angle)) + box.w * SDL_sin(angle) / 2;
     std::cout << angle << '\n';
-    box.w = 18;
-    box.h = 18;
     tex = TextureManager::LoadTexture("../../assets/hitbox.png");
 
 
@@ -21,5 +22,5 @@ void BulletHitbox::Draw() {
 
 void BulletHitbox::Update() {
     box.x = owner->GetDest().x - difX;
-    box.y = owner->GetDest().y + difY - 10;
+    box.y = owner->GetDest().y + difY - box.w / 2;
 }

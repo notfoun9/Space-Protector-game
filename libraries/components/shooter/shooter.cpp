@@ -6,12 +6,20 @@ Shooter::Shooter(std::string bullet, float speed_) : speed(speed_) {
 }
 
 void Shooter::Init() {
+
+}
+
+void Shooter::SetSize(float size) {
     angle = owner->GetComponent<Follower>().GetAngle();
     SDL_Rect temp =  owner->GetComponent<Follower>().GetDest();
-    destRect.x = temp.x + 19;
-    destRect.y = temp.y + 0;
-    destRect.w = 18;
-    destRect.h = 38;
+
+    destRect.w = size * srcRect.w;
+    destRect.h = size * srcRect.h;
+    destRect.y = temp.y;
+    destRect.x = temp.x + temp.w / 2 - destRect.w / 2;
+
+    center.y = owner->GetComponent<Follower>().GetCenter()->y;
+    center.x = destRect.w / 2;
 }
 
 Shooter::~Shooter() {

@@ -810,7 +810,7 @@ game/CMakeFiles/game.dir/game.cpp.o
  /Users/maksim/Study/C++/game2/libraries/components/components.hpp
  /Users/maksim/Study/C++/game2/libraries/utilities/utilities.hpp
  /Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp
- /Users/maksim/Study/C++/game2/libraries/components/collider/collider.hpp
+ /Users/maksim/Study/C++/game2/libraries/components/bulletsCollider/bulletsCollider.hpp
  /Users/maksim/Study/C++/game2/libraries/components/follower/follower.hpp
  /Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp
  /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp

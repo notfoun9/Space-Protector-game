@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libbulletsCollider.a CMakeFiles/bulletsCollider.dir/bulletsCollider.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libbulletsCollider.a

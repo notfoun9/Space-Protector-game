@@ -10,6 +10,7 @@ public:
     ~Follower() = default;
 
     void SetCenter(int x, int y);
+    SDL_Point* GetCenter() { return &center; }
     void Update() override;
     void Draw() override;
 

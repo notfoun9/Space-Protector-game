@@ -1,10 +1,10 @@
-#include<collider/collider.hpp>
+#include <bulletsCollider/bulletsCollider.hpp>
 
-void Collider::AddBox(BulletHitbox* box) {
+void BulletsCollider::AddBox(BulletHitbox* box) {
     boxes.push_back(box);
 }
 
-BulletHitbox* Collider::DoesCollide(SDL_Rect* rect) {
+BulletHitbox* BulletsCollider::DoesCollide(SDL_Rect* rect) {
     for (auto box = boxes.begin(); box != boxes.end(); ++box) {
         if (SDL_HasIntersection( (*box)->GetBox(), rect)) {
             boxes.erase(box);
@@ -14,19 +14,19 @@ BulletHitbox* Collider::DoesCollide(SDL_Rect* rect) {
     return nullptr;
 }
 
-void Collider::Update() {
+void BulletsCollider::Update() {
     for (auto box : boxes) {
         box->Update();
     }
 }
 
-void Collider::Draw() {
+void BulletsCollider::Draw() {
     for (auto box : boxes) {
         box->Draw();
     }    
 }
 
-void Collider::DeleteBox(BulletHitbox* box) {
+void BulletsCollider::DeleteBox(BulletHitbox* box) {
     for (auto iter = boxes.begin(); iter != boxes.end(); ++iter) {
         if (*iter == box) {
             boxes.erase(iter);

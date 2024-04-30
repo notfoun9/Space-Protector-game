@@ -184,7 +184,7 @@ libraries/components/all: libraries/components/mouse/all
 libraries/components/all: libraries/components/follower/all
 libraries/components/all: libraries/components/simpleTexture/all
 libraries/components/all: libraries/components/animatedTexture/all
-libraries/components/all: libraries/components/collider/all
+libraries/components/all: libraries/components/bulletsCollider/all
 .PHONY : libraries/components/all
 
 # Recursive "preinstall" directory target.
@@ -194,7 +194,7 @@ libraries/components/preinstall: libraries/components/mouse/preinstall
 libraries/components/preinstall: libraries/components/follower/preinstall
 libraries/components/preinstall: libraries/components/simpleTexture/preinstall
 libraries/components/preinstall: libraries/components/animatedTexture/preinstall
-libraries/components/preinstall: libraries/components/collider/preinstall
+libraries/components/preinstall: libraries/components/bulletsCollider/preinstall
 .PHONY : libraries/components/preinstall
 
 # Recursive "clean" directory target.
@@ -205,7 +205,7 @@ libraries/components/clean: libraries/components/mouse/clean
 libraries/components/clean: libraries/components/follower/clean
 libraries/components/clean: libraries/components/simpleTexture/clean
 libraries/components/clean: libraries/components/animatedTexture/clean
-libraries/components/clean: libraries/components/collider/clean
+libraries/components/clean: libraries/components/bulletsCollider/clean
 .PHONY : libraries/components/clean
 
 #=============================================================================
@@ -224,19 +224,19 @@ libraries/components/animatedTexture/clean: libraries/components/animatedTexture
 .PHONY : libraries/components/animatedTexture/clean
 
 #=============================================================================
-# Directory level rules for directory libraries/components/collider
+# Directory level rules for directory libraries/components/bulletsCollider
 
 # Recursive "all" directory target.
-libraries/components/collider/all: libraries/components/collider/CMakeFiles/collider.dir/all
-.PHONY : libraries/components/collider/all
+libraries/components/bulletsCollider/all: libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all
+.PHONY : libraries/components/bulletsCollider/all
 
 # Recursive "preinstall" directory target.
-libraries/components/collider/preinstall:
-.PHONY : libraries/components/collider/preinstall
+libraries/components/bulletsCollider/preinstall:
+.PHONY : libraries/components/bulletsCollider/preinstall
 
 # Recursive "clean" directory target.
-libraries/components/collider/clean: libraries/components/collider/CMakeFiles/collider.dir/clean
-.PHONY : libraries/components/collider/clean
+libraries/components/bulletsCollider/clean: libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/clean
+.PHONY : libraries/components/bulletsCollider/clean
 
 #=============================================================================
 # Directory level rules for directory libraries/components/follower
@@ -976,7 +976,7 @@ libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/clean:
 # Target rules for target libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir
 
 # All Build rule for target.
-libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/all: libraries/components/collider/CMakeFiles/collider.dir/all
+libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/all: libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/build.make libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/build.make libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=5,6 "Built target animatedTexture"
@@ -999,30 +999,30 @@ libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/clean:
 .PHONY : libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/clean
 
 #=============================================================================
-# Target rules for target libraries/components/collider/CMakeFiles/collider.dir
+# Target rules for target libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir
 
 # All Build rule for target.
-libraries/components/collider/CMakeFiles/collider.dir/all: libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
-	$(MAKE) $(MAKESILENT) -f libraries/components/collider/CMakeFiles/collider.dir/build.make libraries/components/collider/CMakeFiles/collider.dir/depend
-	$(MAKE) $(MAKESILENT) -f libraries/components/collider/CMakeFiles/collider.dir/build.make libraries/components/collider/CMakeFiles/collider.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=13,14 "Built target collider"
-.PHONY : libraries/components/collider/CMakeFiles/collider.dir/all
+libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all: libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
+	$(MAKE) $(MAKESILENT) -f libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build.make libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/depend
+	$(MAKE) $(MAKESILENT) -f libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build.make libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=13,14 "Built target bulletsCollider"
+.PHONY : libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all
 
 # Build rule for subdir invocation for target.
-libraries/components/collider/CMakeFiles/collider.dir/rule: cmake_check_build_system
+libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/collider/CMakeFiles/collider.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
-.PHONY : libraries/components/collider/CMakeFiles/collider.dir/rule
+.PHONY : libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/rule
 
 # Convenience name for target.
-collider: libraries/components/collider/CMakeFiles/collider.dir/rule
-.PHONY : collider
+bulletsCollider: libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/rule
+.PHONY : bulletsCollider
 
 # clean rule for target.
-libraries/components/collider/CMakeFiles/collider.dir/clean:
-	$(MAKE) $(MAKESILENT) -f libraries/components/collider/CMakeFiles/collider.dir/build.make libraries/components/collider/CMakeFiles/collider.dir/clean
-.PHONY : libraries/components/collider/CMakeFiles/collider.dir/clean
+libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build.make libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/clean
+.PHONY : libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/clean
 
 #=============================================================================
 # Target rules for target libraries/structs/Vector2D/CMakeFiles/Vector2D.dir

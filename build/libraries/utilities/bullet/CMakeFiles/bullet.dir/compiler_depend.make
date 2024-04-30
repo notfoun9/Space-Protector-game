@@ -806,7 +806,7 @@ libraries/utilities/bullet/CMakeFiles/bullet.dir/bullet.cpp.o: /Users/maksim/Stu
   /Users/maksim/Study/C++/game2/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp \
-  /Users/maksim/Study/C++/game2/libraries/components/collider/collider.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/bulletsCollider/bulletsCollider.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/shooter/shooter.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/bulletHitbox.hpp \
@@ -821,6 +821,8 @@ libraries/utilities/bullet/CMakeFiles/bullet.dir/bullet.cpp.o: /Users/maksim/Stu
 /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/shooter/shooter.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/bulletsCollider/bulletsCollider.hpp:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_version.h:
 
@@ -2047,8 +2049,6 @@ libraries/utilities/bullet/CMakeFiles/bullet.dir/bullet.cpp.o: /Users/maksim/Stu
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/unary_negate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__random/log2.h:
-
-/Users/maksim/Study/C++/game2/libraries/components/collider/collider.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/wchar.h:
 

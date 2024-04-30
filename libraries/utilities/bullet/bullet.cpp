@@ -1,6 +1,6 @@
 #include <bullet/bullet.hpp>
 #include <bulletHitbox/bulletHitbox.hpp>
-#include <collider/collider.hpp>
+#include <bulletsCollider/bulletsCollider.hpp>
 Bullet::Bullet(Shooter* owner_) : owner(owner_) {
     angle = owner->GetAngle() + 90;
 
@@ -17,14 +17,14 @@ Bullet::Bullet(Shooter* owner_) : owner(owner_) {
     accuratePos.y = destRect.y;
 
     BulletHitbox* hitBox = new BulletHitbox(this);
-    if (!(owner->owner->HasComponent<Collider>())) {
-        owner->owner->AddComponent<Collider>();
+    if (!(owner->owner->HasComponent<BulletsCollider>())) {
+        owner->owner->AddComponent<BulletsCollider>();
     }
-    owner->owner->GetComponent<Collider>().AddBox(hitBox);
+    owner->owner->GetComponent<BulletsCollider>().AddBox(hitBox);
     hitbox = hitBox;
 }
 Bullet::~Bullet() {
-    owner->owner->GetComponent<Collider>().DeleteBox(hitbox);
+    owner->owner->GetComponent<BulletsCollider>().DeleteBox(hitbox);
     delete hitbox;
     std::cout << "Bullet Destroyed" << '\n';
 }
@@ -33,15 +33,8 @@ void Bullet::Update() {
     accuratePos.x -= velocity.x;
     accuratePos.y -= velocity.y;
 
-
-    destRect.x = accuratePos.x;
-    if (accuratePos.x - float(destRect.x) >= 0.5f) {
-        ++destRect.x;
-    }
-    destRect.y = accuratePos.y;
-    if (accuratePos.y - float(destRect.y) >= 0.5f) {
-        ++destRect.y;
-    }
+    destRect.x = std::round(accuratePos.x);
+    destRect.y = std::round(accuratePos.y);
 
     if (std::abs(destRect.x) > 2000 || std::abs(destRect.y) > 2000) {
         owner->AddBulletToDest(this);

@@ -809,7 +809,7 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
   /Users/maksim/Study/C++/game2/libraries/components/components.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp \
-  /Users/maksim/Study/C++/game2/libraries/components/collider/collider.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/bulletsCollider/bulletsCollider.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/follower/follower.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp \
@@ -851,6 +851,8 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 /Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/follower/follower.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/bulletsCollider/bulletsCollider.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp:
 
@@ -2077,8 +2079,6 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/unary_negate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__random/log2.h:
-
-/Users/maksim/Study/C++/game2/libraries/components/collider/collider.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/wchar.h:
 

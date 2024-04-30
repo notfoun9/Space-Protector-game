@@ -4,10 +4,10 @@
 #include <ECS/ECS.hpp>
 #include <bulletHitbox/bulletHitbox.hpp>
 
-class Collider : public Component {
+class BulletsCollider : public Component {
 public:
-    Collider() = default;
-    ~Collider() = default;
+    BulletsCollider() = default;
+    ~BulletsCollider() = default;
 
     void Update() override;
     void Draw() override;

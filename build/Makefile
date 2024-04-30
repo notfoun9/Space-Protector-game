@@ -370,17 +370,17 @@ animatedTexture/fast:
 .PHONY : animatedTexture/fast
 
 #=============================================================================
-# Target rules for targets named collider
+# Target rules for targets named bulletsCollider
 
 # Build rule for target.
-collider: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 collider
-.PHONY : collider
+bulletsCollider: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bulletsCollider
+.PHONY : bulletsCollider
 
 # fast build rule for target.
-collider/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/components/collider/CMakeFiles/collider.dir/build.make libraries/components/collider/CMakeFiles/collider.dir/build
-.PHONY : collider/fast
+bulletsCollider/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build.make libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build
+.PHONY : bulletsCollider/fast
 
 #=============================================================================
 # Target rules for targets named Vector2D
@@ -465,7 +465,7 @@ help:
 	@echo "... animation"
 	@echo "... bullet"
 	@echo "... bulletHitbox"
-	@echo "... collider"
+	@echo "... bulletsCollider"
 	@echo "... components"
 	@echo "... follower"
 	@echo "... game"

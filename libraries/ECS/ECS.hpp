@@ -86,12 +86,13 @@ T& Entity::AddComponent(TArgs&&... mArgs) {
     t->owner = this;
     std::unique_ptr<Component> uPtr{ t };
     
+    t->Init();
+    
     components.emplace_back(std::move(uPtr));
 
     compArray[GetComponentTypeID<T>()] = t;
     compBitSet[GetComponentTypeID<T>()] = 1;
 
-    t->Init();
     return *t;
 }
 

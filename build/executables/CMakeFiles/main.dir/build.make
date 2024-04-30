@@ -104,7 +104,7 @@ executables/bin/main: libraries/states/menu/libmenu.a
 executables/bin/main: libraries/components/mouse/libmouse.a
 executables/bin/main: libraries/components/shooter/libshooter.a
 executables/bin/main: libraries/utilities/bullet/libbullet.a
-executables/bin/main: libraries/components/collider/libcollider.a
+executables/bin/main: libraries/components/bulletsCollider/libbulletsCollider.a
 executables/bin/main: libraries/structs/bulletHitbox/libbulletHitbox.a
 executables/bin/main: libraries/components/simpleTexture/libsimpleTexture.a
 executables/bin/main: libraries/structs/Vector2D/libVector2D.a
@@ -120,7 +120,7 @@ executables/bin/main: libraries/states/menu/libmenu.a
 executables/bin/main: libraries/components/mouse/libmouse.a
 executables/bin/main: libraries/components/shooter/libshooter.a
 executables/bin/main: libraries/utilities/bullet/libbullet.a
-executables/bin/main: libraries/components/collider/libcollider.a
+executables/bin/main: libraries/components/bulletsCollider/libbulletsCollider.a
 executables/bin/main: libraries/structs/bulletHitbox/libbulletHitbox.a
 executables/bin/main: libraries/components/simpleTexture/libsimpleTexture.a
 executables/bin/main: libraries/structs/Vector2D/libVector2D.a

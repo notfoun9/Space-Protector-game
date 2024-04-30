@@ -7,11 +7,13 @@ Menu::Menu(std::shared_ptr<Game> game_, SDL_Window* window_, SDL_Renderer* rende
     game(game_), window(window_), renderer(renderer_) {
 }
 
+Manager meteors;
+
 Entity mouse;
 Entity background;
 Entity base;
+
 Entity launcher;
-Entity meteor;
 SDL_Event event;
 
 void Menu::Run() {
@@ -32,15 +34,17 @@ void Menu::Run() {
     launcher.GetComponent<Follower>().SetCenter(27, 75);
     launcher.GetComponent<Follower>().SetBoarders(0,0,11,20);
     
-    launcher.AddComponent<Shooter>(ShortNames::bullet, 1);
+    launcher.AddComponent<Shooter>(ShortNames::bullet, 4);
     launcher.GetComponent<Shooter>().SetSrc(0,0,9,18);
-    launcher.GetComponent<Shooter>().SetCenter(9,75);
+    launcher.GetComponent<Shooter>().SetSize(3.0f);
 
-    meteor.AddComponent<PositionComponent>(500, 100, 55,95);
-    meteor.AddComponent<AnimatedTexture>(ShortNames::animatedMeteor);
-    meteor.GetComponent<AnimatedTexture>().AddAnimation("fall", 0, 4, 150);
-    meteor.GetComponent<AnimatedTexture>().SetBoarders(0,0,11,19);
-    meteor.GetComponent<AnimatedTexture>().Play("fall");
+    auto& meteor1 = meteors.AddEntity();
+
+    meteor1.AddComponent<PositionComponent>(500, 100, 55,95);
+    meteor1.AddComponent<AnimatedTexture>(ShortNames::animatedMeteor);
+    meteor1.GetComponent<AnimatedTexture>().AddAnimation("fall", 0, 4, 150);
+    meteor1.GetComponent<AnimatedTexture>().SetBoarders(0,0,11,19);
+    meteor1.GetComponent<AnimatedTexture>().Play("fall");
 
     while (game->inMenu) {
         std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
@@ -55,7 +59,7 @@ void Menu::Run() {
 
 
 void Menu::Update() {
-    meteor.Update();
+    meteors.Update();
     base.Update();
     launcher.Update();
 
@@ -66,8 +70,9 @@ void Menu::Render() {
     SDL_RenderClear(renderer);
 
     // background.Draw();
-    meteor.Draw();
+    meteors.Draw();
     launcher.Draw();
+    // launcher.GetComponent<Follower>().Draw();
     base.Draw();
 
     mouse.Draw();
