@@ -4,6 +4,7 @@ add_subdirectory(mouse)
 add_subdirectory(follower)
 add_subdirectory(simpleTexture)
 add_subdirectory(animatedTexture)
+add_subdirectory(spawner)
 add_subdirectory(bulletsCollider)
 add_subdirectory(meteorHitbox)
 

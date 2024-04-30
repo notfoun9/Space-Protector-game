@@ -69,8 +69,10 @@ public:
     void Draw();
 
     void Refresh();
+    void Clear();
 
     Entity& AddEntity();
+    std::vector<std::unique_ptr<Entity>>* GetEntities() { return &entities; }
 private:
     std::vector<std::unique_ptr<Entity>> entities;
 } ; 

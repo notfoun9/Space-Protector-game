@@ -10,7 +10,7 @@ public:
 
     void Init() override;
     void Update() override;
-    void Draw() override;
+    // void Draw() override;
     
     void Destroy() { owner->Destroy(); }
 
@@ -19,5 +19,5 @@ private:
     SDL_Rect box;
     Vector2D accuratePos = {0,0};
 
-    SDL_Texture* tex;
+    // SDL_Texture* tex;
 } ;

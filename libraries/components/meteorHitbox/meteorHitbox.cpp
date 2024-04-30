@@ -2,7 +2,6 @@
 #include <position/position.hpp>
 #include <short_names/short_names.hpp>
 #include <texture_manager/texture_manager.hpp>
-// #include <velocity/velocity.hpp>
 
 void MeteorHitbox::Init() {
     auto& pos = owner->GetComponent<PositionComponent>();
@@ -15,16 +14,20 @@ void MeteorHitbox::Init() {
 
     accuratePos.x = box.x;
     accuratePos.y = box.y;
-    tex = TextureManager::LoadTexture("../../assets/hitbox.png");
+    // tex = TextureManager::LoadTexture("../../assets/hitbox.png");
 }
 
 void MeteorHitbox::Update() {
-    if (box.y > 700) owner->Destroy();
-    // accuratePos +=owner->GetComponent<VelocityComponent>.GetVector();
+    accuratePos.x += owner->GetComponent<PositionComponent>().GetVelocity().x;
+    accuratePos.y += owner->GetComponent<PositionComponent>().GetVelocity().y;
+    if (box.y > 600) {
+        owner->Destroy();
+        std::cout << "damage" << '\n';
+    }
     box.x = std::round(accuratePos.x);
     box.y = std::round(accuratePos.y);
 }
 
-void MeteorHitbox::Draw() {
-    TextureManager::Draw(tex, NULL, &box, SDL_FLIP_NONE);
-}
+// void MeteorHitbox::Draw() {
+//     TextureManager::Draw(tex, NULL, &box, SDL_FLIP_NONE);
+// }

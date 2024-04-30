@@ -7,11 +7,11 @@ class Bullet;
 
 class BulletHitbox {
 public:
-    BulletHitbox(Bullet* owner_);
+    BulletHitbox(Bullet* owner_, bool back);
     ~BulletHitbox() {
         std::cout << "Hitbox deleted" << '\n';
     }
-    void Draw();
+    // void Draw();
     void Update();
     SDL_Rect* GetBox() { return &box; }
 
@@ -22,6 +22,6 @@ private:
     int difX;
     int difY;
 
-    SDL_Texture* tex;
-    SDL_Rect src = {0,0,9,9};
+    // SDL_Texture* tex;
+    // SDL_Rect src = {0,0,9,9};
 } ;

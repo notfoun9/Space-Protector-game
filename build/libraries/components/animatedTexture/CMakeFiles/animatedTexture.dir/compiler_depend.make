@@ -807,7 +807,9 @@ libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/animatedText
   /Users/maksim/Study/C++/game2/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/animation/animation.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp
 
@@ -816,7 +818,11 @@ libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/animatedText
 
 /Users/maksim/Study/C++/game2/libraries/structs/animation/animation.hpp:
 
+/Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp:
+
 /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/position/position.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp:
 

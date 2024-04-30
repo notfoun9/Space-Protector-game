@@ -9,12 +9,11 @@ Menu::Menu(std::shared_ptr<Game> game_, SDL_Window* window_, SDL_Renderer* rende
 
 Entity mouse;
 Entity background;
-Entity* meteor1 = new Entity();
 Entity base;
 
-std::list<std::unique_ptr<Entity>> meteors;
-
 Entity launcher;
+
+Entity spawner;
 SDL_Event event;
 
 void Menu::Run() {
@@ -35,19 +34,13 @@ void Menu::Run() {
     launcher.GetComponent<Follower>().SetCenter(27, 75);
     launcher.GetComponent<Follower>().SetBoarders(0,0,11,20);
     
-    launcher.AddComponent<Shooter>(ShortNames::bullet, 4);
+    launcher.AddComponent<Shooter>(ShortNames::bullet, 2);
     launcher.GetComponent<Shooter>().SetSrc(0,0,9,18);
-    launcher.GetComponent<Shooter>().SetSize(3.0f);
+    launcher.GetComponent<Shooter>().SetSize(4.0f);
 
-    meteor1->AddComponent<PositionComponent>(500, 100, 55,95);
-    meteor1->AddComponent<AnimatedTexture>(ShortNames::animatedMeteor);
-    meteor1->GetComponent<AnimatedTexture>().AddAnimation("fall", 0, 4, 150);
-    meteor1->GetComponent<AnimatedTexture>().SetBoarders(0,0,11,19);
-    meteor1->GetComponent<AnimatedTexture>().Play("fall");
-    meteor1->AddComponent<MeteorHitbox>();
+    spawner.AddComponent<Spawner>(3000, Vector2D{5,5});
+    spawner.GetComponent<Spawner>().Start();
 
-    std::unique_ptr<Entity> met { meteor1 };
-    meteors.emplace_back(std::move(met));
 
     while (game->inMenu) {
         std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
@@ -62,22 +55,22 @@ void Menu::Run() {
 
 
 void Menu::Update() {
-    for (auto iter = meteors.begin(); iter != meteors.end(); ++iter) {
-        (*iter)->Update();
-    }
     base.Update();
     launcher.Update();
+    spawner.Update();
     mouse.Update();
 
     if (launcher.HasComponent<BulletsCollider>() == 0) return;
 
     BulletHitbox* aboba;
-    for (auto iter = meteors.begin(); iter != meteors.end(); ++iter) {
-        aboba = (launcher.GetComponent<BulletsCollider>().DoesCollide((**iter).GetComponent<MeteorHitbox>().GetBox()));
+
+    auto* meteors = spawner.GetComponent<Spawner>().GetMeteors()->GetEntities();
+    for (auto& met : *meteors) {
+        aboba = (launcher.GetComponent<BulletsCollider>().DoesCollide((*met).GetComponent<MeteorHitbox>().GetBox()));
         if (aboba) {
             std::cout << "sec" << '\n';
             aboba->DestroyOwner();
-            meteors.erase(iter);
+            met->Destroy();
             return;
         }
     }
@@ -87,9 +80,7 @@ void Menu::Render() {
     SDL_RenderClear(renderer);
 
     // background.Draw();
-    for (auto iter = meteors.begin(); iter != meteors.end(); ++iter) {
-        (*iter)->Draw();
-    }
+    spawner.Draw();
     launcher.Draw();
     // launcher.GetComponent<Follower>().Draw();
     base.Draw();

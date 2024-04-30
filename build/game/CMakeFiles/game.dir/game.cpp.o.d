@@ -811,6 +811,7 @@ game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/components/position/../animatedTexture/animatedTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../animation/animation.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../mouse/mouse.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/../spawner/spawner.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../follower/follower.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../shooter/shooter.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../bullet/bullet.hpp \

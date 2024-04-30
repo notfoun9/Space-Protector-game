@@ -806,6 +806,7 @@ libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/simpleTexture.cp
   /Users/maksim/Study/C++/game2/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/meteorHitbox/meteorHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
@@ -819,6 +820,8 @@ libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/simpleTexture.cp
 /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/meteorHitbox/meteorHitbox.hpp:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_version.h:
 

@@ -1,4 +1,5 @@
 #include <position/position.hpp>
+
 PositionComponent::PositionComponent(float x, float y) noexcept{
     position.x = x;
     position.y = y;
@@ -10,6 +11,11 @@ PositionComponent::PositionComponent(float x, float y, float w, float h) noexcep
     height = h;
 }
 
+void PositionComponent::Update() {
+    if (speed != 0) {
+        position += velocity * speed;
+    }
+}
 
 float PositionComponent::X() noexcept {
     return position.x;
@@ -21,10 +27,6 @@ float PositionComponent::Y() noexcept {
 void PositionComponent::SetPos(float x, float y) {
     position.x = x;
     position.y = y;
-}
-
-void PositionComponent::Move(float x, float y) {
-    position += Vector2D(x,y);
 }
  
 float PositionComponent::Width() noexcept {

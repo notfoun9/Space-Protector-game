@@ -146,6 +146,13 @@
 /Users/maksim/Study/C++/game2/build/libraries/components/animatedTexture/CMakeFiles/install.dir
 /Users/maksim/Study/C++/game2/build/libraries/components/animatedTexture/CMakeFiles/install/local.dir
 /Users/maksim/Study/C++/game2/build/libraries/components/animatedTexture/CMakeFiles/install/strip.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/spawner/CMakeFiles/spawner.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/spawner/CMakeFiles/edit_cache.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/spawner/CMakeFiles/rebuild_cache.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/spawner/CMakeFiles/list_install_components.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/spawner/CMakeFiles/install.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/spawner/CMakeFiles/install/local.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/spawner/CMakeFiles/install/strip.dir
 /Users/maksim/Study/C++/game2/build/libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir
 /Users/maksim/Study/C++/game2/build/libraries/components/bulletsCollider/CMakeFiles/edit_cache.dir
 /Users/maksim/Study/C++/game2/build/libraries/components/bulletsCollider/CMakeFiles/rebuild_cache.dir

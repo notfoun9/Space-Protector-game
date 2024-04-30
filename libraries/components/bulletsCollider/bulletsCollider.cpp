@@ -21,11 +21,11 @@ void BulletsCollider::Update() {
     } 
 }
 
-void BulletsCollider::Draw() {
-    for (auto box : boxes) {
-        box->Draw();
-    }    
-}
+// void BulletsCollider::Draw() {
+//     for (auto box : boxes) {
+//         box->Draw();
+//     }    
+// }
 
 void BulletsCollider::DeleteBox(BulletHitbox* box) {
     for (auto iter = boxes.begin(); iter != boxes.end(); ++iter) {

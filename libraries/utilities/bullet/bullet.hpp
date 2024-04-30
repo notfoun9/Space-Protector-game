@@ -20,6 +20,7 @@ public:
     SDL_Rect& GetDest() { return destRect; }
 
     BulletHitbox* hitbox;
+    BulletHitbox* backHitbox;
 private:
     float angle;
     Vector2D accuratePos;

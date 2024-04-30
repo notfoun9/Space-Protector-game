@@ -107,6 +107,7 @@ executables/bin/main: libraries/utilities/bullet/libbullet.a
 executables/bin/main: libraries/components/bulletsCollider/libbulletsCollider.a
 executables/bin/main: libraries/structs/bulletHitbox/libbulletHitbox.a
 executables/bin/main: libraries/components/meteorHitbox/libmeteorHitbox.a
+executables/bin/main: libraries/components/spawner/libspawner.a
 executables/bin/main: libraries/components/simpleTexture/libsimpleTexture.a
 executables/bin/main: libraries/structs/Vector2D/libVector2D.a
 executables/bin/main: libraries/utilities/texture_manager/libtexture_manager.a
@@ -124,6 +125,7 @@ executables/bin/main: libraries/utilities/bullet/libbullet.a
 executables/bin/main: libraries/components/bulletsCollider/libbulletsCollider.a
 executables/bin/main: libraries/structs/bulletHitbox/libbulletHitbox.a
 executables/bin/main: libraries/components/meteorHitbox/libmeteorHitbox.a
+executables/bin/main: libraries/components/spawner/libspawner.a
 executables/bin/main: libraries/components/simpleTexture/libsimpleTexture.a
 executables/bin/main: libraries/structs/Vector2D/libVector2D.a
 executables/bin/main: libraries/utilities/texture_manager/libtexture_manager.a

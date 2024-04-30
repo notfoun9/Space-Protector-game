@@ -41,6 +41,14 @@ void Manager::Refresh() {
         std::end(entities));
 }
 
+void Manager::Clear() {
+    for (auto& e : entities) {
+        e->Destroy();
+    }
+    Refresh();
+    delete this;
+}
+
 Entity& Manager::AddEntity() {
     Entity* e = new Entity();
     std::unique_ptr<Entity> uPtr { e };

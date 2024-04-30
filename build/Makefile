@@ -370,6 +370,19 @@ animatedTexture/fast:
 .PHONY : animatedTexture/fast
 
 #=============================================================================
+# Target rules for targets named spawner
+
+# Build rule for target.
+spawner: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spawner
+.PHONY : spawner
+
+# fast build rule for target.
+spawner/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/spawner/CMakeFiles/spawner.dir/build.make libraries/components/spawner/CMakeFiles/spawner.dir/build
+.PHONY : spawner/fast
+
+#=============================================================================
 # Target rules for targets named bulletsCollider
 
 # Build rule for target.
@@ -491,6 +504,7 @@ help:
 	@echo "... shooter"
 	@echo "... short_names"
 	@echo "... simpleTexture"
+	@echo "... spawner"
 	@echo "... states"
 	@echo "... texture_manager"
 	@echo "... time"

@@ -69,6 +69,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/maksim/Study/C++/game2/build/libraries/components/spawner/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/maksim/Study/C++/game2/build/libraries/components/bulletsCollider/cmake_install.cmake")
 endif()
 

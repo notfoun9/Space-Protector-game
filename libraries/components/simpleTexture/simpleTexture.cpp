@@ -1,16 +1,18 @@
 #include <simpleTexture/simpleTexture.hpp>
 #include <texture_manager/texture_manager.hpp>
 #include <position/position.hpp>
+#include <meteorHitbox/meteorHitbox.hpp>
 
 SimpleTexture::SimpleTexture(std::string texName) {
     tex = TextureManager::LoadTexture(texName.data());
 }
 
 void SimpleTexture::Init() {
-    destRect.x = (int)owner->GetComponent<PositionComponent>().X();
-    destRect.y = (int)owner->GetComponent<PositionComponent>().Y();
-    destRect.w = (int)owner->GetComponent<PositionComponent>().Width();
-    destRect.h = (int)owner->GetComponent<PositionComponent>().Height();
+    auto& pos = owner->GetComponent<PositionComponent>();
+    destRect.x = std::round(pos.X());
+    destRect.y = std::round(pos.Y());
+    destRect.w = std::round(pos.Width());
+    destRect.h = std::round(pos.Height());
 }
 
 SimpleTexture::~SimpleTexture() {

@@ -2,6 +2,7 @@
 #include <simpleTexture/simpleTexture.hpp>
 #include <animatedTexture/animatedTexture.hpp>
 #include <mouse/mouse.hpp>
+#include <spawner/spawner.hpp>
 #include <follower/follower.hpp>
 #include <shooter/shooter.hpp>
 #include <bulletsCollider/bulletsCollider.hpp>
