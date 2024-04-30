@@ -5,3 +5,4 @@
 #include <follower/follower.hpp>
 #include <shooter/shooter.hpp>
 #include <bulletsCollider/bulletsCollider.hpp>
+#include <meteorHitbox/meteorHitbox.hpp>

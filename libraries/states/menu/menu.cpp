@@ -7,11 +7,12 @@ Menu::Menu(std::shared_ptr<Game> game_, SDL_Window* window_, SDL_Renderer* rende
     game(game_), window(window_), renderer(renderer_) {
 }
 
-Manager meteors;
-
 Entity mouse;
 Entity background;
+Entity* meteor1 = new Entity();
 Entity base;
+
+std::list<std::unique_ptr<Entity>> meteors;
 
 Entity launcher;
 SDL_Event event;
@@ -38,13 +39,15 @@ void Menu::Run() {
     launcher.GetComponent<Shooter>().SetSrc(0,0,9,18);
     launcher.GetComponent<Shooter>().SetSize(3.0f);
 
-    auto& meteor1 = meteors.AddEntity();
+    meteor1->AddComponent<PositionComponent>(500, 100, 55,95);
+    meteor1->AddComponent<AnimatedTexture>(ShortNames::animatedMeteor);
+    meteor1->GetComponent<AnimatedTexture>().AddAnimation("fall", 0, 4, 150);
+    meteor1->GetComponent<AnimatedTexture>().SetBoarders(0,0,11,19);
+    meteor1->GetComponent<AnimatedTexture>().Play("fall");
+    meteor1->AddComponent<MeteorHitbox>();
 
-    meteor1.AddComponent<PositionComponent>(500, 100, 55,95);
-    meteor1.AddComponent<AnimatedTexture>(ShortNames::animatedMeteor);
-    meteor1.GetComponent<AnimatedTexture>().AddAnimation("fall", 0, 4, 150);
-    meteor1.GetComponent<AnimatedTexture>().SetBoarders(0,0,11,19);
-    meteor1.GetComponent<AnimatedTexture>().Play("fall");
+    std::unique_ptr<Entity> met { meteor1 };
+    meteors.emplace_back(std::move(met));
 
     while (game->inMenu) {
         std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
@@ -59,22 +62,39 @@ void Menu::Run() {
 
 
 void Menu::Update() {
-    meteors.Update();
+    for (auto iter = meteors.begin(); iter != meteors.end(); ++iter) {
+        (*iter)->Update();
+    }
     base.Update();
     launcher.Update();
-
     mouse.Update();
+
+    if (launcher.HasComponent<BulletsCollider>() == 0) return;
+
+    BulletHitbox* aboba;
+    for (auto iter = meteors.begin(); iter != meteors.end(); ++iter) {
+        aboba = (launcher.GetComponent<BulletsCollider>().DoesCollide((**iter).GetComponent<MeteorHitbox>().GetBox()));
+        if (aboba) {
+            std::cout << "sec" << '\n';
+            aboba->DestroyOwner();
+            meteors.erase(iter);
+            return;
+        }
+    }
 }
 
 void Menu::Render() {
     SDL_RenderClear(renderer);
 
     // background.Draw();
-    meteors.Draw();
+    for (auto iter = meteors.begin(); iter != meteors.end(); ++iter) {
+        (*iter)->Draw();
+    }
     launcher.Draw();
     // launcher.GetComponent<Follower>().Draw();
     base.Draw();
 
     mouse.Draw();
     SDL_RenderPresent(renderer);
+
 }

@@ -24,3 +24,8 @@ void BulletHitbox::Update() {
     box.x = owner->GetDest().x - difX;
     box.y = owner->GetDest().y + difY - box.w / 2;
 }
+
+void BulletHitbox::DestroyOwner() { 
+    std::cout << "Hit" << '\n';
+    owner->owner->AddBulletToDest(owner);
+}

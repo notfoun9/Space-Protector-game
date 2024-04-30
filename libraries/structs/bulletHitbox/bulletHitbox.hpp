@@ -14,6 +14,8 @@ public:
     void Draw();
     void Update();
     SDL_Rect* GetBox() { return &box; }
+
+    void DestroyOwner();
 private:
     Bullet* owner;
     SDL_Rect box;

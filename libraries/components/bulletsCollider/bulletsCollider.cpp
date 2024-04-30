@@ -6,9 +6,10 @@ void BulletsCollider::AddBox(BulletHitbox* box) {
 
 BulletHitbox* BulletsCollider::DoesCollide(SDL_Rect* rect) {
     for (auto box = boxes.begin(); box != boxes.end(); ++box) {
-        if (SDL_HasIntersection( (*box)->GetBox(), rect)) {
+        if (SDL_HasIntersection( (*box)->GetBox(), rect )) {
+            auto ret = *box;
             boxes.erase(box);
-            return *box;
+            return ret;
         }
     }
     return nullptr;
@@ -17,7 +18,7 @@ BulletHitbox* BulletsCollider::DoesCollide(SDL_Rect* rect) {
 void BulletsCollider::Update() {
     for (auto box : boxes) {
         box->Update();
-    }
+    } 
 }
 
 void BulletsCollider::Draw() {
@@ -35,3 +36,4 @@ void BulletsCollider::DeleteBox(BulletHitbox* box) {
         }
     }
 }
+

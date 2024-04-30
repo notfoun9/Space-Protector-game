@@ -185,6 +185,7 @@ libraries/components/all: libraries/components/follower/all
 libraries/components/all: libraries/components/simpleTexture/all
 libraries/components/all: libraries/components/animatedTexture/all
 libraries/components/all: libraries/components/bulletsCollider/all
+libraries/components/all: libraries/components/meteorHitbox/all
 .PHONY : libraries/components/all
 
 # Recursive "preinstall" directory target.
@@ -195,6 +196,7 @@ libraries/components/preinstall: libraries/components/follower/preinstall
 libraries/components/preinstall: libraries/components/simpleTexture/preinstall
 libraries/components/preinstall: libraries/components/animatedTexture/preinstall
 libraries/components/preinstall: libraries/components/bulletsCollider/preinstall
+libraries/components/preinstall: libraries/components/meteorHitbox/preinstall
 .PHONY : libraries/components/preinstall
 
 # Recursive "clean" directory target.
@@ -206,6 +208,7 @@ libraries/components/clean: libraries/components/follower/clean
 libraries/components/clean: libraries/components/simpleTexture/clean
 libraries/components/clean: libraries/components/animatedTexture/clean
 libraries/components/clean: libraries/components/bulletsCollider/clean
+libraries/components/clean: libraries/components/meteorHitbox/clean
 .PHONY : libraries/components/clean
 
 #=============================================================================
@@ -252,6 +255,21 @@ libraries/components/follower/preinstall:
 # Recursive "clean" directory target.
 libraries/components/follower/clean: libraries/components/follower/CMakeFiles/follower.dir/clean
 .PHONY : libraries/components/follower/clean
+
+#=============================================================================
+# Directory level rules for directory libraries/components/meteorHitbox
+
+# Recursive "all" directory target.
+libraries/components/meteorHitbox/all: libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/all
+.PHONY : libraries/components/meteorHitbox/all
+
+# Recursive "preinstall" directory target.
+libraries/components/meteorHitbox/preinstall:
+.PHONY : libraries/components/meteorHitbox/preinstall
+
+# Recursive "clean" directory target.
+libraries/components/meteorHitbox/clean: libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/clean
+.PHONY : libraries/components/meteorHitbox/clean
 
 #=============================================================================
 # Directory level rules for directory libraries/components/mouse
@@ -592,7 +610,7 @@ executables/CMakeFiles/main.dir/all: libraries/components/CMakeFiles/components.
 
 # Build rule for subdir invocation for target.
 executables/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 executables/CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : executables/CMakeFiles/main.dir/rule
@@ -618,7 +636,7 @@ game/CMakeFiles/game.dir/all: libraries/ECS/CMakeFiles/ECS.dir/all
 
 # Build rule for subdir invocation for target.
 game/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : game/CMakeFiles/game.dir/rule
@@ -644,7 +662,7 @@ libraries/ECS/CMakeFiles/ECS.dir/all: libraries/utilities/texture_manager/CMakeF
 
 # Build rule for subdir invocation for target.
 libraries/ECS/CMakeFiles/ECS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 32
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/ECS/CMakeFiles/ECS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/ECS/CMakeFiles/ECS.dir/rule
@@ -691,12 +709,12 @@ libraries/utilities/CMakeFiles/utilities.dir/clean:
 libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all: libraries/utilities/time/CMakeFiles/time.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=35,36 "Built target texture_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=37,38 "Built target texture_manager"
 .PHONY : libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 30
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/rule
@@ -717,12 +735,12 @@ libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/clean:
 libraries/utilities/time/CMakeFiles/time.dir/all: libraries/utilities/short_names/CMakeFiles/short_names.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/time/CMakeFiles/time.dir/build.make libraries/utilities/time/CMakeFiles/time.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/time/CMakeFiles/time.dir/build.make libraries/utilities/time/CMakeFiles/time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=37,38 "Built target time"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=39,40 "Built target time"
 .PHONY : libraries/utilities/time/CMakeFiles/time.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/utilities/time/CMakeFiles/time.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/time/CMakeFiles/time.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/time/CMakeFiles/time.dir/rule
@@ -750,7 +768,7 @@ libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/all: li
 
 # Build rule for subdir invocation for target.
 libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/rule
@@ -771,12 +789,12 @@ libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/clean:
 libraries/utilities/short_names/CMakeFiles/short_names.dir/all: libraries/utilities/bullet/CMakeFiles/bullet.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/short_names/CMakeFiles/short_names.dir/build.make libraries/utilities/short_names/CMakeFiles/short_names.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/short_names/CMakeFiles/short_names.dir/build.make libraries/utilities/short_names/CMakeFiles/short_names.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=31,32 "Built target short_names"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=33,34 "Built target short_names"
 .PHONY : libraries/utilities/short_names/CMakeFiles/short_names.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/utilities/short_names/CMakeFiles/short_names.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/short_names/CMakeFiles/short_names.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/short_names/CMakeFiles/short_names.dir/rule
@@ -802,7 +820,7 @@ libraries/utilities/bullet/CMakeFiles/bullet.dir/all: libraries/components/posit
 
 # Build rule for subdir invocation for target.
 libraries/utilities/bullet/CMakeFiles/bullet.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/bullet/CMakeFiles/bullet.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/bullet/CMakeFiles/bullet.dir/rule
@@ -849,12 +867,12 @@ libraries/components/CMakeFiles/components.dir/clean:
 libraries/components/position/CMakeFiles/position.dir/all: libraries/components/shooter/CMakeFiles/shooter.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/position/CMakeFiles/position.dir/build.make libraries/components/position/CMakeFiles/position.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/position/CMakeFiles/position.dir/build.make libraries/components/position/CMakeFiles/position.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=27,28 "Built target position"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=29,30 "Built target position"
 .PHONY : libraries/components/position/CMakeFiles/position.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/components/position/CMakeFiles/position.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/position/CMakeFiles/position.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/components/position/CMakeFiles/position.dir/rule
@@ -875,12 +893,12 @@ libraries/components/position/CMakeFiles/position.dir/clean:
 libraries/components/shooter/CMakeFiles/shooter.dir/all: libraries/components/mouse/CMakeFiles/mouse.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/shooter/CMakeFiles/shooter.dir/build.make libraries/components/shooter/CMakeFiles/shooter.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/shooter/CMakeFiles/shooter.dir/build.make libraries/components/shooter/CMakeFiles/shooter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=29,30 "Built target shooter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=31,32 "Built target shooter"
 .PHONY : libraries/components/shooter/CMakeFiles/shooter.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/components/shooter/CMakeFiles/shooter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/shooter/CMakeFiles/shooter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/components/shooter/CMakeFiles/shooter.dir/rule
@@ -901,12 +919,12 @@ libraries/components/shooter/CMakeFiles/shooter.dir/clean:
 libraries/components/mouse/CMakeFiles/mouse.dir/all: libraries/components/follower/CMakeFiles/follower.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/mouse/CMakeFiles/mouse.dir/build.make libraries/components/mouse/CMakeFiles/mouse.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/mouse/CMakeFiles/mouse.dir/build.make libraries/components/mouse/CMakeFiles/mouse.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=25,26 "Built target mouse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=27,28 "Built target mouse"
 .PHONY : libraries/components/mouse/CMakeFiles/mouse.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/components/mouse/CMakeFiles/mouse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/mouse/CMakeFiles/mouse.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/components/mouse/CMakeFiles/mouse.dir/rule
@@ -932,7 +950,7 @@ libraries/components/follower/CMakeFiles/follower.dir/all: libraries/components/
 
 # Build rule for subdir invocation for target.
 libraries/components/follower/CMakeFiles/follower.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/follower/CMakeFiles/follower.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/components/follower/CMakeFiles/follower.dir/rule
@@ -953,12 +971,12 @@ libraries/components/follower/CMakeFiles/follower.dir/clean:
 libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all: libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=33,34 "Built target simpleTexture"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=35,36 "Built target simpleTexture"
 .PHONY : libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/rule
@@ -984,7 +1002,7 @@ libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/all: librari
 
 # Build rule for subdir invocation for target.
 libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/rule
@@ -1002,7 +1020,7 @@ libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/clean:
 # Target rules for target libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir
 
 # All Build rule for target.
-libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all: libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
+libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all: libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build.make libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build.make libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=13,14 "Built target bulletsCollider"
@@ -1010,7 +1028,7 @@ libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all: librari
 
 # Build rule for subdir invocation for target.
 libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/rule
@@ -1023,6 +1041,32 @@ bulletsCollider: libraries/components/bulletsCollider/CMakeFiles/bulletsCollider
 libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/clean:
 	$(MAKE) $(MAKESILENT) -f libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/build.make libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/clean
 .PHONY : libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/clean
+
+#=============================================================================
+# Target rules for target libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir
+
+# All Build rule for target.
+libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/all: libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
+	$(MAKE) $(MAKESILENT) -f libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/build.make libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/depend
+	$(MAKE) $(MAKESILENT) -f libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/build.make libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=25,26 "Built target meteorHitbox"
+.PHONY : libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/all
+
+# Build rule for subdir invocation for target.
+libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
+.PHONY : libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/rule
+
+# Convenience name for target.
+meteorHitbox: libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/rule
+.PHONY : meteorHitbox
+
+# clean rule for target.
+libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/build.make libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/clean
+.PHONY : libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/clean
 
 #=============================================================================
 # Target rules for target libraries/structs/Vector2D/CMakeFiles/Vector2D.dir
@@ -1090,7 +1134,7 @@ libraries/structs/animation/CMakeFiles/animation.dir/all: libraries/components/C
 
 # Build rule for subdir invocation for target.
 libraries/structs/animation/CMakeFiles/animation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/structs/animation/CMakeFiles/animation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/structs/animation/CMakeFiles/animation.dir/rule

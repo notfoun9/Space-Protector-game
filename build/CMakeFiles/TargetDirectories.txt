@@ -153,6 +153,13 @@
 /Users/maksim/Study/C++/game2/build/libraries/components/bulletsCollider/CMakeFiles/install.dir
 /Users/maksim/Study/C++/game2/build/libraries/components/bulletsCollider/CMakeFiles/install/local.dir
 /Users/maksim/Study/C++/game2/build/libraries/components/bulletsCollider/CMakeFiles/install/strip.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/meteorHitbox/CMakeFiles/edit_cache.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/meteorHitbox/CMakeFiles/rebuild_cache.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/meteorHitbox/CMakeFiles/list_install_components.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/meteorHitbox/CMakeFiles/install.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/meteorHitbox/CMakeFiles/install/local.dir
+/Users/maksim/Study/C++/game2/build/libraries/components/meteorHitbox/CMakeFiles/install/strip.dir
 /Users/maksim/Study/C++/game2/build/libraries/structs/CMakeFiles/edit_cache.dir
 /Users/maksim/Study/C++/game2/build/libraries/structs/CMakeFiles/rebuild_cache.dir
 /Users/maksim/Study/C++/game2/build/libraries/structs/CMakeFiles/list_install_components.dir

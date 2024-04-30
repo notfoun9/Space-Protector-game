@@ -15,7 +15,7 @@ public:
     float Y() noexcept;
     float Width() noexcept;
     float Height() noexcept;
-
+    
     void SetShape(float w, float h);
     
     void SetPos(float x, float y); 

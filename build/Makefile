@@ -383,6 +383,19 @@ bulletsCollider/fast:
 .PHONY : bulletsCollider/fast
 
 #=============================================================================
+# Target rules for targets named meteorHitbox
+
+# Build rule for target.
+meteorHitbox: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 meteorHitbox
+.PHONY : meteorHitbox
+
+# fast build rule for target.
+meteorHitbox/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/build.make libraries/components/meteorHitbox/CMakeFiles/meteorHitbox.dir/build
+.PHONY : meteorHitbox/fast
+
+#=============================================================================
 # Target rules for targets named Vector2D
 
 # Build rule for target.
@@ -472,6 +485,7 @@ help:
 	@echo "... keyboardController"
 	@echo "... main"
 	@echo "... menu"
+	@echo "... meteorHitbox"
 	@echo "... mouse"
 	@echo "... position"
 	@echo "... shooter"

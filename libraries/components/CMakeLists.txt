@@ -5,6 +5,7 @@ add_subdirectory(follower)
 add_subdirectory(simpleTexture)
 add_subdirectory(animatedTexture)
 add_subdirectory(bulletsCollider)
+add_subdirectory(meteorHitbox)
 
 add_library(components INTERFACE components.hpp)
 set_property(TARGET components PROPERTY CXX_STANDARD 20)

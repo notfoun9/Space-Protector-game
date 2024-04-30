@@ -811,6 +811,7 @@ game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/game2/game/game.cpp
   /Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/bulletsCollider/bulletsCollider.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/follower/follower.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/meteorHitbox/meteorHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/shooter/shooter.hpp \
@@ -849,6 +850,8 @@ game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/game2/game/game.cpp
 /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/meteorHitbox/meteorHitbox.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/follower/follower.hpp:
 

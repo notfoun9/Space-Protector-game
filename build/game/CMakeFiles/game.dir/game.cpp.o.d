@@ -817,6 +817,7 @@ game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../bulletHitbox/bulletHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../bulletsCollider/bulletsCollider.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/../meteorHitbox/meteorHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../time/time.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../short_names/short_names.hpp \
