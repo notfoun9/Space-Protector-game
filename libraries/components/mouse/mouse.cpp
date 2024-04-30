@@ -10,8 +10,8 @@ void Mouse::Update() {
     SDL_GetMouseState(&(destRect.x), &(destRect.y));
     SDL_GetMouseState(&(tip.x), &(tip.y));
 
-    destRect.x -= 20;
-    destRect.y -= 20;
+    destRect.x -= 23;
+    destRect.y -= 23;
     tip.x -= 22;
     tip.y -= 22;
 }

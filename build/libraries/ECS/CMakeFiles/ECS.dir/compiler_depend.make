@@ -580,6 +580,7 @@ libraries/ECS/CMakeFiles/ECS.dir/ECS.cpp.o: /Users/maksim/Study/C++/game2/librar
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/math.h \
@@ -808,10 +809,6 @@ libraries/ECS/CMakeFiles/ECS.dir/ECS.cpp.o: /Users/maksim/Study/C++/game2/librar
 
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_version.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_is_heap.h:
-
-/Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_touch.h:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_system.h:
 
@@ -1093,6 +1090,10 @@ libraries/ECS/CMakeFiles/ECS.dir/ECS.cpp.o: /Users/maksim/Study/C++/game2/librar
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/initializer_list:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__utility/pair.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits:
@@ -1106,8 +1107,6 @@ libraries/ECS/CMakeFiles/ECS.dir/ECS.cpp.o: /Users/maksim/Study/C++/game2/librar
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/machine/endian.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ios:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/initializer_list:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/float.h:
 
@@ -1626,6 +1625,10 @@ libraries/ECS/CMakeFiles/ECS.dir/ECS.cpp.o: /Users/maksim/Study/C++/game2/librar
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/bind_front.h:
+
+/Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_touch.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_is_heap.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
 

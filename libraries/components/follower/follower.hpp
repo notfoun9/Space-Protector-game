@@ -12,6 +12,8 @@ public:
     void SetCenter(int x, int y);
     void Update() override;
     void Draw() override;
+
+    float GetAngle() { return angle; }
 private:
     float angle;
     SDL_Point center;

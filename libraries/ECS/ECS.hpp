@@ -80,7 +80,8 @@ template <typename T> bool Entity::HasComponent() const {
     return compBitSet[GetComponentTypeID<T>()];
 }
 
-template <typename T, typename...TArgs> T& Entity::AddComponent(TArgs&&... mArgs) {
+template <typename T, typename...TArgs> 
+T& Entity::AddComponent(TArgs&&... mArgs) {
     T* t = new T(std::forward<TArgs>(mArgs)...);
     t->owner = this;
     std::unique_ptr<Component> uPtr{ t };
@@ -98,3 +99,4 @@ template <typename T> T& Entity::GetComponent() const {
     auto ptr(compArray[GetComponentTypeID<T>()]);
     return *static_cast<T*>(ptr);
 }
+

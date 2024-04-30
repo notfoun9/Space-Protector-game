@@ -266,6 +266,19 @@ short_names/fast:
 .PHONY : short_names/fast
 
 #=============================================================================
+# Target rules for targets named bullet
+
+# Build rule for target.
+bullet: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bullet
+.PHONY : bullet
+
+# fast build rule for target.
+bullet/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/utilities/bullet/CMakeFiles/bullet.dir/build.make libraries/utilities/bullet/CMakeFiles/bullet.dir/build
+.PHONY : bullet/fast
+
+#=============================================================================
 # Target rules for targets named components
 
 # Build rule for target.
@@ -290,6 +303,19 @@ position: cmake_check_build_system
 position/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/components/position/CMakeFiles/position.dir/build.make libraries/components/position/CMakeFiles/position.dir/build
 .PHONY : position/fast
+
+#=============================================================================
+# Target rules for targets named shooter
+
+# Build rule for target.
+shooter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shooter
+.PHONY : shooter
+
+# fast build rule for target.
+shooter/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/shooter/CMakeFiles/shooter.dir/build.make libraries/components/shooter/CMakeFiles/shooter.dir/build
+.PHONY : shooter/fast
 
 #=============================================================================
 # Target rules for targets named mouse
@@ -344,6 +370,19 @@ animatedTexture/fast:
 .PHONY : animatedTexture/fast
 
 #=============================================================================
+# Target rules for targets named collider
+
+# Build rule for target.
+collider: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 collider
+.PHONY : collider
+
+# fast build rule for target.
+collider/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/collider/CMakeFiles/collider.dir/build.make libraries/components/collider/CMakeFiles/collider.dir/build
+.PHONY : collider/fast
+
+#=============================================================================
 # Target rules for targets named Vector2D
 
 # Build rule for target.
@@ -355,6 +394,19 @@ Vector2D: cmake_check_build_system
 Vector2D/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build.make libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/build
 .PHONY : Vector2D/fast
+
+#=============================================================================
+# Target rules for targets named bulletHitbox
+
+# Build rule for target.
+bulletHitbox: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bulletHitbox
+.PHONY : bulletHitbox
+
+# fast build rule for target.
+bulletHitbox/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/structs/bulletHitbox/CMakeFiles/bulletHitbox.dir/build.make libraries/structs/bulletHitbox/CMakeFiles/bulletHitbox.dir/build
+.PHONY : bulletHitbox/fast
 
 #=============================================================================
 # Target rules for targets named animation
@@ -411,6 +463,9 @@ help:
 	@echo "... Vector2D"
 	@echo "... animatedTexture"
 	@echo "... animation"
+	@echo "... bullet"
+	@echo "... bulletHitbox"
+	@echo "... collider"
 	@echo "... components"
 	@echo "... follower"
 	@echo "... game"
@@ -419,6 +474,7 @@ help:
 	@echo "... menu"
 	@echo "... mouse"
 	@echo "... position"
+	@echo "... shooter"
 	@echo "... short_names"
 	@echo "... simpleTexture"
 	@echo "... states"

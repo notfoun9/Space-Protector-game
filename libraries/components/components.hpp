@@ -4,3 +4,4 @@
 #include <mouse/mouse.hpp>
 #include <follower/follower.hpp>
 #include <shooter/shooter.hpp>
+#include <collider/collider.hpp>

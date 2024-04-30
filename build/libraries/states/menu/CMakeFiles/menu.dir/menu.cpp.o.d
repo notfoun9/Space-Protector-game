@@ -802,6 +802,7 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stack \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
   /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../components/components.hpp \
@@ -812,8 +813,12 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../animation/animation.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../follower/follower.hpp \
-  /Users/maksim/Study/C++/game2/libraries/ECS/../utilities/utilities.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/../shooter/shooter.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../bullet/bullet.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../bulletHitbox/bulletHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../texture_manager/texture_manager.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/../collider/collider.hpp \
+  /Users/maksim/Study/C++/game2/libraries/ECS/../utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../time/time.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../short_names/short_names.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../keyboardController/keyboardController.hpp

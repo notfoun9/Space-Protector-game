@@ -11,6 +11,7 @@ Entity mouse;
 Entity background;
 Entity base;
 Entity launcher;
+Entity meteor;
 SDL_Event event;
 
 void Menu::Run() {
@@ -28,14 +29,25 @@ void Menu::Run() {
 
     launcher.AddComponent<PositionComponent>(70,550,55,100);
     launcher.AddComponent<Follower>(ShortNames::launcher);
-    launcher.GetComponent<Follower>().SetCenter(25, 75);
+    launcher.GetComponent<Follower>().SetCenter(27, 75);
     launcher.GetComponent<Follower>().SetBoarders(0,0,11,20);
+    
+    launcher.AddComponent<Shooter>(ShortNames::bullet, 1);
+    launcher.GetComponent<Shooter>().SetSrc(0,0,9,18);
+    launcher.GetComponent<Shooter>().SetCenter(9,75);
 
+    meteor.AddComponent<PositionComponent>(500, 100, 55,95);
+    meteor.AddComponent<AnimatedTexture>(ShortNames::animatedMeteor);
+    meteor.GetComponent<AnimatedTexture>().AddAnimation("fall", 0, 4, 150);
+    meteor.GetComponent<AnimatedTexture>().SetBoarders(0,0,11,19);
+    meteor.GetComponent<AnimatedTexture>().Play("fall");
 
     while (game->inMenu) {
         std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
         SDL_PollEvent(&event);
-
+        if (event.type == SDL_MOUSEBUTTONUP && event.button.button == SDL_BUTTON_LEFT) {
+            launcher.GetComponent<Shooter>().Shoot();
+        }
         Update();
         Render();
     }
@@ -43,7 +55,7 @@ void Menu::Run() {
 
 
 void Menu::Update() {
-    // background.Update();
+    meteor.Update();
     base.Update();
     launcher.Update();
 
@@ -54,6 +66,7 @@ void Menu::Render() {
     SDL_RenderClear(renderer);
 
     // background.Draw();
+    meteor.Draw();
     launcher.Draw();
     base.Draw();
 

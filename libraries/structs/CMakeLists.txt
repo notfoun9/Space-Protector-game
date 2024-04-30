@@ -1,2 +1,3 @@
 add_subdirectory(Vector2D)
+add_subdirectory(bulletHitbox)
 add_subdirectory(animation)

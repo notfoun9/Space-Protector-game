@@ -580,6 +580,7 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/math.h \
@@ -808,13 +809,17 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
   /Users/maksim/Study/C++/game2/libraries/components/components.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/collider/collider.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/follower/follower.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/shooter/shooter.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/states/menu/menu.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/animation/animation.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/bulletHitbox.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/bullet/bullet.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/keyboardController/keyboardController.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp \
@@ -829,6 +834,8 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 
 /Users/maksim/Study/C++/game2/libraries/utilities/keyboardController/keyboardController.hpp:
 
+/Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/bulletHitbox.hpp:
+
 /Users/maksim/Study/C++/game2/libraries/structs/animation/animation.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp:
@@ -836,6 +843,8 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 /Users/maksim/Study/C++/game2/libraries/states/menu/menu.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/shooter/shooter.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp:
 
@@ -848,10 +857,6 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 /Users/maksim/Study/C++/game2/libraries/utilities/utilities.hpp:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_version.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_is_heap.h:
-
-/Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_touch.h:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_system.h:
 
@@ -1133,6 +1138,10 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/initializer_list:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__utility/pair.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits:
@@ -1146,8 +1155,6 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/machine/endian.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ios:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/initializer_list:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/float.h:
 
@@ -1663,6 +1670,10 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/bind_front.h:
 
+/Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_touch.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_is_heap.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_metal.h:
@@ -2067,6 +2078,8 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__random/log2.h:
 
+/Users/maksim/Study/C++/game2/libraries/components/collider/collider.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/wchar.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_arithmetic.h:
@@ -2154,6 +2167,8 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/predicate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_unsigned.h:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/bullet/bullet.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__threading_support:
 
