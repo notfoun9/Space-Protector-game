@@ -23,7 +23,8 @@ public:
     void Shoot();
     void SetSrc(int x, int y, int w, int h) { srcRect = {x,y,w,h}; }
     void SetSize(float size);
-
+    void AddBullets(int num) { bulletsLeft += num; }
+ 
     void AddBulletToDest(Bullet* bul) { bulletsToDestroy.push(bul); }
 
     SDL_Rect destRect;
@@ -31,11 +32,12 @@ public:
     std::unordered_set<Bullet*> bullets;
 private:
     SDL_Texture* tex;
-
     SDL_Point center;
 
     std::stack<Bullet*> bulletsToDestroy;
     float angle;
     float speed;
+
+    int bulletsLeft = 0;
 } ;
 

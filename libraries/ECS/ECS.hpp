@@ -24,6 +24,8 @@ constexpr std::size_t maxComponents = 32;
 using ComponentBitSet = std::bitset<maxComponents>;
 using ComponentArray = std::array<Component*, maxComponents>;
 
+
+
 class Component {
 public:
     Entity* owner;
@@ -35,6 +37,7 @@ public:
     Component() = default;
     virtual ~Component() = default;
 } ;
+
 
 class Entity {
 public:
@@ -62,6 +65,7 @@ private:
     ComponentBitSet compBitSet;
 
 } ;
+
 
 class Manager {
 public:

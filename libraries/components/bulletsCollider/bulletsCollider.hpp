@@ -10,7 +10,7 @@ public:
     ~BulletsCollider() = default;
 
     void Update() override;
-    // void Draw() override;
+    void Draw() override;
     void AddBox(BulletHitbox* box);
     void DeleteBox(BulletHitbox* box);
     BulletHitbox* DoesCollide(SDL_Rect* rect);

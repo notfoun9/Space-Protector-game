@@ -15,6 +15,10 @@ void PositionComponent::Update() {
     if (speed != 0) {
         position += velocity * speed;
     }
+    if (acceleration.Mod() != 0) {
+        velocity.x += acceleration.x;
+        velocity.y += acceleration.y;
+    }
 }
 
 float PositionComponent::X() noexcept {

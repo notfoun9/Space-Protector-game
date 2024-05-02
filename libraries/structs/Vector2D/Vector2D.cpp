@@ -39,6 +39,6 @@ Vector2D operator-(const Vector2D& lhs, const Vector2D& rhs) noexcept {
     return Vector2D(lhs.x - rhs.x, lhs.y - rhs.y);
 }
 
-Vector2D operator*(const Vector2D& lhs, const int rhs) noexcept {
+Vector2D operator*(const Vector2D& lhs, const float rhs) noexcept {
     return Vector2D(lhs.x * rhs, lhs.y * rhs);
 }

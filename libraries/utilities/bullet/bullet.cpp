@@ -1,6 +1,7 @@
 #include <bullet/bullet.hpp>
 #include <bulletHitbox/bulletHitbox.hpp>
 #include <bulletsCollider/bulletsCollider.hpp>
+#include <short_names/short_names.hpp>
 
 Bullet::Bullet(Shooter* owner_) : owner(owner_) {
     angle = owner->GetAngle() + 90;
@@ -45,6 +46,11 @@ void Bullet::Update() {
     if (std::abs(destRect.x) > 2000 || std::abs(destRect.y) > 2000) {
         owner->AddBulletToDest(this);
     }
+
+    // if (acceleration.Mod() != 0) {
+    //     velocity.x += acceleration.x;
+    //     velocity.y += acceleration.y;
+    // }
 }
 
 void Bullet::Draw() {

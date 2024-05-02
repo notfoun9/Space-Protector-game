@@ -811,10 +811,13 @@ libraries/utilities/bullet/CMakeFiles/bullet.dir/bullet.cpp.o: /Users/maksim/Stu
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/bulletHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/bullet/bullet.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp
 
 
 /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/bulletHitbox.hpp:
 

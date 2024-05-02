@@ -1,17 +1,19 @@
 #pragma once
 
 #include <game/game.hpp>
+#include <ECS/ECS.hpp>
 
-class Menu {
+class Levels {
 public:
-    Menu(std::shared_ptr<Game> game, SDL_Window* window, SDL_Renderer* renderer);
-    ~Menu() = default;
-    
+    Levels(std::shared_ptr<Game> game, SDL_Renderer* renderer);
+    ~Levels() = default;
+
     void Run();
     void Update();
     void Render();
 private:
+    Manager buttons;
+
     std::shared_ptr<Game> game;
-    SDL_Window* window;
     SDL_Renderer* renderer;
 } ;

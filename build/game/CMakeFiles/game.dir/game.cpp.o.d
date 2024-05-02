@@ -813,14 +813,17 @@ game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/components/position/../mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../spawner/spawner.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../follower/follower.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/../button/button.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../shooter/shooter.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../bullet/bullet.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../bulletHitbox/bulletHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../bulletsCollider/bulletsCollider.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/../text/text.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../../../src/inc/SDL2/SDL_ttf.h \
   /Users/maksim/Study/C++/game2/libraries/components/position/../meteorHitbox/meteorHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../time/time.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../short_names/short_names.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../keyboardController/keyboardController.hpp \
-  /Users/maksim/Study/C++/game2/libraries/states/menu/../menu/menu.hpp
+  /Users/maksim/Study/C++/game2/libraries/states/party/../party/party.hpp

@@ -1,8 +1,6 @@
-add_subdirectory(menu)
-# add_subdirectory(texture_manager)
-# add_subdirectory(keyboardController)
-# add_subdirectory(short_names)
-# add_subdirectory(mouse)
+# add_subdirectory(menu)
+add_subdirectory(levels)
+add_subdirectory(party)
 
 add_library(states INTERFACE states.hpp)
 

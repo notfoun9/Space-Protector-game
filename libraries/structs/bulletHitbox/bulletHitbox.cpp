@@ -3,7 +3,7 @@
 BulletHitbox::BulletHitbox(Bullet* bul, bool front) : owner(bul), box({0,0,0,0}) {
     float len = owner->owner->GetCenter()->y;
     box.w = owner->GetDest().w;
-    box.h = owner->GetDest().w;
+    box.h = box.w;
     float angle = owner->GetAngle() * (3.14f / 180);
 
     if (front) {
@@ -15,12 +15,12 @@ BulletHitbox::BulletHitbox(Bullet* bul, bool front) : owner(bul), box({0,0,0,0})
         difY = len * (1.0f - SDL_sin(angle)) + 1.5 * box.w * SDL_sin(angle);
     }
 
-    // tex = TextureManager::LoadTexture("../../assets/hitbox.png");
+    tex = TextureManager::LoadTexture("../../assets/hitbox.png");
 }
 
-// void BulletHitbox::Draw() {
-//     TextureManager::Draw(tex, &src, &box, SDL_FLIP_NONE);
-// }
+void BulletHitbox::Draw() {
+    TextureManager::Draw(tex, &src, &box, SDL_FLIP_NONE);
+}
 
 void BulletHitbox::Update() {
     box.x = owner->GetDest().x - difX;

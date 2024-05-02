@@ -8,11 +8,13 @@ SimpleTexture::SimpleTexture(std::string texName) {
 }
 
 void SimpleTexture::Init() {
-    auto& pos = owner->GetComponent<PositionComponent>();
-    destRect.x = std::round(pos.X());
-    destRect.y = std::round(pos.Y());
-    destRect.w = std::round(pos.Width());
-    destRect.h = std::round(pos.Height());
+    if (owner->HasComponent<PositionComponent>()) {
+        auto& pos = owner->GetComponent<PositionComponent>();
+        destRect.x = std::round(pos.X());
+        destRect.y = std::round(pos.Y());
+        destRect.w = std::round(pos.Width());
+        destRect.h = std::round(pos.Height());      
+    }
 }
 
 SimpleTexture::~SimpleTexture() {
@@ -23,8 +25,9 @@ void SimpleTexture::Draw() {
     TextureManager::Draw(tex, &srcRect, &destRect, flip);
 }
 void SimpleTexture::Update() {
-    destRect.x = (int)owner->GetComponent<PositionComponent>().X();
-    destRect.y = (int)owner->GetComponent<PositionComponent>().Y();
+    auto& pos = owner->GetComponent<PositionComponent>();
+    destRect.x = std::round(pos.X());
+    destRect.y = std::round(pos.Y());
 }
 
 void SimpleTexture::SetBoarders(int x, int y, int w, int h) {

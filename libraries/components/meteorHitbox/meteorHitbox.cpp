@@ -6,28 +6,24 @@
 void MeteorHitbox::Init() {
     auto& pos = owner->GetComponent<PositionComponent>();
 
-    box.x = pos.X() + pos.Width() / 11;
     box.w = pos.Width() * 9 / 11;
-
     box.h = pos.Height() * 9 / 19;
-    box.y = pos.Y() + box.h;
 
-    accuratePos.x = box.x;
-    accuratePos.y = box.y;
-    // tex = TextureManager::LoadTexture("../../assets/hitbox.png");
+    difX = pos.Width() / 11;
+    difY = pos.Height() * 9 / 19;
+
+    tex = TextureManager::LoadTexture("../../assets/hitbox.png");
 }
 
 void MeteorHitbox::Update() {
-    accuratePos.x += owner->GetComponent<PositionComponent>().GetVelocity().x;
-    accuratePos.y += owner->GetComponent<PositionComponent>().GetVelocity().y;
     if (box.y > 600) {
         owner->Destroy();
         std::cout << "damage" << '\n';
     }
-    box.x = std::round(accuratePos.x);
-    box.y = std::round(accuratePos.y);
+    box.x = std::round(owner->GetComponent<PositionComponent>().X() + difX);
+    box.y = std::round(owner->GetComponent<PositionComponent>().Y() + difY);
 }
 
-// void MeteorHitbox::Draw() {
-//     TextureManager::Draw(tex, NULL, &box, SDL_FLIP_NONE);
-// }
+void MeteorHitbox::Draw() {
+    TextureManager::Draw(tex, NULL, &box, SDL_FLIP_NONE);
+}

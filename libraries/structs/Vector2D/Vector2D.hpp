@@ -19,13 +19,14 @@ struct Vector2D {
 
     Vector2D& Add(const Vector2D& vec) noexcept;
     Vector2D& Substract(const Vector2D& vec) noexcept;
+    float Mod() { return std::sqrt(x * x + y * y); }
     // Vector2D& Multiply(const Vector2D& vec) noexcept;
     // Vector2D& Divide(const Vector2D& vec);
 
     friend Vector2D operator+(const Vector2D& lhs, const Vector2D& rhs) noexcept;
     friend Vector2D operator-(const Vector2D& lhs, const Vector2D& rhs) noexcept;
     friend Vector2D operator*(const Vector2D& lhs, const Vector2D& rhs) noexcept;
-    friend Vector2D operator*(const Vector2D& lhs, const int rhs) noexcept;
+    friend Vector2D operator*(const Vector2D& lhs, const float rhs) noexcept;
     friend Vector2D operator/(const Vector2D& lhs, const Vector2D& rhs);
 
     float x = 0.0f;

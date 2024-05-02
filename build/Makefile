@@ -409,6 +409,32 @@ meteorHitbox/fast:
 .PHONY : meteorHitbox/fast
 
 #=============================================================================
+# Target rules for targets named button
+
+# Build rule for target.
+button: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 button
+.PHONY : button
+
+# fast build rule for target.
+button/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/button/CMakeFiles/button.dir/build.make libraries/components/button/CMakeFiles/button.dir/build
+.PHONY : button/fast
+
+#=============================================================================
+# Target rules for targets named text
+
+# Build rule for target.
+text: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 text
+.PHONY : text
+
+# fast build rule for target.
+text/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/components/text/CMakeFiles/text.dir/build.make libraries/components/text/CMakeFiles/text.dir/build
+.PHONY : text/fast
+
+#=============================================================================
 # Target rules for targets named Vector2D
 
 # Build rule for target.
@@ -461,17 +487,30 @@ states/fast:
 .PHONY : states/fast
 
 #=============================================================================
-# Target rules for targets named menu
+# Target rules for targets named levels
 
 # Build rule for target.
-menu: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 menu
-.PHONY : menu
+levels: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 levels
+.PHONY : levels
 
 # fast build rule for target.
-menu/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/states/menu/CMakeFiles/menu.dir/build.make libraries/states/menu/CMakeFiles/menu.dir/build
-.PHONY : menu/fast
+levels/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/states/levels/CMakeFiles/levels.dir/build.make libraries/states/levels/CMakeFiles/levels.dir/build
+.PHONY : levels/fast
+
+#=============================================================================
+# Target rules for targets named party
+
+# Build rule for target.
+party: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 party
+.PHONY : party
+
+# fast build rule for target.
+party/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/states/party/CMakeFiles/party.dir/build.make libraries/states/party/CMakeFiles/party.dir/build
+.PHONY : party/fast
 
 # Help Target
 help:
@@ -492,20 +531,23 @@ help:
 	@echo "... bullet"
 	@echo "... bulletHitbox"
 	@echo "... bulletsCollider"
+	@echo "... button"
 	@echo "... components"
 	@echo "... follower"
 	@echo "... game"
 	@echo "... keyboardController"
+	@echo "... levels"
 	@echo "... main"
-	@echo "... menu"
 	@echo "... meteorHitbox"
 	@echo "... mouse"
+	@echo "... party"
 	@echo "... position"
 	@echo "... shooter"
 	@echo "... short_names"
 	@echo "... simpleTexture"
 	@echo "... spawner"
 	@echo "... states"
+	@echo "... text"
 	@echo "... texture_manager"
 	@echo "... time"
 	@echo "... utilities"

@@ -809,4 +809,5 @@ libraries/utilities/bullet/CMakeFiles/bullet.dir/bullet.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/utilities/bullet/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../bulletHitbox/bulletHitbox.hpp \
-  /Users/maksim/Study/C++/game2/libraries/components/position/../bulletsCollider/bulletsCollider.hpp
+  /Users/maksim/Study/C++/game2/libraries/components/position/../bulletsCollider/bulletsCollider.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/bullet/../short_names/short_names.hpp

@@ -6,13 +6,17 @@
 
 class Spawner : public Component {
 public:
-    Spawner(int rate, Vector2D velocity);
+    Spawner(int rate);
     ~Spawner();
 
     void Update() override;
     void Draw() override;
-    void SeBoarders(int  left, int right);
-    void SetSize(int w, int h);
+
+    void SeBoarders(int left, int right);
+    void SetSize(float min, float max);
+    void SetVelocity(float x, float y) { velocity = {x,y}; };
+    void SetSpeed(float speed_) { speed = speed_; };
+    void AddMeteors(int mets) { meteorsLeft += mets; }
 
     void Start() { 
         active = 1; 
@@ -24,14 +28,19 @@ public:
     Manager* GetMeteors() { return &meteors; }
 private:
     Manager meteors;
+    Vector2D velocity = {0,0};
+    Vector2D acceleration;
+    float speed = 1.0f;
+
+    int meteorsLeft = 0;
 
     int rate;
-    Vector2D velocity;
-    int leftBoarder;
-    int rightBoarder;
 
-    int w = 0;
-    int h = 0;
+    int leftBoarder = 0;
+    int rightBoarder = 0;
+
+    float minSize = 0;
+    float maxSize = 0;
 
     bool active;
     int lastTick = 0;

@@ -1,7 +1,7 @@
 #include <game/game.hpp>
 #include <components/components.hpp>
 #include <utilities/utilities.hpp>
-#include <menu/menu.hpp>
+#include <party/party.hpp>
 
 SDL_Renderer* Game::renderer = nullptr;
 
@@ -57,10 +57,14 @@ void Game::Quit() {
 
 void Game::Run() {
     std::shared_ptr<Game> g { this };
-    Menu menu(g , window, renderer);
-    while (inMenu) {
-        std::cout << "cycle << '\n";
-        menu.Run();
+    Party party(g, renderer);
+    if (inMenu) {
+        std::cout << "InMenu << '\n";
+        // menu.Run();
+    }
+    if (inParty) {
+        std::cout << "inParty << '\n";
+        party.Run();
     }
     SDL_RenderClear(renderer);
     

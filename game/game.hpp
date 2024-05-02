@@ -17,6 +17,7 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <algorithm>
+#include <tuple>
 #include <bitset>
 #include <memory>
 
@@ -34,8 +35,13 @@ public:
     
     static SDL_Renderer *renderer;
     static SDL_Event event;
+    bool text = 0;
 
-    bool inMenu = 1;
+    enum settings {METEOR_SIZE_MIN, METEOR_SIZE_MAX, METEOR_FREQUENCY, METEOR_SPEED, METEOR_NUM, BUL_SIZE, BUL_NUM, METEOR_ACCELERATION, LIFES};
+    static std::tuple<float, float, int, float, int, int, float, int, int> settings;
+
+    bool inMenu = 0;
+    bool inParty = 1;
 private:
     SDL_Window *window;
     bool isRunning = 1;

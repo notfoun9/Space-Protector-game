@@ -18,6 +18,7 @@ public:
     float GetAngle() { return angle; }
     Shooter* owner;
     SDL_Rect& GetDest() { return destRect; }
+    void SetAcceleration(float x, float y) { acceleration.x = x; acceleration.y = y; } 
 
     BulletHitbox* hitbox;
     BulletHitbox* backHitbox;
@@ -25,6 +26,7 @@ private:
     float angle;
     Vector2D accuratePos;
     Vector2D velocity;
+    Vector2D acceleration = {0,0};
 
     SDL_Texture* texture;
     SDL_Rect srcRect;

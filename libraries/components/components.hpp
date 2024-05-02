@@ -4,6 +4,8 @@
 #include <mouse/mouse.hpp>
 #include <spawner/spawner.hpp>
 #include <follower/follower.hpp>
+#include <button/button.hpp>
 #include <shooter/shooter.hpp>
 #include <bulletsCollider/bulletsCollider.hpp>
+#include <text/text.hpp>
 #include <meteorHitbox/meteorHitbox.hpp>

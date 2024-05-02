@@ -32,6 +32,7 @@ Shooter::~Shooter() {
 void Shooter::Update() {
     angle = owner->GetComponent<Follower>().GetAngle();
 
+
     if (Game::event.button.button == SDL_BUTTON_LEFT) {
         Shoot();
     }
@@ -56,6 +57,11 @@ void Shooter::Draw() {
 }
 
 void Shooter::Shoot() {
-    Bullet* bul = new Bullet(this);
-    bullets.insert(bul);
+    if (bulletsLeft > 0) {
+        Bullet* bul = new Bullet(this);
+        bul->SetAcceleration(0,-0.06);
+        bullets.insert(bul);
+        --bulletsLeft;
+    }
+    std::cout << "Bullets left: " << bulletsLeft << '\n';
 }

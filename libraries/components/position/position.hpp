@@ -16,10 +16,11 @@ public:
     float Y() noexcept;
     float Width() noexcept;
     float Height() noexcept;
-    
+
     Vector2D& GetVelocity() { return velocity; } 
     void SetVelocity(int x, int y) { velocity.x = x; velocity.y = y; } 
-    void SetSpeed(const int speed_) { speed = speed_; }
+    void SetAcceleration(float x, float y) { acceleration.x = x; acceleration.y = y; } 
+    void SetSpeed(const float speed_) { speed = speed_; }
     void SetShape(float w, float h);
     
     void SetPos(float x, float y); 
@@ -33,4 +34,5 @@ private:
 
     float speed = 0;
     Vector2D velocity;
+    Vector2D acceleration = {0,0};
 } ;
