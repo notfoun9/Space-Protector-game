@@ -9,10 +9,10 @@ int main() {
     SDL_ShowCursor(false);
 
     if (!game) std::cout << "error 1" << '\n';
-    while (game->IsRunning()) {
+    if (game->IsRunning()) {
         game->Run();
     }
-
+    std::cout << "Flag 1" << '\n';
     game->Quit();
 
     return 0;

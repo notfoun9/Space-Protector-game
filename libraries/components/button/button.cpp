@@ -15,13 +15,17 @@ Button::~Button() {
 void Button::Init() {
     auto& pos = owner->GetComponent<PositionComponent>();
     
-    destRect.x = pos.X();
-    destRect.y = pos.Y();
+    destRect.x = pos.X() + diff.x;
+    destRect.y = pos.Y() + diff.y;
     destRect.w = pos.Width();
     destRect.h = pos.Height();
 }
 
 void Button::Update() {
+    auto& pos = owner->GetComponent<PositionComponent>();
+    destRect.x = pos.X() + diff.x;
+    destRect.y = pos.Y() + diff.y;
+
     SDL_Rect tmp = {0,0,2,2};
     SDL_GetMouseState(&tmp.x, &tmp.y);
     if (SDL_HasIntersection(&destRect, &tmp)) {
@@ -30,6 +34,7 @@ void Button::Update() {
     else {
         selected = false;
     }
+
 }
 
 void Button::Draw() {

@@ -3,9 +3,11 @@
 #include <game/game.hpp>
 #include <ECS/ECS.hpp>
 
+class Game;
+
 class Levels {
 public:
-    Levels(std::shared_ptr<Game> game, SDL_Renderer* renderer);
+    Levels(Game* game, SDL_Renderer* renderer);
     ~Levels() = default;
 
     void Run();
@@ -13,7 +15,10 @@ public:
     void Render();
 private:
     Manager buttons;
-
-    std::shared_ptr<Game> game;
+    
+    std::vector<Entity*> buts;
+    Game* game;
     SDL_Renderer* renderer;
+
+
 } ;

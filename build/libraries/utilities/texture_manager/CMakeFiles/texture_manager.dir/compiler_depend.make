@@ -808,10 +808,13 @@ libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/texture_manag
   /Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp
 
 
 /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp:
 

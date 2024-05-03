@@ -46,7 +46,6 @@ void Manager::Clear() {
         e->Destroy();
     }
     Refresh();
-    delete this;
 }
 
 Entity& Manager::AddEntity() {

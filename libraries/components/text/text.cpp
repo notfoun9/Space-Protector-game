@@ -38,6 +38,7 @@ void Text::SetMessage(std::string message_) {
 }
 
 void Text::Update() {
+    SetMessage(message);
     SDL_QueryTexture(textTex, nullptr, nullptr, &destRect.w, &destRect.h);
 }
 

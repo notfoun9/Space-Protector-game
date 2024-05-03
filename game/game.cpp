@@ -2,14 +2,12 @@
 #include <components/components.hpp>
 #include <utilities/utilities.hpp>
 #include <party/party.hpp>
-
+#include <levels/levels.hpp>
 SDL_Renderer* Game::renderer = nullptr;
 
+
+
 SDL_Event Game::event;
-Game::Game() {
-
-
-}
 Game::~Game() {
     TTF_Quit();
     IMG_Quit();
@@ -19,6 +17,7 @@ Game::~Game() {
 }
 
 void Game::Init(const char* title, int xPos, int yPos, int width, int height, bool fullscreen) {
+
     int flags = 0;
     if (fullscreen) {
         flags = SDL_WINDOW_FULLSCREEN;
@@ -44,7 +43,7 @@ void Game::Init(const char* title, int xPos, int yPos, int width, int height, bo
     }
 }
 
-bool Game::IsRunning() {
+bool& Game::IsRunning() {
     return isRunning;
 }
 void Game::ToggleFullscreen() {
@@ -56,18 +55,16 @@ void Game::Quit() {
 }
 
 void Game::Run() {
-    std::shared_ptr<Game> g { this };
-    Party party(g, renderer);
-    if (inMenu) {
-        std::cout << "InMenu << '\n";
-        // menu.Run();
+    Party party(this, renderer);
+    Levels levels(this, renderer);
+    while (IsRunning()) {
+        while (inMenu) {
+            std::cout << "InMenu" << '\n';
+            levels.Run();
+        }
+        while (inParty) {
+            std::cout << "inParty" << '\n';
+            party.Run();
+        }
     }
-    if (inParty) {
-        std::cout << "inParty << '\n";
-        party.Run();
-    }
-    SDL_RenderClear(renderer);
-    
-
-    SDL_RenderPresent(renderer);
 }

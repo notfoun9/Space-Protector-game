@@ -826,4 +826,5 @@ game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../time/time.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../short_names/short_names.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../keyboardController/keyboardController.hpp \
-  /Users/maksim/Study/C++/game2/libraries/states/party/../party/party.hpp
+  /Users/maksim/Study/C++/game2/libraries/states/party/../party/party.hpp \
+  /Users/maksim/Study/C++/game2/libraries/states/party/../levels/levels.hpp

@@ -2,6 +2,7 @@
 
 #include <game/game.hpp>
 #include <ECS/ECS.hpp>
+#include <Vector2D/Vector2D.hpp>
 
 class Button : public Component {
 public:
@@ -13,10 +14,13 @@ public:
     void Draw() override;
 
     bool IsSelected() const { return selected; }
+
+    void SetDiff(float x, float y) { diff = {x,y}; }
 private:
     bool selected = 0;
 
     SDL_Rect destRect;
+    Vector2D diff = {0,0};
     SDL_Texture* selectedTex;
     SDL_Texture* notSelectedTex;
 } ; 

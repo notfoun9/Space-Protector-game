@@ -9,7 +9,7 @@ class Bullet;
 
 class Shooter : public Component {
 public:
-    Shooter(std::string bullet, float speed);
+    Shooter(std::string bullet);
     ~Shooter();
 
     void Init() override;
@@ -17,14 +17,21 @@ public:
     float GetAngle() { return angle; }
     SDL_Point* GetCenter() { return &center; }
     SDL_Texture* GetTex() { return tex; }
+    int BulletsLeft() { return bulletsLeft; }
 
     void Update() override;
     void Draw() override;
     void Shoot();
+
     void SetSrc(int x, int y, int w, int h) { srcRect = {x,y,w,h}; }
     void SetSize(float size);
-    void AddBullets(int num) { bulletsLeft += num; }
- 
+    void SetSpeed(float s) { speed = s; }
+
+    void AddBullets(int num) { bulletsLeft = num; }
+    void DeleteBulls() { 
+        for (auto b : bullets) bulletsToDestroy.emplace(b);
+        bullets.clear();
+    }
     void AddBulletToDest(Bullet* bul) { bulletsToDestroy.push(bul); }
 
     SDL_Rect destRect;
@@ -34,6 +41,8 @@ private:
     SDL_Texture* tex;
     SDL_Point center;
 
+    int baseW = 9;
+    int baseH = 27;
     std::stack<Bullet*> bulletsToDestroy;
     float angle;
     float speed;

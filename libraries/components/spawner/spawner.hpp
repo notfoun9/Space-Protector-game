@@ -6,7 +6,7 @@
 
 class Spawner : public Component {
 public:
-    Spawner(int rate);
+    Spawner();
     ~Spawner();
 
     void Update() override;
@@ -16,14 +16,15 @@ public:
     void SetSize(float min, float max);
     void SetVelocity(float x, float y) { velocity = {x,y}; };
     void SetSpeed(float speed_) { speed = speed_; };
-    void AddMeteors(int mets) { meteorsLeft += mets; }
+    void SetRate(int r) { rate = r; }
+    void SetMeteorsNum(int mets) { meteorsLeft = mets; }
 
     void Start() { 
         active = 1; 
         lastTick = SDL_GetTicks();
     }
     void Stop() { active = 0; }
-
+    void DeleteMets() { meteors.Clear(); }
     void Spawn();
     Manager* GetMeteors() { return &meteors; }
 private:

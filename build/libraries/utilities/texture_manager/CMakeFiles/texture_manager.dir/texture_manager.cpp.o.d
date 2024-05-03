@@ -806,4 +806,5 @@ libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/texture_manag
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
   /Users/maksim/Study/C++/game2/libraries/components/position/../mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../simpleTexture/simpleTexture.hpp \
-  /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp
+  /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../Vector2D/Vector2D.hpp

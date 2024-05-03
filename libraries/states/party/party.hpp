@@ -1,16 +1,31 @@
 #pragma once
 
 #include <game/game.hpp>
+#include <ECS/ECS.hpp>
+
+class Game;
 
 class Party {
 public:
-    Party(std::shared_ptr<Game> game, SDL_Renderer* renderer);
+    Party(Game* game, SDL_Renderer* renderer);
     ~Party() = default;
     
     void Run();
     void Update();
     void Render();
 private:
-    std::shared_ptr<Game> game;
+    Game* game;
     SDL_Renderer* renderer;
+
+
+    Entity mouse;
+    Entity background;
+    Entity lifes;
+    Entity base;
+    Entity bulsLeft;
+
+    Entity launcher;
+
+    Entity spawner;
+    SDL_Event event;
 } ;

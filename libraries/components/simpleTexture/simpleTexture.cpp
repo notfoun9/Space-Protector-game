@@ -26,8 +26,10 @@ void SimpleTexture::Draw() {
 }
 void SimpleTexture::Update() {
     auto& pos = owner->GetComponent<PositionComponent>();
-    destRect.x = std::round(pos.X());
-    destRect.y = std::round(pos.Y());
+    destRect.x = std::round(pos.X() + diff.x);
+    destRect.y = std::round(pos.Y() + diff.y);
+    destRect.w = std::round(pos.Width());
+    destRect.h = std::round(pos.Height());
 }
 
 void SimpleTexture::SetBoarders(int x, int y, int w, int h) {

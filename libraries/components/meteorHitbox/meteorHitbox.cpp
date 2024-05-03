@@ -25,5 +25,5 @@ void MeteorHitbox::Update() {
 }
 
 void MeteorHitbox::Draw() {
-    TextureManager::Draw(tex, NULL, &box, SDL_FLIP_NONE);
+    // TextureManager::Draw(tex, NULL, &box, SDL_FLIP_NONE);
 }

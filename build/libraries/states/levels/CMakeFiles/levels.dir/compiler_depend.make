@@ -806,10 +806,70 @@ libraries/states/levels/CMakeFiles/levels.dir/levels.cpp.o: /Users/maksim/Study/
   /Users/maksim/Study/C++/game2/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp \
-  /Users/maksim/Study/C++/game2/libraries/states/levels/levels.hpp
+  /Users/maksim/Study/C++/game2/libraries/components/components.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/utilities.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/bulletsCollider/bulletsCollider.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/button/button.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/follower/follower.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/meteorHitbox/meteorHitbox.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/shooter/shooter.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/spawner/spawner.hpp \
+  /Users/maksim/Study/C++/game2/libraries/components/text/text.hpp \
+  /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_ttf.h \
+  /Users/maksim/Study/C++/game2/libraries/states/levels/levels.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/animation/animation.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/bulletHitbox.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/bullet/bullet.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/keyboardController/keyboardController.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/time/time.hpp
 
+
+/Users/maksim/Study/C++/game2/libraries/utilities/time/time.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/keyboardController/keyboardController.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/bulletHitbox.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/structs/animation/animation.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/states/levels/levels.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/text/text.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/spawner/spawner.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/simpleTexture/simpleTexture.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/shooter/shooter.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/position/position.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/mouse/mouse.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/meteorHitbox/meteorHitbox.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/follower/follower.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/button/button.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/bulletsCollider/bulletsCollider.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/components/animatedTexture/animatedTexture.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/utilities.hpp:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_version.h:
 
@@ -2125,6 +2185,8 @@ libraries/states/levels/CMakeFiles/levels.dir/levels.cpp.o: /Users/maksim/Study/
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_unsigned.h:
 
+/Users/maksim/Study/C++/game2/libraries/utilities/bullet/bullet.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__threading_support:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/push_heap.h:
@@ -2392,6 +2454,8 @@ libraries/states/levels/CMakeFiles/levels.dir/levels.cpp.o: /Users/maksim/Study/
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sched.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_uintmax_t.h:
+
+/Users/maksim/Study/C++/game2/libraries/components/components.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/advance.h:
 

@@ -1,7 +1,7 @@
 #include <shooter/shooter.hpp>
 #include <follower/follower.hpp>
 
-Shooter::Shooter(std::string bullet, float speed_) : speed(speed_) {
+Shooter::Shooter(std::string bullet) {
     tex = TextureManager::LoadTexture(bullet.data());
 }
 
@@ -13,8 +13,8 @@ void Shooter::SetSize(float size) {
     angle = owner->GetComponent<Follower>().GetAngle();
     SDL_Rect temp =  owner->GetComponent<Follower>().GetDest();
 
-    destRect.w = size * srcRect.w;
-    destRect.h = size * srcRect.h;
+    destRect.w = size * baseW;
+    destRect.h = size * baseH;
     destRect.y = temp.y;
     destRect.x = temp.x + temp.w / 2 - destRect.w / 2;
 

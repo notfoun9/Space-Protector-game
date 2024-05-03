@@ -9,7 +9,7 @@ public:
     Text(std::string fontPath, int fontSize, const SDL_Color color);
     ~Text();
     void SetMessage(std::string message);
-
+    void AddMessage(std::string extraMes) { message += extraMes; }
     void Draw() override;
     void Update() override;
     void Init() override;

@@ -4,7 +4,7 @@
 #include <meteorHitbox/meteorHitbox.hpp>
 #include <position/position.hpp>
 
-Spawner::Spawner(int rate_) : rate(rate_) {
+Spawner::Spawner() {
     active = 0;
 }
 

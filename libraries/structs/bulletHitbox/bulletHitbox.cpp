@@ -19,7 +19,7 @@ BulletHitbox::BulletHitbox(Bullet* bul, bool front) : owner(bul), box({0,0,0,0})
 }
 
 void BulletHitbox::Draw() {
-    TextureManager::Draw(tex, &src, &box, SDL_FLIP_NONE);
+    // TextureManager::Draw(tex, &src, &box, SDL_FLIP_NONE);
 }
 
 void BulletHitbox::Update() {
