@@ -9,14 +9,16 @@ public:
     Text(std::string fontPath, int fontSize, const SDL_Color color);
     ~Text();
     void SetMessage(std::string message);
-    void AddMessage(std::string extraMes) { message += extraMes; }
+    void AddMessage(std::string extraMes);
     void Draw() override;
     void Update() override;
     void Init() override;
 
     void SetSize(int w, int h);
 private:
+    SDL_Surface* textSurface;
     SDL_Texture* textTex = nullptr;
+
     SDL_Rect destRect;
     std::string message;
     SDL_Color color;

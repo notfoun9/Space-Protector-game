@@ -31,15 +31,23 @@ void Text::SetSize(int w, int h) {
 
 void Text::SetMessage(std::string message_) {
     message = message_;
-    auto textSurface = TTF_RenderText_Solid(font, message.c_str(), color);
+    SDL_DestroyTexture(textTex);
+    SDL_FreeSurface(textSurface);
+    textSurface = TTF_RenderText_Solid(font, message.c_str(), color);
 
     SDL_DestroyTexture(textTex);
     textTex = SDL_CreateTextureFromSurface(Game::renderer, textSurface);
+    SDL_QueryTexture(textTex, nullptr, nullptr, &destRect.w, &destRect.h);
+}
+
+void Text::AddMessage(std::string extraMes) {
+    message += extraMes;
+    SetMessage(message);
+    SDL_QueryTexture(textTex, nullptr, nullptr, &destRect.w, &destRect.h);
 }
 
 void Text::Update() {
-    SetMessage(message);
-    SDL_QueryTexture(textTex, nullptr, nullptr, &destRect.w, &destRect.h);
+    // SDL_QueryTexture(textTex, nullptr, nullptr, &destRect.w, &destRect.h);
 }
 
 void Text::Draw() {

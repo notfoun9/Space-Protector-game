@@ -41,7 +41,7 @@ Levels::Levels(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(ren
 }
 
 void Levels::Run() {
-
+    std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
     SDL_ShowCursor(true);
     while (game->inMenu) {
         std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
@@ -62,7 +62,9 @@ level_7 : CHAOS EVERYWHERE (angles, fast meteost, small sizes)
 */
 
 void Levels::Update() {
-    buttons.Update();
+    for (auto b : buts) {
+        b->Update();
+    }
     SDL_Event e;
     SDL_PollEvent(&e);
     if (e.type == SDL_MOUSEBUTTONUP && e.button.button == SDL_BUTTON_LEFT) {

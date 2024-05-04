@@ -22,7 +22,7 @@ void Button::Init() {
 }
 
 void Button::Update() {
-    auto& pos = owner->GetComponent<PositionComponent>();
+    auto pos = owner->GetComponent<PositionComponent>();
     destRect.x = pos.X() + diff.x;
     destRect.y = pos.Y() + diff.y;
 
@@ -34,7 +34,7 @@ void Button::Update() {
     else {
         selected = false;
     }
-
+    
 }
 
 void Button::Draw() {
