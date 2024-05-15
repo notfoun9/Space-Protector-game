@@ -50,7 +50,6 @@ void Party::Run() {
     spawner.GetComponent<Spawner>().SetSpeed(2);
 
 
-    std::cout << "ABOBA" << ' ' << get<BUL_NUM>(game->settings) << '\n';
 
     while (game->inParty) {
         std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
@@ -96,7 +95,7 @@ void Party::Update() {
 void Party::Render() {
     SDL_RenderClear(renderer);
 
-    background.Draw();
+    // background.Draw();
     spawner.Draw();
     launcher.Draw();
     launcher.GetComponent<Follower>().Draw();
