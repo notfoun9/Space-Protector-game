@@ -52,6 +52,9 @@ void Levels::Update() {
         game->inMenu = 0;
         game->Quit();
     }
+    if (keystat[SDL_SCANCODE_F11]) {
+        game->ToggleFullscreen();
+    }
 
 }
 

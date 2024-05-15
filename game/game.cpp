@@ -50,8 +50,12 @@ bool& Game::IsRunning() {
     return isRunning;
 }
 void Game::ToggleFullscreen() {
-    fullscreen_ = !fullscreen_;
-    (fullscreen_) ? SDL_SetWindowFullscreen(window, 1) : SDL_SetWindowFullscreen(window, 0);
+    static int64_t lastUsed = 0;
+    if (SDL_GetTicks64() - lastUsed > 500) {
+        lastUsed = SDL_GetTicks64();
+        fullscreen_ = !fullscreen_;
+        (fullscreen_) ? SDL_SetWindowFullscreen(window, 1) : SDL_SetWindowFullscreen(window, 0);
+    }
 }
 void Game::Quit() {
     isRunning = 0;

@@ -12,4 +12,5 @@ struct ShortNames {
     static std::string font;
     static std::string button;
     static std::string activeButton;
+    static std::string ship;
 } ;

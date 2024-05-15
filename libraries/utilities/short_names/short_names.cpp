@@ -10,3 +10,4 @@ std::string ShortNames::bullet = "../../assets/bullet.png";
 std::string ShortNames::font = "../../assets/invasion2000.TTF";
 std::string ShortNames::button = "../../assets/button.png";
 std::string ShortNames::activeButton = "../../assets/activeButton.png";
+std::string ShortNames::ship = "../../assets/ship.png";

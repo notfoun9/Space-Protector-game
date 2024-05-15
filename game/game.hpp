@@ -67,8 +67,8 @@ private:
 
     std::vector<float> settings;
     bool isRunning = 1;
-    SDL_Window *window;
     bool fullscreen_ = 0;
+    SDL_Window *window;
 } ;
 
 

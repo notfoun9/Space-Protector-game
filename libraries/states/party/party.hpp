@@ -24,6 +24,7 @@ private:
     Entity lifes;
     Entity base;
     Entity bulsLeft;
+    Entity ship;
 
     Entity launcher;
 

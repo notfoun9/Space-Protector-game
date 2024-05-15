@@ -8,15 +8,19 @@ Party::Party(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(rende
     mouse.AddComponent<Mouse>(ShortNames::scope);
     mouse.GetComponent<Mouse>().SetBoarders(0,0,15,15);
 
-    background.AddComponent<PositionComponent>(0,0,1080,720);
+    background.AddComponent<PositionComponent>(0,0,1920,1080);
     background.AddComponent<SimpleTexture>(ShortNames::back);
     background.GetComponent<SimpleTexture>().SetBoarders(0,0,1920,1080);
 
-    base.AddComponent<PositionComponent>(31,610,132,66);
+    base.AddComponent<PositionComponent>(431,610,132,66);
     base.AddComponent<SimpleTexture>(ShortNames::base);
     base.GetComponent<SimpleTexture>().SetBoarders(0,0,22,11);
 
-    launcher.AddComponent<PositionComponent>(70,550,55,100);
+    ship.AddComponent<PositionComponent>(-30,645,1120,500);
+    ship.AddComponent<SimpleTexture>(ShortNames::ship);
+    ship.GetComponent<SimpleTexture>().SetBoarders(0,0,800,500);
+
+    launcher.AddComponent<PositionComponent>(470,550,55,100);
     launcher.AddComponent<Follower>(ShortNames::launcher);
     launcher.GetComponent<Follower>().SetCenter(27, 75);
     launcher.GetComponent<Follower>().SetBoarders(0,0,11,20);
@@ -24,11 +28,11 @@ Party::Party(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(rende
     launcher.AddComponent<Shooter>(ShortNames::bullet);
     launcher.GetComponent<Shooter>().SetSrc(0,0,64,128);
 
-    bulsLeft.AddComponent<PositionComponent>(200,650,200,50);
-    bulsLeft.AddComponent<Text>(ShortNames::font, 50, SDL_Color{255,255,255,0});
+    bulsLeft.AddComponent<PositionComponent>(20,600,200,50);
+    bulsLeft.AddComponent<Text>(ShortNames::font, 40, SDL_Color{255,255,255,0});
 
     spawner.AddComponent<Spawner>();
-    spawner.GetComponent<Spawner>().SeBoarders(200, 900);
+    spawner.GetComponent<Spawner>().SeBoarders(120, 1000);
 
     gameLost.AddComponent<PositionComponent>(200, 250);
     gameLost.AddComponent<Text>(ShortNames::font, 100, SDL_Color{255,255,255,0});
@@ -88,6 +92,9 @@ void Party::Run() {
         if (keystat[SDL_SCANCODE_H]) {
             Hitboxes::Switch();
         }
+        if (keystat[SDL_SCANCODE_F11]) {
+            game->ToggleFullscreen();
+        }
 
         Update();
         Render();
@@ -100,7 +107,7 @@ void Party::Update() {
     launcher.Update();
     spawner.Update();
     mouse.Update();
-    bulsLeft.GetComponent<Text>().SetMessage("Bullets Left: ");
+    bulsLeft.GetComponent<Text>().SetMessage("Bullets: ");
     bulsLeft.GetComponent<Text>().AddMessage(std::to_string(launcher.GetComponent<Shooter>().BulletsLeft()));
     bulsLeft.Update();
     if (launcher.HasComponent<BulletsCollider>() == 0) return;
@@ -133,6 +140,7 @@ void Party::Render() {
     launcher.Draw();
     launcher.GetComponent<Follower>().Draw();
     base.Draw();
+    ship.Draw();
     bulsLeft.Draw();
 
     Life::Draw();
