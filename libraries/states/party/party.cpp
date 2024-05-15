@@ -21,9 +21,9 @@ Party::Party(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(rende
     ship.GetComponent<SimpleTexture>().SetBoarders(0,0,800,500);
 
     launcher.AddComponent<PositionComponent>(470,550,55,100);
-    launcher.AddComponent<Follower>(ShortNames::launcher);
+    launcher.AddComponent<Follower>(ShortNames::launcher2);
     launcher.GetComponent<Follower>().SetCenter(27, 75);
-    launcher.GetComponent<Follower>().SetBoarders(0,0,11,20);
+    launcher.GetComponent<Follower>().SetBoarders(0,0,22,40);
 
     launcher.AddComponent<Shooter>(ShortNames::bullet);
     launcher.GetComponent<Shooter>().SetSrc(0,0,64,128);

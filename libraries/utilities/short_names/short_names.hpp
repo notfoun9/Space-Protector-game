@@ -8,6 +8,7 @@ struct ShortNames {
     static std::string back;
     static std::string base;
     static std::string launcher;
+    static std::string launcher2;
     static std::string bullet;
     static std::string font;
     static std::string button;
