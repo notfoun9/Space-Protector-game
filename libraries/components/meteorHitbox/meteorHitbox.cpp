@@ -18,12 +18,14 @@ void MeteorHitbox::Init() {
 void MeteorHitbox::Update() {
     if (box.y > 600) {
         owner->Destroy();
-        std::cout << "damage" << '\n';
+        Life::MakeDamage(1);
     }
     box.x = std::round(owner->GetComponent<PositionComponent>().X() + difX);
     box.y = std::round(owner->GetComponent<PositionComponent>().Y() + difY);
 }
 
 void MeteorHitbox::Draw() {
-    TextureManager::Draw(tex, NULL, &box, SDL_FLIP_NONE);
+    if (Hitboxes::Active()) {
+        TextureManager::Draw(tex, NULL, &box, SDL_FLIP_NONE);
+    }
 }

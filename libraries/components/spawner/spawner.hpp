@@ -17,7 +17,9 @@ public:
     void SetVelocity(float x, float y) { velocity = {x,y}; };
     void SetSpeed(float speed_) { speed = speed_; };
     void SetRate(int r) { rate = r; }
+    
     void SetMeteorsNum(int mets) { meteorsLeft = mets; }
+    int MeteorsLeft() { return meteorsLeft; }
 
     void Start() { 
         active = 1; 

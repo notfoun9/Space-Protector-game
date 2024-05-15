@@ -805,8 +805,11 @@ libraries/ECS/CMakeFiles/ECS.dir/ECS.cpp.o: /Users/maksim/Study/C++/game2/librar
   /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_video.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/close_code.h \
-  /Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp
+  /Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp
 
+
+/Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_version.h:
 

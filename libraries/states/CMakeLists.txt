@@ -1,7 +1,5 @@
-# add_subdirectory(menu)
 add_subdirectory(levels)
 add_subdirectory(party)
-# add_subdirectory(gameover)
 
 add_library(states INTERFACE states.hpp)
 

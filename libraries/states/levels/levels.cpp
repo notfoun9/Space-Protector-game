@@ -1,5 +1,3 @@
-#pragma once 
-
 #include <levels/levels.hpp>
 #include <position/position.hpp>
 #include <text/text.hpp>
@@ -41,7 +39,7 @@ void Levels::Update() {
         for (int i = 0; i < buts.size(); ++i) {
             if (buts[i]->GetComponent<Button>().IsSelected()) {
                 std::cout << "Level " << i << "is started" << '\n';
-                game->settings = std::move(game->GetLevel(i));
+                game->SetSettings(i);
                 game->inMenu = 0;
                 game->inParty = 1;
                 return;

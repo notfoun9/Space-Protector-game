@@ -4,6 +4,7 @@
 #include <ECS/ECS.hpp>
 
 class Game;
+class Life;
 
 class Party {
 public:
@@ -28,4 +29,9 @@ private:
 
     Entity spawner;
     SDL_Event event;
+
+    Entity gameLost;
+    Entity gameWon;
+
+    int gameState = 0;
 } ;

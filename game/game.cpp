@@ -3,6 +3,7 @@
 #include <utilities/utilities.hpp>
 #include <party/party.hpp>
 #include <levels/levels.hpp>
+
 SDL_Renderer* Game::renderer = nullptr;
 
 
@@ -41,6 +42,8 @@ void Game::Init(const char* title, int xPos, int yPos, int width, int height, bo
         std::cerr << "failed to init ttf" << '\n';
         return;
     }
+
+    Life::Init();
 }
 
 bool& Game::IsRunning() {
@@ -58,11 +61,11 @@ void Game::Run() {
     Party party(this, renderer);
     Levels levels(this, renderer);
     while (IsRunning()) {
-        while (inMenu) {
+        if (inMenu) {
             std::cout << "InMenu" << '\n';
             levels.Run();
         }
-        while (inParty) {
+        if (inParty) {
             std::cout << "inParty" << '\n';
             party.Run();
         }

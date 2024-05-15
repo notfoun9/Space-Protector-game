@@ -20,24 +20,10 @@
 #include <tuple>
 #include <bitset>
 #include <memory>
+#include <texture_manager/texture_manager.hpp>
 
-enum class Settings {
-    METEOR_SIZE_MIN = 0, 
-    METEOR_SIZE_MAX = 1, 
-    METEOR_FREQUENCY = 2, 
-    METEOR_SPEED = 3, 
-    METEOR_NUM = 4, 
-    BUL_SIZE = 5, 
-    BUL_NUM = 6, 
-    BUL_SPEED = 7, 
-    METEOR_ACCELERATION = 8, 
-    LIVES = 9
-};
-
-struct LevelSettings {
-    
-} ; 
-
+enum settings {METEOR_SIZE_MIN,  METEOR_SIZE_MAX,  METEOR_FREQUENCY,  METEOR_SPEED,         METEOR_NUM,  
+               BUL_SIZE,         BUL_NUM,          BUL_SPEED,         METEOR_ACCELERATION,  LIVES};
 
 class Game {
 public:
@@ -54,47 +40,74 @@ public:
     static SDL_Renderer *renderer;
     static SDL_Event event;
     bool text = 0;
-    
-    enum settings {METEOR_SIZE_MIN, METEOR_SIZE_MAX, METEOR_FREQUENCY, METEOR_SPEED, METEOR_NUM, BUL_SIZE, BUL_NUM, BUL_SPEED, METEOR_ACCELERATION, LIVES};
-    std::tuple<float, float, int, float, int, int, float, float, int, int> settings = {};
 
-    std::vector<std::tuple<float, float, int, float, int, int, float, float, int, int>> lvls = {
-        {6, 8, 1500, 2,   15, 3.5, 25,   2, 3, 5}, 
-        {6, 8, 1300, 3.5, 20, 3, 30,    20, 3, 5}, 
-        {5, 6, 1200, 3.5, 20, 3, 25,    18, 3, 5},
-        {2, 9, 1200, 2,   40, 4.5, 50,  17, 3, 5}, 
-        {6, 7, 700, 3.5,  40, 3, 50,    22, 3, 5}, 
-        {5, 6, 100, 2,    20, 3, 100,    8, 3, 5},
-        {5, 6, 100, 2,    20, 3, 100,    8, 3, 5}, 
-        {5, 6, 100, 2,    20, 3, 100,    8, 3, 1}
-    };
-
-    std::vector<float> meteorSizeMin   = {6,    6,    5,    2,    6,   5,   5,   5};
-    std::vector<float> meteorSizeMax   = {8,    8,    6,    9,    7,   5,   5,   5};
-    std::vector<float> meteorFrequency = {1500, 1300, 1200, 1200, 700, 100, 100, 100};
+                                  // LVL  1     2     3     4     5    6    7    8
+    std::vector<float> meteorSizeMin   = {6,    6,    5,    2,    6,   6,   6,   6};
+    std::vector<float> meteorSizeMax   = {8,    8,    6,    9,    7,   8,   8,   8};
+    std::vector<float> meteorFrequency = {1500, 1300, 1200, 1200, 700, 1500,1500,1500};
     std::vector<float> meteorSpeed     = {2,    3.5,  3.5,  2,    3.5, 2,   2,   2}; 
-    std::vector<float> meteorNum       = {15,   20,   20,   40,   40,  20,  20,  20};
-    std::vector<float> bulletSize      = {3.5,  3,    3,    4.5,  3,   3,   3,   3};
-    std::vector<float> bulletNum       = {25,   30,   25,   50,   50,  100, 100, 100};
-    std::vector<float> bulletSpeed     = {10,   20,   18,   17,   22,  8,   8,   8};
+    std::vector<float> meteorNum       = {15,   20,   20,   40,   40,  15,  15,  15};
+    std::vector<float> bulletSize      = {3.5,  3,    3,    4.5,  3,   3,   3,   3.5};
+    std::vector<float> bulletNum       = {25,   30,   25,   50,   50,  25,  25,  25};
+    std::vector<float> bulletSpeed     = {10,   20,   18,   17,   22,  10,  10,  10};
     std::vector<float> meteorAccel     = {3,    3,    3,    3,    3,   3,   3,   3};
     std::vector<float> lives           = {5,    5,    5,    5,    5,   5,   5,   5};
 
-    auto GetLevel(int num) {
-        settings = std::make_tuple(meteorSizeMin[num], meteorSizeMax[num], meteorFrequency[num], meteorSpeed[num], meteorNum[num],       
-                                   bulletSize[num],    bulletNum[num],     bulletSpeed[num],     meteorAccel[num], lives[num]);
-        return settings;
+    auto SetSettings(int lvl) {
+        settings = std::vector<float>{meteorSizeMin[lvl], meteorSizeMax[lvl], meteorFrequency[lvl], meteorSpeed[lvl], meteorNum[lvl],       
+                                      bulletSize[lvl],    bulletNum[lvl],     bulletSpeed[lvl],     meteorAccel[lvl], lives[lvl]};
     }
-
-
+    float Setting(size_t param) {
+        return settings[param];
+    }
 
     bool inMenu = 1;
     bool inParty = 0;
 private:
 
+    std::vector<float> settings;
     bool isRunning = 1;
     SDL_Window *window;
     bool fullscreen_ = 0;
+} ;
+
+struct Hitboxes {
+    static bool Active() { return active; }
+    static void Switch() {
+        if (SDL_GetTicks64() - tick > 500) {
+            tick = SDL_GetTicks64();
+            active = !active;
+            std::cout << (active ? "Hitboxes Shown" : "Hitboxes Hidden") << std::endl;
+        }
+    }
+
+    inline static long long tick = 0;
+    inline static bool active = 0;
+};
+
+class Life {
+public:
+    static void Init() {
+        SDL_Surface* tmpSurface = IMG_Load("../../assets/heart.png");
+        SDL_Texture* textureFromSurface = SDL_CreateTextureFromSurface(Game::renderer, tmpSurface);
+        if (!textureFromSurface) std::cerr << "texture is not created" << '\n';
+        SDL_FreeSurface(tmpSurface);
+
+        heart = textureFromSurface;
+    }
+    static void SetHP(int num) { hp = num; }
+    static int hpLeft() { return hp; }
+
+    static void MakeDamage(int damage) { hp -= damage; }
+    static void Draw() { 
+        for (int i = 0; i < hp; ++i) {
+            SDL_Rect dest = {30, 30 + 90 * i, 80, 80};
+            SDL_RenderCopyEx(Game::renderer, heart, NULL, &dest, 0.0, NULL, SDL_FLIP_NONE);
+        }
+    }
+private:
+    inline static SDL_Texture* heart;
+    inline static int hp = 0;
 } ;
 
 #endif 

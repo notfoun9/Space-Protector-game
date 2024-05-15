@@ -22,9 +22,11 @@ void BulletsCollider::Update() {
 }
 
 void BulletsCollider::Draw() {
-    for (auto box : boxes) {
-        box->Draw();
-    }    
+    if (Hitboxes::Active()) {
+        for (auto box : boxes) {
+            box->Draw();
+        }    
+    }
 }
 
 void BulletsCollider::DeleteBox(BulletHitbox* box) {

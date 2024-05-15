@@ -806,8 +806,11 @@ libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/keyboar
   /Users/maksim/Study/C++/game2/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/game2/libraries/ECS/ECS.hpp \
-  /Users/maksim/Study/C++/game2/libraries/utilities/keyboardController/keyboardController.hpp
+  /Users/maksim/Study/C++/game2/libraries/utilities/keyboardController/keyboardController.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp
 
+
+/Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/utilities/keyboardController/keyboardController.hpp:
 

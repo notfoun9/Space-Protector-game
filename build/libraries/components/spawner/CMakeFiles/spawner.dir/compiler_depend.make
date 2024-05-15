@@ -813,8 +813,11 @@ libraries/components/spawner/CMakeFiles/spawner.dir/spawner.cpp.o: /Users/maksim
   /Users/maksim/Study/C++/game2/libraries/components/spawner/spawner.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/animation/animation.hpp \
-  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp
+  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp
 
+
+/Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp:
 

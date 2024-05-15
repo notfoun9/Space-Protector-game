@@ -805,10 +805,13 @@ libraries/utilities/time/CMakeFiles/time.dir/time.cpp.o: /Users/maksim/Study/C++
   /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_video.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/game2/src/inc/SDL2/close_code.h \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/time/time.hpp
 
 
 /Users/maksim/Study/C++/game2/libraries/utilities/time/time.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
 
 /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_version.h:
 

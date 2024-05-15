@@ -1,6 +1,7 @@
 libraries/states/levels/CMakeFiles/levels.dir/levels.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/states/levels/levels.cpp \
   /Users/maksim/Study/C++/game2/libraries/states/levels/../levels/levels.hpp \
+  /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp \
   /Users/maksim/Study/C++/game2/game/../game/game.hpp \
   /Users/maksim/Study/C++/game2/game/../src/inc/SDL2/SDL.h \
   /Users/maksim/Study/C++/game2/game/../src/inc/SDL2/SDL_main.h \
@@ -804,7 +805,7 @@ libraries/states/levels/CMakeFiles/levels.dir/levels.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
-  /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../position/position.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../text/text.hpp \
@@ -812,7 +813,6 @@ libraries/states/levels/CMakeFiles/levels.dir/levels.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/ECS/../utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../mouse/mouse.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../simpleTexture/simpleTexture.hpp \
-  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../time/time.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../short_names/short_names.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../keyboardController/keyboardController.hpp \

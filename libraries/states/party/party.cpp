@@ -3,6 +3,7 @@
 #include <utilities/utilities.hpp>
 
 Party::Party(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(renderer_) {
+
     mouse.AddComponent<PositionComponent>(0,0,45,45);
     mouse.AddComponent<Mouse>(ShortNames::scope);
     mouse.GetComponent<Mouse>().SetBoarders(0,0,15,15);
@@ -28,42 +29,66 @@ Party::Party(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(rende
 
     spawner.AddComponent<Spawner>();
     spawner.GetComponent<Spawner>().SeBoarders(200, 900);
+
+    gameLost.AddComponent<PositionComponent>(200, 250);
+    gameLost.AddComponent<Text>(ShortNames::font, 100, SDL_Color{255,255,255,0});
+    gameLost.GetComponent<Text>().SetMessage("GAME OVER!");
+
+    gameWon.AddComponent<PositionComponent>(200, 250);
+    gameWon.AddComponent<Text>(ShortNames::font, 130, SDL_Color{255,255,255,0});
+    gameWon.GetComponent<Text>().SetMessage("YOU WIN!");
 }
 
-
-
 void Party::Run() {
+    gameState = 0;
     SDL_ShowCursor(false);
-    enum settings {METEOR_SIZE_MIN, METEOR_SIZE_MAX, METEOR_FREQUENCY, METEOR_SPEED, METEOR_NUM, BUL_SIZE, BUL_NUM, BUL_SPEED, METEOR_ACCELERATION, LIFES};
     launcher.GetComponent<Shooter>().DeleteBulls();
     spawner.GetComponent<Spawner>().DeleteMets();
     
-    launcher.GetComponent<Shooter>().SetSpeed(get<BUL_SPEED>(game->settings));
-    launcher.GetComponent<Shooter>().SetSize(get<BUL_SIZE>(game->settings));
-    launcher.GetComponent<Shooter>().AddBullets(get<BUL_NUM>(game->settings));
+    launcher.GetComponent<Shooter>().SetSpeed(game->Setting(BUL_SPEED));
+    launcher.GetComponent<Shooter>().SetSize(game->Setting(BUL_SIZE));
+    launcher.GetComponent<Shooter>().AddBullets(game->Setting(BUL_NUM));
 
-    spawner.GetComponent<Spawner>().SetRate(get<METEOR_FREQUENCY>(game->settings));
+    spawner.GetComponent<Spawner>().SetRate(game->Setting(METEOR_FREQUENCY));
     spawner.GetComponent<Spawner>().Start();
-    spawner.GetComponent<Spawner>().SetSize(get<METEOR_SIZE_MIN>(game->settings), get<METEOR_SIZE_MAX>(game->settings));
-    spawner.GetComponent<Spawner>().SetVelocity(0, get<METEOR_SPEED>(game->settings));
-    spawner.GetComponent<Spawner>().SetMeteorsNum(get<METEOR_NUM>(game->settings));
+    spawner.GetComponent<Spawner>().SetSize(game->Setting(METEOR_SIZE_MIN), game->Setting(METEOR_SIZE_MAX));
+    spawner.GetComponent<Spawner>().SetVelocity(0, game->Setting(METEOR_SPEED));
+    spawner.GetComponent<Spawner>().SetMeteorsNum(game->Setting(METEOR_NUM));
     spawner.GetComponent<Spawner>().SetSpeed(2);
+
+    Life::SetHP(game->Setting(LIVES));
 
 
 
     while (game->inParty) {
-        std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
+        FPSController fpsController;
         SDL_Event e;
         SDL_PollEvent(&e);
         if (e.type == SDL_MOUSEBUTTONUP && e.button.button == SDL_BUTTON_LEFT) {
             launcher.GetComponent<Shooter>().Shoot();
         }
+
+        if (gameState == 0) {
+            if (Life::hpLeft() == 0) {
+                gameState = -1;
+            }
+            else if (spawner.GetComponent<Spawner>().MeteorsLeft() == 0 
+                     && spawner.GetComponent<Spawner>().GetMeteors()->GetEntities()->empty()) {
+                gameState = 1;
+            }
+        }
+
         const Uint8 *keystat = SDL_GetKeyboardState(NULL);
         if (keystat[SDL_SCANCODE_ESCAPE]) {
             game->inParty = 0;
             game->inMenu = 1;
             std::cout << "ESC pressed" << '\n';
+            continue;
         }
+        if (keystat[SDL_SCANCODE_H]) {
+            Hitboxes::Switch();
+        }
+
         Update();
         Render();
     }
@@ -87,7 +112,6 @@ void Party::Update() {
         if (aboba) {
             aboba->DestroyOwner();
             met->Destroy();
-            return;
         }
     }
 }
@@ -95,14 +119,25 @@ void Party::Update() {
 void Party::Render() {
     SDL_RenderClear(renderer);
 
-    // background.Draw();
-    spawner.Draw();
+    background.Draw();
+
+    if (gameState == 0) {
+        spawner.Draw();
+    }
+    else if (gameState == 1) {
+        gameWon.Draw();
+    }
+    else {
+        gameLost.Draw();
+    }
     launcher.Draw();
     launcher.GetComponent<Follower>().Draw();
     base.Draw();
     bulsLeft.Draw();
 
+    Life::Draw();
     mouse.Draw();
+
     SDL_RenderPresent(renderer);
 
 }

@@ -804,9 +804,9 @@ libraries/utilities/bullet/CMakeFiles/bullet.dir/bullet.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
+  /Users/maksim/Study/C++/game2/libraries/utilities/bullet/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../shooter/shooter.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp \
-  /Users/maksim/Study/C++/game2/libraries/utilities/bullet/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../bulletHitbox/bulletHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../bulletsCollider/bulletsCollider.hpp \

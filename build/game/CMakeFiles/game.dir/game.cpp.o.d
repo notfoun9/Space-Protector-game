@@ -803,6 +803,7 @@ game/CMakeFiles/game.dir/game.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
+  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../components/components.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../position/position.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp \
@@ -817,7 +818,6 @@ game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/components/position/../shooter/shooter.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../bullet/bullet.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../bulletHitbox/bulletHitbox.hpp \
-  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../bulletsCollider/bulletsCollider.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../text/text.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/../../../src/inc/SDL2/SDL_ttf.h \
