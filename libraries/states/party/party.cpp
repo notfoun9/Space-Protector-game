@@ -46,8 +46,6 @@ Party::Party(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(rende
 void Party::Run() {
     gameState = 0;
     SDL_ShowCursor(false);
-    launcher.GetComponent<Shooter>().DeleteBulls();
-    spawner.GetComponent<Spawner>().DeleteMets();
     
     launcher.GetComponent<Shooter>().SetSpeed(game->Setting(BUL_SPEED));
     launcher.GetComponent<Shooter>().SetSize(game->Setting(BUL_SIZE));
@@ -86,6 +84,9 @@ void Party::Run() {
         if (keystat[SDL_SCANCODE_ESCAPE]) {
             game->inParty = 0;
             game->inMenu = 1;
+            launcher.GetComponent<Shooter>().DeleteBulls();
+            spawner.GetComponent<Spawner>().DeleteMets();   
+
             std::cout << "ESC pressed" << '\n';
             continue;
         }
