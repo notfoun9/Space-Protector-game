@@ -20,6 +20,7 @@ Levels::Levels(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(ren
 }
 
 void Levels::Run() {
+    ticksSinceJoined = SDL_GetTicks64();
     std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
     SDL_ShowCursor(true);
     while (game->inMenu) {
@@ -46,6 +47,12 @@ void Levels::Update() {
             }
         }
     }
+    const Uint8 *keystat = SDL_GetKeyboardState(NULL);
+    if (keystat[SDL_SCANCODE_ESCAPE] && (SDL_GetTicks64() - ticksSinceJoined > 500)) {
+        game->inMenu = 0;
+        game->Quit();
+    }
+
 }
 
 void Levels::Render() {

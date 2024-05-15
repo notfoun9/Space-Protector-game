@@ -19,8 +19,9 @@ private:
     Game* game;
     SDL_Renderer* renderer;
 
+    long long ticksSinceJoined = 0;
 } ;
 
 static const std::vector<std::string> 
-    levelNames = {"1: Easy Start",    "2: Make it Faster!", "3: Hurry up!",    "4: New Conditions",
+    levelNames = {"1: Easy Start",         "2: Make it Harder!",  "3: Hurry up!",    "4: New Conditions",
                   "5: Stressful situation", "6: Kill the insect", "7: A long night", "8: CHAOS EVERYWHERE"};

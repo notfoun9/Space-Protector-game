@@ -41,17 +41,17 @@ public:
     static SDL_Event event;
     bool text = 0;
 
-                                  // LVL  1     2     3     4     5    6    7    8
-    std::vector<float> meteorSizeMin   = {6,    6,    5,    2,    6,   6,   6,   6};
-    std::vector<float> meteorSizeMax   = {8,    8,    6,    9,    7,   8,   8,   8};
-    std::vector<float> meteorFrequency = {1500, 1300, 1200, 1200, 700, 1500,1500,1500};
-    std::vector<float> meteorSpeed     = {2,    3.5,  3.5,  2,    3.5, 2,   2,   2}; 
-    std::vector<float> meteorNum       = {15,   20,   20,   40,   40,  15,  15,  15};
-    std::vector<float> bulletSize      = {3.5,  3,    3,    4.5,  3,   3,   3,   3.5};
-    std::vector<float> bulletNum       = {25,   30,   25,   50,   50,  25,  25,  25};
-    std::vector<float> bulletSpeed     = {10,   20,   18,   17,   22,  10,  10,  10};
-    std::vector<float> meteorAccel     = {3,    3,    3,    3,    3,   3,   3,   3};
-    std::vector<float> lives           = {5,    5,    5,    5,    5,   5,   5,   5};
+                                  // LVL  1     2     3     4     5    6     7    8
+    std::vector<float> meteorSizeMin   = {5,    5,    4,    2,    6,   3,    5,    6};
+    std::vector<float> meteorSizeMax   = {7,    6,    6,    9,    7,   4,    8,    8};
+    std::vector<float> meteorFrequency = {1000, 1000, 500,  1000, 700, 700,  800, 500};
+    std::vector<float> meteorSpeed     = {3,    3.5,  4.5,  4,    3.5, 2,    3,    4}; 
+    std::vector<float> meteorNum       = {15,   20,   20,   20,   40,  20,   50,   20};
+    std::vector<float> bulletSize      = {3.5,  3,    3,    4,    3,   4,    3,    3.5};
+    std::vector<float> bulletNum       = {25,   30,   25,   25,   50,  25,   60,   25};
+    std::vector<float> bulletSpeed     = {20,   25,   35,   30,   22,  20,   25,   50};
+    std::vector<float> meteorAccel     = {0,    0,    3,    3,    3,   3,    0,    3};
+    std::vector<float> lives           = {5,    3,    5,    3,    5,   5,    4,    1};
 
     auto SetSettings(int lvl) {
         settings = std::vector<float>{meteorSizeMin[lvl], meteorSizeMax[lvl], meteorFrequency[lvl], meteorSpeed[lvl], meteorNum[lvl],       
@@ -71,6 +71,9 @@ private:
     bool fullscreen_ = 0;
 } ;
 
+
+
+
 struct Hitboxes {
     static bool Active() { return active; }
     static void Switch() {
@@ -84,6 +87,8 @@ struct Hitboxes {
     inline static long long tick = 0;
     inline static bool active = 0;
 };
+
+
 
 class Life {
 public:
