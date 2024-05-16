@@ -14,6 +14,7 @@ public:
     void Render();
 private:
     Manager buttons;
+    Entity* endlessMode;
     
     std::vector<Entity*> buts;
     Game* game;

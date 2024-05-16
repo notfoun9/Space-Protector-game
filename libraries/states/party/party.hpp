@@ -35,4 +35,5 @@ private:
     Entity gameWon;
 
     int gameState = 0;
+    int score = 0;
 } ;

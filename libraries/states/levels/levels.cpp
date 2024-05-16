@@ -17,6 +17,14 @@ Levels::Levels(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(ren
         levelButtonI->GetComponent<Text>().SetMessage("Level " + levelNames[i]);
         buts.push_back(levelButtonI);
     }
+
+    endlessMode = new Entity();
+
+    endlessMode->AddComponent<PositionComponent>(100, 590, 865, 60);
+    endlessMode->AddComponent<Button>(ShortNames::activeButton, ShortNames::button);
+    endlessMode->GetComponent<Button>().SetDiff(-15, 0);
+    endlessMode->AddComponent<Text>(ShortNames::font, 50, SDL_Color{0,0,0,255});
+    endlessMode->GetComponent<Text>().SetMessage("Endless Mode");
 }
 
 void Levels::Run() {
@@ -40,13 +48,24 @@ void Levels::Update() {
         for (int i = 0; i < buts.size(); ++i) {
             if (buts[i]->GetComponent<Button>().IsSelected()) {
                 std::cout << "Level " << i << "is started" << '\n';
-                game->SetSettings(i);
+                game->SetSettings(i + 1);
+                game->endlessMode = 0;
                 game->inMenu = 0;
                 game->inParty = 1;
                 return;
             }
         }
+        if (endlessMode->GetComponent<Button>().IsSelected()) {
+            std::cout << "EndlessMode is selected" << '\n';
+            game->SetSettings(0);
+            game->endlessMode = 1;
+            game->inMenu = 0;
+            game->inParty = 1;
+            return;
+        }
     }
+    endlessMode->Update();
+
     const Uint8 *keystat = SDL_GetKeyboardState(NULL);
     if (keystat[SDL_SCANCODE_ESCAPE] && (SDL_GetTicks64() - ticksSinceJoined > 500)) {
         game->inMenu = 0;
@@ -61,6 +80,7 @@ void Levels::Update() {
 void Levels::Render() {
     SDL_RenderClear(renderer);
     buttons.Draw();
+    endlessMode->Draw();
 
     SDL_RenderPresent(renderer);
 }

@@ -45,6 +45,7 @@ Party::Party(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(rende
 
 void Party::Run() {
     gameState = 0;
+    score = 0;
     SDL_ShowCursor(false);
     
     launcher.GetComponent<Shooter>().SetSpeed(game->Setting(BUL_SPEED));
@@ -108,8 +109,15 @@ void Party::Update() {
     launcher.Update();
     spawner.Update();
     mouse.Update();
-    bulsLeft.GetComponent<Text>().SetMessage("Bullets: ");
-    bulsLeft.GetComponent<Text>().AddMessage(std::to_string(launcher.GetComponent<Shooter>().BulletsLeft()));
+    if (!game->endlessMode) {
+        bulsLeft.GetComponent<Text>().SetMessage("Bullets: ");
+        bulsLeft.GetComponent<Text>().AddMessage(std::to_string(launcher.GetComponent<Shooter>().BulletsLeft()));   
+    }
+    else {
+        bulsLeft.GetComponent<Text>().SetMessage("Score: ");
+        bulsLeft.GetComponent<Text>().AddMessage(std::to_string(score));   
+    }
+
     bulsLeft.Update();
     if (launcher.HasComponent<BulletsCollider>() == 0) return;
 
@@ -120,6 +128,7 @@ void Party::Update() {
         if (aboba) {
             aboba->DestroyOwner();
             met->Destroy();
+            ++score;
         }
     }
 }
@@ -128,6 +137,12 @@ void Party::Render() {
     SDL_RenderClear(renderer);
 
     background.Draw();
+    launcher.Draw();
+    launcher.GetComponent<Follower>().Draw();
+    base.Draw();
+    ship.Draw();
+    bulsLeft.Draw();
+    Life::Draw();
 
     if (gameState == 0) {
         spawner.Draw();
@@ -138,13 +153,6 @@ void Party::Render() {
     else {
         gameLost.Draw();
     }
-    launcher.Draw();
-    launcher.GetComponent<Follower>().Draw();
-    base.Draw();
-    ship.Draw();
-    bulsLeft.Draw();
-
-    Life::Draw();
     mouse.Draw();
 
     SDL_RenderPresent(renderer);
