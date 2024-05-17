@@ -48,16 +48,16 @@ void Party::Run() {
     score = 0;
     SDL_ShowCursor(false);
     
-    launcher.GetComponent<Shooter>().SetSpeed(game->Setting(BUL_SPEED) * 90 / FPSController::FPS);
+    launcher.GetComponent<Shooter>().SetSpeed(game->Setting(BUL_SPEED));
     launcher.GetComponent<Shooter>().SetSize(game->Setting(BUL_SIZE));
     launcher.GetComponent<Shooter>().AddBullets(game->Setting(BUL_NUM));
 
-    spawner.GetComponent<Spawner>().SetRate(game->Setting(METEOR_FREQUENCY * 90 / FPSController::FPS));
+    spawner.GetComponent<Spawner>().SetRate(game->Setting(METEOR_FREQUENCY));
     spawner.GetComponent<Spawner>().Start();
     spawner.GetComponent<Spawner>().SetSize(game->Setting(METEOR_SIZE_MIN), game->Setting(METEOR_SIZE_MAX));
-    spawner.GetComponent<Spawner>().SetVelocity(0, game->Setting(METEOR_SPEED) * 90 / FPSController::FPS);
+    spawner.GetComponent<Spawner>().SetVelocity(0, game->Setting(METEOR_SPEED));
     spawner.GetComponent<Spawner>().SetMeteorsNum(game->Setting(METEOR_NUM));
-    spawner.GetComponent<Spawner>().SetSpeed(2 * 90 / FPSController::FPS);
+    spawner.GetComponent<Spawner>().SetSpeed(2);
 
     Life::SetHP(game->Setting(LIVES));
 
@@ -105,6 +105,7 @@ void Party::Run() {
 
 
 void Party::Update() {
+
     base.Update();
     launcher.Update();
     spawner.Update();
@@ -129,6 +130,12 @@ void Party::Update() {
             aboba->DestroyOwner();
             met->Destroy();
             ++score;
+            spawner.GetComponent<Spawner>().IncVelocity(0.1f);
+            if (score % 10 == 0) {
+                if (score % 20 == 0) Life::MakeDamage(-1);
+                launcher.GetComponent<Shooter>().Speed() *= 1.1f;
+            }
+
         }
     }
 }

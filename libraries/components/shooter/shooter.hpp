@@ -26,6 +26,8 @@ public:
     void SetSrc(int x, int y, int w, int h) { srcRect = {x,y,w,h}; }
     void SetSize(float size);
     void SetSpeed(float s) { speed = s; }
+    float& Speed() { return speed; }
+
 
     void AddBullets(int num) { bulletsLeft = num; }
     void DeleteBulls() { 

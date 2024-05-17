@@ -15,8 +15,11 @@ public:
     void SeBoarders(int left, int right);
     void SetSize(float min, float max);
     void SetVelocity(float x, float y) { velocity = {x,y}; };
+    void IncVelocity(float y) { velocity.y += y; }
+    
     void SetSpeed(float speed_) { speed = speed_; };
     void SetRate(int r) { rate = r; }
+    
     
     void SetMeteorsNum(int mets) { meteorsLeft = mets; }
     int MeteorsLeft() { return meteorsLeft; }
