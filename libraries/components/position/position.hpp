@@ -2,14 +2,17 @@
 
 #include <ECS/ECS.hpp>
 
-#include <Vector2D/Vector2D.hpp>
-
 class PositionComponent : public Component {
 public:
-    PositionComponent() = default;
-    PositionComponent(float x, float y) noexcept ;
-    PositionComponent(float x, float y, float w, float h) noexcept ;
-    ~PositionComponent() = default;
+    PositionComponent() noexcept;
+    PositionComponent(float x, float y) noexcept;
+    PositionComponent(float x, float y, float w, float h) noexcept;
+    ~PositionComponent();
+
+    PositionComponent(PositionComponent&& rhs);
+    PositionComponent(const PositionComponent& rhs);
+    PositionComponent& operator=(PositionComponent&& rhs);
+    PositionComponent& operator=(const PositionComponent& rhs);
 
     void Update() override;
     float X() noexcept;
@@ -17,22 +20,14 @@ public:
     float Width() noexcept;
     float Height() noexcept;
 
-    Vector2D& GetVelocity() { return velocity; } 
-    void SetVelocity(int x, int y) { velocity.x = x; velocity.y = y; } 
-    void SetAcceleration(float x, float y) { acceleration.x = x; acceleration.y = y; } 
-    void SetSpeed(const float speed_) { speed = speed_; }
+    void SetVelocity(int x, int y);
+    void SetAcceleration(float x, float y);
+    void SetSpeed(const float speed_);
     void SetShape(float w, float h);
     
     void SetPos(float x, float y); 
 private:
-    Vector2D position;
 
-    float width = 32;
-    float height = 32;
-
-    float scale = 1;
-
-    float speed = 0;
-    Vector2D velocity;
-    Vector2D acceleration = {0,0};
+    struct Impl;
+    std::unique_ptr<Impl> pimpl;
 } ;

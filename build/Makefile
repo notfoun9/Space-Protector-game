@@ -253,6 +253,19 @@ keyboardController/fast:
 .PHONY : keyboardController/fast
 
 #=============================================================================
+# Target rules for targets named reusedTextures
+
+# Build rule for target.
+reusedTextures: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reusedTextures
+.PHONY : reusedTextures
+
+# fast build rule for target.
+reusedTextures/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/build.make libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/build
+.PHONY : reusedTextures/fast
+
+#=============================================================================
 # Target rules for targets named short_names
 
 # Build rule for target.
@@ -542,6 +555,7 @@ help:
 	@echo "... mouse"
 	@echo "... party"
 	@echo "... position"
+	@echo "... reusedTextures"
 	@echo "... shooter"
 	@echo "... short_names"
 	@echo "... simpleTexture"

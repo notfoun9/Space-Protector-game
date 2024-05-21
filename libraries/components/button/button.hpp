@@ -18,7 +18,7 @@ public:
     void SetDiff(float x, float y) { diff = {x,y}; }
 private:
     bool selected = 0;
-
+    
     SDL_Rect destRect;
     Vector2D diff = {0,0};
     SDL_Texture* selectedTex;

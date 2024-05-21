@@ -808,4 +808,6 @@ libraries/structs/bulletHitbox/CMakeFiles/bulletHitbox.dir/bulletHitbox.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../bullet/bullet.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../shooter/shooter.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp \
-  /Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/../Vector2D/Vector2D.hpp
+  /Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/../Vector2D/Vector2D.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../reusedTextures/reusedTextures.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../short_names/short_names.hpp

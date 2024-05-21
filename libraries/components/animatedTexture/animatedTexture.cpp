@@ -5,6 +5,11 @@
 AnimatedTexture::AnimatedTexture(std::string texName) {
     tex = TextureManager::LoadTexture(texName.data());
 }
+AnimatedTexture::AnimatedTexture(SDL_Texture* texName) {
+    tex = texName;
+    texIsShared = 1;
+}
+
 
 void AnimatedTexture::AddAnimation(std::string name, int idx, int frames, int speed) {
     animations.insert({name, Animation(idx, frames, speed)});

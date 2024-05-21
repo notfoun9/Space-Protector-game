@@ -808,8 +808,8 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/ECS/../ECS/ECS.hpp \
   /Users/maksim/Study/C++/game2/libraries/ECS/../components/components.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../position/position.hpp \
-  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../simpleTexture/simpleTexture.hpp \
+  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../animatedTexture/animatedTexture.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/../animation/animation.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/position/../mouse/mouse.hpp \
@@ -826,4 +826,5 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/ECS/../utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../time/time.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../short_names/short_names.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../reusedTextures/reusedTextures.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../keyboardController/keyboardController.hpp

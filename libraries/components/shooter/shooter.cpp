@@ -1,8 +1,8 @@
 #include <shooter/shooter.hpp>
 #include <follower/follower.hpp>
 
-Shooter::Shooter(std::string bullet) {
-    tex = TextureManager::LoadTexture(bullet.data());
+Shooter::Shooter(SDL_Texture* bulTex) {
+    tex = bulTex;
 }
 
 void Shooter::Init() {

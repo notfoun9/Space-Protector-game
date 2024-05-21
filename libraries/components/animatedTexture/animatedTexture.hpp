@@ -7,6 +7,7 @@
 class AnimatedTexture : public SimpleTexture {
 public:
     AnimatedTexture(std::string texName);
+    AnimatedTexture(SDL_Texture* tex);
     ~AnimatedTexture() = default;
 
     void Update() override;

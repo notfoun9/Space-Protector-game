@@ -18,7 +18,7 @@ void SimpleTexture::Init() {
 }
 
 SimpleTexture::~SimpleTexture() {
-    SDL_DestroyTexture(tex);
+    if (!texIsShared) SDL_DestroyTexture(tex);
 }
 
 void SimpleTexture::Draw() {

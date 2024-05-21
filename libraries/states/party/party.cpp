@@ -25,7 +25,7 @@ Party::Party(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(rende
     launcher.GetComponent<Follower>().SetCenter(27, 75);
     launcher.GetComponent<Follower>().SetBoarders(0,0,22,40);
 
-    launcher.AddComponent<Shooter>(ShortNames::bullet);
+    launcher.AddComponent<Shooter>(ReusedTextures::bulletTex);
     launcher.GetComponent<Shooter>().SetSrc(0,0,64,128);
 
     bulsLeft.AddComponent<PositionComponent>(20,600,200,50);

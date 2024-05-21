@@ -827,6 +827,7 @@ game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/game2/game/game.cpp
   /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_ttf.h \
   /Users/maksim/Study/C++/game2/libraries/utilities/bullet/bullet.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/keyboardController/keyboardController.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/reusedTextures/reusedTextures.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/time/time.hpp
@@ -1223,6 +1224,8 @@ game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/game2/game/game.cpp
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/errno.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/bit:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/reusedTextures/reusedTextures.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__variant/monostate.h:
 

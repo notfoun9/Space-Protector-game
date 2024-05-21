@@ -3,6 +3,7 @@
 #include <short_names/short_names.hpp>
 #include <meteorHitbox/meteorHitbox.hpp>
 #include <position/position.hpp>
+#include <reusedTextures/reusedTextures.hpp>
 
 Spawner::Spawner() {
     active = 0;
@@ -40,7 +41,7 @@ void Spawner::Spawn() {
     meteor.GetComponent<PositionComponent>().SetVelocity(velocity.x, velocity.y);
     meteor.GetComponent<PositionComponent>().SetSpeed(speed);
 
-    meteor.AddComponent<AnimatedTexture>(ShortNames::animatedMeteor);
+    meteor.AddComponent<AnimatedTexture>(ReusedTextures::meteorTex);
     auto& tex = meteor.GetComponent<AnimatedTexture>();
     tex.AddAnimation("fall", 0, 4, 150);
     tex.Play("fall");

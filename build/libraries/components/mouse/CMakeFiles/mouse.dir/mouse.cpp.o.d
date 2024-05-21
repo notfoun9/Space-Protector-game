@@ -811,4 +811,5 @@ libraries/components/mouse/CMakeFiles/mouse.dir/mouse.cpp.o: \
   /Users/maksim/Study/C++/game2/libraries/ECS/../utilities/utilities.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../time/time.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../short_names/short_names.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../reusedTextures/reusedTextures.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/../keyboardController/keyboardController.hpp

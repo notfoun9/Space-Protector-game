@@ -1,4 +1,5 @@
 #include <bulletHitbox/bulletHitbox.hpp>
+#include <reusedTextures/reusedTextures.hpp>
 
 BulletHitbox::BulletHitbox(Bullet* bul, bool front) : owner(bul), box({0,0,0,0}) {
     float len = owner->owner->GetCenter()->y;
@@ -15,7 +16,7 @@ BulletHitbox::BulletHitbox(Bullet* bul, bool front) : owner(bul), box({0,0,0,0})
         difY = len * (1.0f - SDL_sin(angle)) + 1.5 * box.w * SDL_sin(angle);
     }
 
-    tex = TextureManager::LoadTexture("../../assets/hitbox.png");
+    tex = ReusedTextures::hitboxTex;
 }
 
 void BulletHitbox::Draw() {

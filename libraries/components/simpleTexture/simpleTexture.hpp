@@ -28,4 +28,5 @@ protected:
 
     Vector2D diff = {0,0};
     SDL_Texture* tex;
+    bool texIsShared = 0;
 } ; 

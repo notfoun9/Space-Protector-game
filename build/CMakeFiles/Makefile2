@@ -509,6 +509,7 @@ libraries/utilities/all: libraries/utilities/CMakeFiles/utilities.dir/all
 libraries/utilities/all: libraries/utilities/texture_manager/all
 libraries/utilities/all: libraries/utilities/time/all
 libraries/utilities/all: libraries/utilities/keyboardController/all
+libraries/utilities/all: libraries/utilities/reusedTextures/all
 libraries/utilities/all: libraries/utilities/short_names/all
 libraries/utilities/all: libraries/utilities/bullet/all
 .PHONY : libraries/utilities/all
@@ -517,6 +518,7 @@ libraries/utilities/all: libraries/utilities/bullet/all
 libraries/utilities/preinstall: libraries/utilities/texture_manager/preinstall
 libraries/utilities/preinstall: libraries/utilities/time/preinstall
 libraries/utilities/preinstall: libraries/utilities/keyboardController/preinstall
+libraries/utilities/preinstall: libraries/utilities/reusedTextures/preinstall
 libraries/utilities/preinstall: libraries/utilities/short_names/preinstall
 libraries/utilities/preinstall: libraries/utilities/bullet/preinstall
 .PHONY : libraries/utilities/preinstall
@@ -526,6 +528,7 @@ libraries/utilities/clean: libraries/utilities/CMakeFiles/utilities.dir/clean
 libraries/utilities/clean: libraries/utilities/texture_manager/clean
 libraries/utilities/clean: libraries/utilities/time/clean
 libraries/utilities/clean: libraries/utilities/keyboardController/clean
+libraries/utilities/clean: libraries/utilities/reusedTextures/clean
 libraries/utilities/clean: libraries/utilities/short_names/clean
 libraries/utilities/clean: libraries/utilities/bullet/clean
 .PHONY : libraries/utilities/clean
@@ -559,6 +562,21 @@ libraries/utilities/keyboardController/preinstall:
 # Recursive "clean" directory target.
 libraries/utilities/keyboardController/clean: libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/clean
 .PHONY : libraries/utilities/keyboardController/clean
+
+#=============================================================================
+# Directory level rules for directory libraries/utilities/reusedTextures
+
+# Recursive "all" directory target.
+libraries/utilities/reusedTextures/all: libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/all
+.PHONY : libraries/utilities/reusedTextures/all
+
+# Recursive "preinstall" directory target.
+libraries/utilities/reusedTextures/preinstall:
+.PHONY : libraries/utilities/reusedTextures/preinstall
+
+# Recursive "clean" directory target.
+libraries/utilities/reusedTextures/clean: libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/clean
+.PHONY : libraries/utilities/reusedTextures/clean
 
 #=============================================================================
 # Directory level rules for directory libraries/utilities/short_names
@@ -682,7 +700,7 @@ executables/CMakeFiles/main.dir/all: libraries/components/CMakeFiles/components.
 
 # Build rule for subdir invocation for target.
 executables/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 44
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 46
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 executables/CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : executables/CMakeFiles/main.dir/rule
@@ -708,7 +726,7 @@ game/CMakeFiles/game.dir/all: libraries/ECS/CMakeFiles/ECS.dir/all
 
 # Build rule for subdir invocation for target.
 game/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 42
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 44
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : game/CMakeFiles/game.dir/rule
@@ -734,7 +752,7 @@ libraries/ECS/CMakeFiles/ECS.dir/all: libraries/utilities/texture_manager/CMakeF
 
 # Build rule for subdir invocation for target.
 libraries/ECS/CMakeFiles/ECS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 40
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 42
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/ECS/CMakeFiles/ECS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/ECS/CMakeFiles/ECS.dir/rule
@@ -781,12 +799,12 @@ libraries/utilities/CMakeFiles/utilities.dir/clean:
 libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all: libraries/utilities/time/CMakeFiles/time.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=45,46 "Built target texture_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=47,48 "Built target texture_manager"
 .PHONY : libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 40
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/rule
@@ -804,15 +822,15 @@ libraries/utilities/texture_manager/CMakeFiles/texture_manager.dir/clean:
 # Target rules for target libraries/utilities/time/CMakeFiles/time.dir
 
 # All Build rule for target.
-libraries/utilities/time/CMakeFiles/time.dir/all: libraries/utilities/short_names/CMakeFiles/short_names.dir/all
+libraries/utilities/time/CMakeFiles/time.dir/all: libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/time/CMakeFiles/time.dir/build.make libraries/utilities/time/CMakeFiles/time.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/time/CMakeFiles/time.dir/build.make libraries/utilities/time/CMakeFiles/time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=47,48 "Built target time"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=49,50 "Built target time"
 .PHONY : libraries/utilities/time/CMakeFiles/time.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/utilities/time/CMakeFiles/time.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/time/CMakeFiles/time.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/time/CMakeFiles/time.dir/rule
@@ -840,7 +858,7 @@ libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/all: li
 
 # Build rule for subdir invocation for target.
 libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 44
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 46
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/rule
@@ -855,13 +873,39 @@ libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/clean:
 .PHONY : libraries/utilities/keyboardController/CMakeFiles/keyboardController.dir/clean
 
 #=============================================================================
+# Target rules for target libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir
+
+# All Build rule for target.
+libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/all: libraries/utilities/short_names/CMakeFiles/short_names.dir/all
+	$(MAKE) $(MAKESILENT) -f libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/build.make libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/depend
+	$(MAKE) $(MAKESILENT) -f libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/build.make libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=35,36 "Built target reusedTextures"
+.PHONY : libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/all
+
+# Build rule for subdir invocation for target.
+libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 36
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
+.PHONY : libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/rule
+
+# Convenience name for target.
+reusedTextures: libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/rule
+.PHONY : reusedTextures
+
+# clean rule for target.
+libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/build.make libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/clean
+.PHONY : libraries/utilities/reusedTextures/CMakeFiles/reusedTextures.dir/clean
+
+#=============================================================================
 # Target rules for target libraries/utilities/short_names/CMakeFiles/short_names.dir
 
 # All Build rule for target.
 libraries/utilities/short_names/CMakeFiles/short_names.dir/all: libraries/utilities/bullet/CMakeFiles/bullet.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/short_names/CMakeFiles/short_names.dir/build.make libraries/utilities/short_names/CMakeFiles/short_names.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/utilities/short_names/CMakeFiles/short_names.dir/build.make libraries/utilities/short_names/CMakeFiles/short_names.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=37,38 "Built target short_names"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=39,40 "Built target short_names"
 .PHONY : libraries/utilities/short_names/CMakeFiles/short_names.dir/all
 
 # Build rule for subdir invocation for target.
@@ -965,7 +1009,7 @@ libraries/components/position/CMakeFiles/position.dir/clean:
 libraries/components/shooter/CMakeFiles/shooter.dir/all: libraries/components/mouse/CMakeFiles/mouse.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/shooter/CMakeFiles/shooter.dir/build.make libraries/components/shooter/CMakeFiles/shooter.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/shooter/CMakeFiles/shooter.dir/build.make libraries/components/shooter/CMakeFiles/shooter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=35,36 "Built target shooter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=37,38 "Built target shooter"
 .PHONY : libraries/components/shooter/CMakeFiles/shooter.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1043,7 +1087,7 @@ libraries/components/follower/CMakeFiles/follower.dir/clean:
 libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all: libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build.make libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=39,40 "Built target simpleTexture"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=41,42 "Built target simpleTexture"
 .PHONY : libraries/components/simpleTexture/CMakeFiles/simpleTexture.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1095,7 +1139,7 @@ libraries/components/animatedTexture/CMakeFiles/animatedTexture.dir/clean:
 libraries/components/spawner/CMakeFiles/spawner.dir/all: libraries/components/bulletsCollider/CMakeFiles/bulletsCollider.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/spawner/CMakeFiles/spawner.dir/build.make libraries/components/spawner/CMakeFiles/spawner.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/spawner/CMakeFiles/spawner.dir/build.make libraries/components/spawner/CMakeFiles/spawner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=41,42 "Built target spawner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=43,44 "Built target spawner"
 .PHONY : libraries/components/spawner/CMakeFiles/spawner.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1199,7 +1243,7 @@ libraries/components/button/CMakeFiles/button.dir/clean:
 libraries/components/text/CMakeFiles/text.dir/all: libraries/structs/Vector2D/CMakeFiles/Vector2D.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/components/text/CMakeFiles/text.dir/build.make libraries/components/text/CMakeFiles/text.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/components/text/CMakeFiles/text.dir/build.make libraries/components/text/CMakeFiles/text.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=43,44 "Built target text"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/game2/build/CMakeFiles --progress-num=45,46 "Built target text"
 .PHONY : libraries/components/text/CMakeFiles/text.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1284,7 +1328,7 @@ libraries/structs/animation/CMakeFiles/animation.dir/all: libraries/components/C
 
 # Build rule for subdir invocation for target.
 libraries/structs/animation/CMakeFiles/animation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 44
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 46
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/structs/animation/CMakeFiles/animation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/game2/build/CMakeFiles 0
 .PHONY : libraries/structs/animation/CMakeFiles/animation.dir/rule

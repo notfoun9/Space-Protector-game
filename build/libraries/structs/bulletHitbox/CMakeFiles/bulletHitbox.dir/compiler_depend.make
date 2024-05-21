@@ -810,10 +810,14 @@ libraries/structs/bulletHitbox/CMakeFiles/bulletHitbox.dir/bulletHitbox.cpp.o: /
   /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/bulletHitbox.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/bullet/bullet.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/reusedTextures/reusedTextures.hpp \
+  /Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp
 
 
 /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/short_names/short_names.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/structs/bulletHitbox/bulletHitbox.hpp:
 
@@ -1170,6 +1174,8 @@ libraries/structs/bulletHitbox/CMakeFiles/bulletHitbox.dir/bulletHitbox.cpp.o: /
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/errno.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/bit:
+
+/Users/maksim/Study/C++/game2/libraries/utilities/reusedTextures/reusedTextures.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__variant/monostate.h:
 

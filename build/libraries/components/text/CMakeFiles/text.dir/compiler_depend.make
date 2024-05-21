@@ -809,13 +809,10 @@ libraries/components/text/CMakeFiles/text.dir/text.cpp.o: /Users/maksim/Study/C+
   /Users/maksim/Study/C++/game2/src/inc/SDL2/SDL_ttf.h \
   /Users/maksim/Study/C++/game2/libraries/components/position/position.hpp \
   /Users/maksim/Study/C++/game2/libraries/components/text/text.hpp \
-  /Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp \
   /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp
 
 
 /Users/maksim/Study/C++/game2/libraries/utilities/texture_manager/texture_manager.hpp:
-
-/Users/maksim/Study/C++/game2/libraries/structs/Vector2D/Vector2D.hpp:
 
 /Users/maksim/Study/C++/game2/libraries/components/text/text.hpp:
 

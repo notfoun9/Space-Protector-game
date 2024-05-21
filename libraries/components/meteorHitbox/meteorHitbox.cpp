@@ -2,6 +2,7 @@
 #include <position/position.hpp>
 #include <short_names/short_names.hpp>
 #include <texture_manager/texture_manager.hpp>
+#include <reusedTextures/reusedTextures.hpp>
 
 void MeteorHitbox::Init() {
     auto& pos = owner->GetComponent<PositionComponent>();
@@ -12,7 +13,7 @@ void MeteorHitbox::Init() {
     difX = pos.Width() / 11;
     difY = pos.Height() * 9 / 19;
 
-    tex = TextureManager::LoadTexture("../../assets/hitbox.png");
+    tex = ReusedTextures::hitboxTex;
 }
 
 void MeteorHitbox::Update() {

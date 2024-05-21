@@ -66,6 +66,7 @@ public:
     bool inParty = 0;
 
     bool endlessMode = 0;
+
 private:
 
     std::vector<float> settings;

@@ -9,7 +9,7 @@ class Bullet;
 
 class Shooter : public Component {
 public:
-    Shooter(std::string bullet);
+    Shooter(SDL_Texture* bulTex);
     ~Shooter();
 
     void Init() override;

@@ -3,10 +3,9 @@
 #include <utilities/utilities.hpp>
 #include <party/party.hpp>
 #include <levels/levels.hpp>
+#include <reusedTextures/reusedTextures.hpp>
 
 SDL_Renderer* Game::renderer = nullptr;
-
-
 
 SDL_Event Game::event;
 Game::~Game() {
@@ -44,6 +43,7 @@ void Game::Init(const char* title, int xPos, int yPos, int width, int height, bo
     }
 
     Life::Init();
+    ReusedTextures::Init();
 }
 
 bool& Game::IsRunning() {
