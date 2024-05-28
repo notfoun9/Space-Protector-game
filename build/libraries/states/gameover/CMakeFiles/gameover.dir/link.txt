@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libgameover.a CMakeFiles/gameover.dir/gameover.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libgameover.a

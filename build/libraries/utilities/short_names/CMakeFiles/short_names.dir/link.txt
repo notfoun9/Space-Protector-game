@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libshort_names.a CMakeFiles/short_names.dir/short_names.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libshort_names.a

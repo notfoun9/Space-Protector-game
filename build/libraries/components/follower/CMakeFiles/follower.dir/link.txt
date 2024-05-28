@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libfollower.a CMakeFiles/follower.dir/follower.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libfollower.a

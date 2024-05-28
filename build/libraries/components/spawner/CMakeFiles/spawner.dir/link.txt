@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libspawner.a CMakeFiles/spawner.dir/spawner.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libspawner.a

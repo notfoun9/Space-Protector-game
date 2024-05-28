@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc liblevels.a CMakeFiles/levels.dir/levels.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib liblevels.a

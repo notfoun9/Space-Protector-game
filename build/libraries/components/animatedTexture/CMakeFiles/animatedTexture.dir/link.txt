@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libanimatedTexture.a CMakeFiles/animatedTexture.dir/animatedTexture.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libanimatedTexture.a

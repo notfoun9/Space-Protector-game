@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libbutton.a CMakeFiles/button.dir/button.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libbutton.a

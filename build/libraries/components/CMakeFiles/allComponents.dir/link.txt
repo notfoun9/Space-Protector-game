@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc liballComponents.a 
-/Library/Developer/CommandLineTools/usr/bin/ranlib liballComponents.a
