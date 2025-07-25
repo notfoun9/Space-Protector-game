@@ -49,9 +49,6 @@ void Manager::Clear() {
 }
 
 Entity& Manager::AddEntity() {
-    Entity* e = new Entity();
-    std::unique_ptr<Entity> uPtr { e };
-    entities.emplace_back(std::move(uPtr));
-    
-    return *e;
+    entities.emplace_back(std::make_unique<Entity>());
+    return *entities.back().get();
 }
