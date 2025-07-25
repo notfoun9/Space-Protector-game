@@ -2,7 +2,10 @@ add_library(texture_manager texture_manager.cpp texture_manager.hpp)
 
 set_property(TARGET texture_manager PROPERTY CXX_STANDARD 20)
 
-target_link_libraries(texture_manager game)
+target_link_libraries(texture_manager
+      game 
+      SDL3_image::SDL3_image
+)
 
 target_include_directories(texture_manager PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..>

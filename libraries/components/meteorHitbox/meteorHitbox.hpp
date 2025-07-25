@@ -14,9 +14,9 @@ public:
     
     void Destroy() { owner->Destroy(); }
 
-    SDL_Rect* GetBox() { return &box; }
+    SDL_FRect* GetBox() { return &box; }
 private:
-    SDL_Rect box;
+    SDL_FRect box;
     
     float difX = 0;
     float difY = 0;

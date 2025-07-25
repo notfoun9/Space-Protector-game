@@ -12,11 +12,11 @@ Bullet::Bullet(Shooter* owner_) : owner(owner_) {
     std::cout << SDL_sin(angle * (3.14 / 180)) << '\n';
     std::cout << SDL_cos(angle * (3.14 / 180)) << '\n';
     texture = owner->GetTex();
-    destRect = owner->destRect;
-    srcRect = owner->srcRect;
+    destFRect = owner->destFRect;
+    srcFRect = owner->srcFRect;
 
-    accuratePos.x = destRect.x;
-    accuratePos.y = destRect.y;
+    accuratePos.x = destFRect.x;
+    accuratePos.y = destFRect.y;
 
     BulletHitbox* hitBox = new BulletHitbox(this, 1);
     BulletHitbox* backHitBox = new BulletHitbox(this, 0);
@@ -40,10 +40,10 @@ void Bullet::Update() {
     accuratePos.x -= velocity.x;
     accuratePos.y -= velocity.y;
 
-    destRect.x = std::round(accuratePos.x);
-    destRect.y = std::round(accuratePos.y);
+    destFRect.x = std::round(accuratePos.x);
+    destFRect.y = std::round(accuratePos.y);
 
-    if (std::abs(destRect.x) > 2000 || std::abs(destRect.y) > 2000) {
+    if (std::abs(destFRect.x) > 2000 || std::abs(destFRect.y) > 2000) {
         owner->AddBulletToDest(this);
     }
 
@@ -54,5 +54,5 @@ void Bullet::Update() {
 }
 
 void Bullet::Draw() {
-    TextureManager::Draw(texture, &srcRect, &destRect, angle - 90, owner->GetCenter(), SDL_FLIP_NONE);
+    TextureManager::Draw(texture, &srcFRect, &destFRect, angle - 90, owner->GetCenter(), SDL_FLIP_NONE);
 }

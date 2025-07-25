@@ -15,7 +15,7 @@ public:
     void Init() override;
     float GetSpeed() { return speed; }
     float GetAngle() { return angle; }
-    SDL_Point* GetCenter() { return &center; }
+    SDL_FPoint* GetCenter() { return &center; }
     SDL_Texture* GetTex() { return tex; }
     int BulletsLeft() { return bulletsLeft; }
 
@@ -23,11 +23,10 @@ public:
     void Draw() override;
     void Shoot();
 
-    void SetSrc(int x, int y, int w, int h) { srcRect = {x,y,w,h}; }
+    void SetSrc(float x, float y, float w, float h) { srcFRect = {x,y,w,h}; }
     void SetSize(float size);
     void SetSpeed(float s) { speed = s; }
     float& Speed() { return speed; }
-
 
     void AddBullets(int num) { bulletsLeft = num; }
     void DeleteBulls() { 
@@ -36,12 +35,12 @@ public:
     }
     void AddBulletToDest(Bullet* bul) { bulletsToDestroy.push(bul); }
 
-    SDL_Rect destRect;
-    SDL_Rect srcRect;
+    SDL_FRect destFRect;
+    SDL_FRect srcFRect;
     std::unordered_set<Bullet*> bullets;
 private:
     SDL_Texture* tex;
-    SDL_Point center;
+    SDL_FPoint center;
 
     int baseW = 9;
     int baseH = 27;

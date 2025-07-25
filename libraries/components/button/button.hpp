@@ -19,7 +19,7 @@ public:
 private:
     bool selected = 0;
     
-    SDL_Rect destRect;
+    SDL_FRect destRect;
     Vector2D diff = {0,0};
     SDL_Texture* selectedTex;
     SDL_Texture* notSelectedTex;

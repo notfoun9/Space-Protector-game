@@ -13,7 +13,7 @@ public:
     void Draw() override;
     void AddBox(BulletHitbox* box);
     void DeleteBox(BulletHitbox* box);
-    BulletHitbox* DoesCollide(SDL_Rect* rect);
+    BulletHitbox* DoesCollide(SDL_FRect* rect);
 private:    
     std::list<BulletHitbox*> boxes;
 } ;

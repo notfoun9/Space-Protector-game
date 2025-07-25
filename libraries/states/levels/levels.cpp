@@ -28,9 +28,9 @@ Levels::Levels(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(ren
 }
 
 void Levels::Run() {
-    ticksSinceJoined = SDL_GetTicks64();
+    ticksSinceJoined = SDL_GetTicks();
     std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
-    SDL_ShowCursor(true);
+    SDL_ShowCursor();
     while (game->inMenu) {
         std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
         Update();
@@ -44,7 +44,7 @@ void Levels::Update() {
     }
     SDL_Event e;
     SDL_PollEvent(&e);
-    if (e.type == SDL_MOUSEBUTTONUP && e.button.button == SDL_BUTTON_LEFT) {
+    if (e.type == SDL_EVENT_MOUSE_BUTTON_UP && e.button.button == SDL_BUTTON_LEFT) {
         for (int i = 0; i < buts.size(); ++i) {
             if (buts[i]->GetComponent<Button>().IsSelected()) {
                 std::cout << "Level " << i << "is started" << '\n';
@@ -66,8 +66,8 @@ void Levels::Update() {
     }
     endlessMode->Update();
 
-    const Uint8 *keystat = SDL_GetKeyboardState(NULL);
-    if (keystat[SDL_SCANCODE_ESCAPE] && (SDL_GetTicks64() - ticksSinceJoined > 500)) {
+    const bool *keystat = SDL_GetKeyboardState(NULL);
+    if (keystat[SDL_SCANCODE_ESCAPE] && (SDL_GetTicks() - ticksSinceJoined > 500)) {
         game->inMenu = 0;
         game->Quit();
     }

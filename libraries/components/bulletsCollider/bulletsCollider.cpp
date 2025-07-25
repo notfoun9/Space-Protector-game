@@ -4,9 +4,9 @@ void BulletsCollider::AddBox(BulletHitbox* box) {
     boxes.push_back(box);
 }
 
-BulletHitbox* BulletsCollider::DoesCollide(SDL_Rect* rect) {
+BulletHitbox* BulletsCollider::DoesCollide(SDL_FRect* rect) {
     for (auto box = boxes.begin(); box != boxes.end(); ++box) {
-        if (SDL_HasIntersection( (*box)->GetBox(), rect )) {
+        if (SDL_HasRectIntersectionFloat( (*box)->GetBox(), rect )) {
             auto ret = *box;
             boxes.erase(box);
             return ret;

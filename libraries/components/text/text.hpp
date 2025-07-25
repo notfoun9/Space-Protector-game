@@ -2,7 +2,7 @@
 
 #include<game/game.hpp>
 #include <ECS/ECS.hpp>
-#include "../../src/inc/SDL2/SDL_ttf.h"
+#include <SDL3_ttf/SDL_ttf.h>
 
 class Text : public Component {
 public:
@@ -19,7 +19,7 @@ private:
     SDL_Surface* textSurface;
     SDL_Texture* textTex = nullptr;
 
-    SDL_Rect destRect;
+    SDL_FRect destRect;
     std::string message;
     SDL_Color color;
 

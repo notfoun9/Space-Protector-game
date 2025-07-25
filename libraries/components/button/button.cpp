@@ -26,9 +26,9 @@ void Button::Update() {
     destRect.x = pos.X() + diff.x;
     destRect.y = pos.Y() + diff.y;
 
-    SDL_Rect tmp = {0,0,2,2};
+    SDL_FRect tmp = {0,0,2,2};
     SDL_GetMouseState(&tmp.x, &tmp.y);
-    if (SDL_HasIntersection(&destRect, &tmp)) {
+    if (SDL_HasRectIntersectionFloat(&destRect, &tmp)) {
         selected = true;
     }
     else {

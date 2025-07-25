@@ -17,7 +17,7 @@ public:
     void Destroy();
     float GetAngle() { return angle; }
     Shooter* owner;
-    SDL_Rect& GetDest() { return destRect; }
+    SDL_FRect& GetDest() { return destFRect; }
     void SetAcceleration(float x, float y) { acceleration.x = x; acceleration.y = y; } 
 
     BulletHitbox* hitbox;
@@ -29,6 +29,6 @@ private:
     Vector2D acceleration = {0,0};
 
     SDL_Texture* texture;
-    SDL_Rect srcRect;
-    SDL_Rect destRect;
+    SDL_FRect srcFRect;
+    SDL_FRect destFRect;
 } ;

@@ -16,15 +16,15 @@ void AnimatedTexture::AddAnimation(std::string name, int idx, int frames, int sp
 }
 
 void AnimatedTexture::Update() {
-    destRect.x = (int)owner->GetComponent<PositionComponent>().X();
-    destRect.y = (int)owner->GetComponent<PositionComponent>().Y();
+    destFRect.x = (int)owner->GetComponent<PositionComponent>().X();
+    destFRect.y = (int)owner->GetComponent<PositionComponent>().Y();
     if (speed == 0) {
         std::cerr << "Animation is not set!" << '\n';
         return;
     }
-    srcRect.x = srcRect.w * static_cast<int>((SDL_GetTicks() / speed) % frames);
+    srcFRect.x = srcFRect.w * static_cast<int>((SDL_GetTicks() / speed) % frames);
 
-    srcRect.y = animIndex * srcRect.h;
+    srcFRect.y = animIndex * srcFRect.h;
 }
 
 void AnimatedTexture::Play(std::string animName) {

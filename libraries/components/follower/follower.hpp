@@ -9,13 +9,13 @@ public:
     Follower(std::string tex);
     ~Follower() = default;
 
-    void SetCenter(int x, int y);
-    SDL_Point* GetCenter() { return &center; }
+    void SetCenter(float x, float y);
+    SDL_FPoint* GetCenter() { return &center; }
     void Update() override;
     void Draw() override;
 
     float GetAngle() { return angle; }
 private:
     float angle;
-    SDL_Point center;
+    SDL_FPoint center;
 } ;

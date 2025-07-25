@@ -3,12 +3,12 @@
 #ifndef Game_hpp
 #define Game_hpp
 
-#include "src/inc/SDL2/SDL.h"
-#include "src/inc/SDL2/SDL_image.h"
-#include "src/inc/SDL2/SDL_ttf.h"
 #include <string>
 #include <iostream>
 #include <thread>
+#include <SDL3/SDL.h>
+#include <SDL3_ttf/SDL_ttf.h>
+#include <SDL3_image/SDL_image.h>
 #include <chrono>
 #include <vector>
 #include <array>
@@ -16,11 +16,11 @@
 #include <list>
 #include <unordered_set>
 #include <unordered_map>
+#include <limits>
 #include <algorithm>
 #include <tuple>
 #include <bitset>
 #include <memory>
-#include <texture_manager/texture_manager.hpp>
 
 enum settings {METEOR_SIZE_MIN,  METEOR_SIZE_MAX,  METEOR_FREQUENCY,  METEOR_SPEED,         METEOR_NUM,  
                BUL_SIZE,         BUL_NUM,          BUL_SPEED,         METEOR_ACCELERATION,  LIVES};
@@ -41,7 +41,7 @@ public:
     static SDL_Event event;
     bool text = 0;
 
-    float fm = FLT_MAX;
+    float fm = INT_MAX;
                                   // LVL em      1     2     3     4     5    6     7     8
     std::vector<float> meteorSizeMin   = {8,     6,    5,    4,    2,    6,   3,    5,    6};
     std::vector<float> meteorSizeMax   = {9,     9,    6,    6,    9,    7,   4,    8,    8};
@@ -79,8 +79,8 @@ private:
 struct Hitboxes {
     static bool Active() { return active; }
     static void Switch() {
-        if (SDL_GetTicks64() - tick > 500) {
-            tick = SDL_GetTicks64();
+        if (SDL_GetTicks() - tick > 500) {
+            tick = SDL_GetTicks();
             active = !active;
             std::cout << (active ? "Hitboxes Shown" : "Hitboxes Hidden") << std::endl;
         }
@@ -93,22 +93,16 @@ struct Hitboxes {
 
 class Life {
 public:
-    static void Init() {
-        SDL_Surface* tmpSurface = IMG_Load("../../assets/heart.png");
-        SDL_Texture* textureFromSurface = SDL_CreateTextureFromSurface(Game::renderer, tmpSurface);
-        if (!textureFromSurface) std::cerr << "texture is not created" << '\n';
-        SDL_FreeSurface(tmpSurface);
+    static void Init();
 
-        heart = textureFromSurface;
-    }
     static void SetHP(int num) { hp = num; }
     static int hpLeft() { return hp; }
 
     static void MakeDamage(int damage) { hp -= damage; }
     static void Draw() { 
         for (int i = 0; i < hp; ++i) {
-            SDL_Rect dest = {30, 30 + 90 * i, 80, 80};
-            SDL_RenderCopyEx(Game::renderer, heart, NULL, &dest, 0.0, NULL, SDL_FLIP_NONE);
+            SDL_FRect dest = {30, float(30 + 90 * i), 80, 80};
+            SDL_RenderTextureRotated(Game::renderer, heart, NULL, &dest, 0.0, NULL, SDL_FLIP_NONE);
         }
     }
 private:

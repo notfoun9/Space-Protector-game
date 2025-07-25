@@ -11,15 +11,15 @@ void Shooter::Init() {
 
 void Shooter::SetSize(float size) {
     angle = owner->GetComponent<Follower>().GetAngle();
-    SDL_Rect temp =  owner->GetComponent<Follower>().GetDest();
+    SDL_FRect temp =  owner->GetComponent<Follower>().GetDest();
 
-    destRect.w = size * baseW;
-    destRect.h = size * baseH;
-    destRect.y = temp.y;
-    destRect.x = temp.x + temp.w / 2 - destRect.w / 2;
+    destFRect.w = size * baseW;
+    destFRect.h = size * baseH;
+    destFRect.y = temp.y;
+    destFRect.x = temp.x + temp.w / 2 - destFRect.w / 2;
 
     center.y = owner->GetComponent<Follower>().GetCenter()->y;
-    center.x = destRect.w / 2;
+    center.x = destFRect.w / 2;
 }
 
 Shooter::~Shooter() {

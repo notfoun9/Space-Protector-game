@@ -13,18 +13,18 @@ public:
     virtual void Update() override;
     virtual void Init() override;
 
-    SDL_Rect& GetDest() {
-        return destRect;
+    SDL_FRect& GetDest() {
+        return destFRect;
     }
     void Flip();
     void Unflip();
-    virtual void SetBoarders(int x, int y, int w, int h);
+    virtual void SetBoarders(float x, float y, float w, float h);
     void SetDiff(float x, float y) { diff = {x,y}; }
 
 protected:
-    SDL_RendererFlip flip = SDL_FLIP_NONE;
-    SDL_Rect srcRect;
-    SDL_Rect destRect = {0,0,0,0};
+    SDL_FlipMode flip = SDL_FLIP_NONE;
+    SDL_FRect srcFRect;
+    SDL_FRect destFRect = {0,0,0,0};
 
     Vector2D diff = {0,0};
     SDL_Texture* tex;

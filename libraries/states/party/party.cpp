@@ -46,7 +46,7 @@ Party::Party(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(rende
 void Party::Run() {
     gameState = 0;
     score = 0;
-    SDL_ShowCursor(false);
+    SDL_HideCursor();
     
     launcher.GetComponent<Shooter>().SetSpeed(game->Setting(BUL_SPEED));
     launcher.GetComponent<Shooter>().SetSize(game->Setting(BUL_SIZE));
@@ -67,7 +67,7 @@ void Party::Run() {
         FPSController fpsController;
         SDL_Event e;
         SDL_PollEvent(&e);
-        if (e.type == SDL_MOUSEBUTTONUP && e.button.button == SDL_BUTTON_LEFT) {
+        if (e.type == SDL_EVENT_MOUSE_BUTTON_UP && e.button.button == SDL_BUTTON_LEFT) {
             launcher.GetComponent<Shooter>().Shoot();
         }
 
@@ -81,7 +81,7 @@ void Party::Run() {
             }
         }
 
-        const Uint8 *keystat = SDL_GetKeyboardState(NULL);
+        const bool *keystat = SDL_GetKeyboardState(NULL);
         if (keystat[SDL_SCANCODE_ESCAPE]) {
             game->inParty = 0;
             game->inMenu = 1;

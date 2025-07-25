@@ -13,15 +13,15 @@ public:
     }
     void Draw();
     void Update();
-    SDL_Rect* GetBox() { return &box; }
+    SDL_FRect* GetBox() { return &box; }
 
     void DestroyOwner();
 private:
     Bullet* owner;
-    SDL_Rect box;
+    SDL_FRect box;
     int difX;
     int difY;
 
     SDL_Texture* tex;
-    SDL_Rect src = {0,0,9,9};
+    SDL_FRect src = {0,0,9,9};
 } ;

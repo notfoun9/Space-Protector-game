@@ -1,19 +1,23 @@
 #include <texture_manager/texture_manager.hpp>
 #include <mouse/mouse.hpp>
+#include <SDL3_image/SDL_image.h>
 
 [[nodiscard]] SDL_Texture* TextureManager::LoadTexture(const char* texture) {
     SDL_Surface* tmpSurface = IMG_Load(texture);
     SDL_Texture* textureFromSurface = SDL_CreateTextureFromSurface(Game::renderer, tmpSurface);
-    if (!textureFromSurface) std::cerr << "texture is not created" << '\n';
-    SDL_FreeSurface(tmpSurface);
+    if (!textureFromSurface) {
+        std::cerr << "Texture: " << texture << " is not created" << '\n';
+    }
+
+    SDL_DestroySurface(tmpSurface);
 
     return textureFromSurface;
 }
 
-void TextureManager::Draw(SDL_Texture* texture, const SDL_Rect* src, const SDL_Rect *dest, SDL_RendererFlip flip) {
-    SDL_RenderCopyEx(Game::renderer, texture, src, dest, NULL, NULL, flip);
+void TextureManager::Draw(SDL_Texture* texture, const SDL_FRect* src, const SDL_FRect *dest, SDL_FlipMode flip) {
+    SDL_RenderTextureRotated(Game::renderer, texture, src, dest, 0.0, NULL, flip);
 }
 
-void TextureManager::Draw(SDL_Texture* texture, const SDL_Rect* src, const SDL_Rect* dest, double angle, SDL_Point* center, SDL_RendererFlip flip) {
-    SDL_RenderCopyEx(Game::renderer, texture, src, dest, angle, center, flip);
+void TextureManager::Draw(SDL_Texture* texture, const SDL_FRect* src, const SDL_FRect* dest, double angle, SDL_FPoint* center, SDL_FlipMode flip) {
+    SDL_RenderTextureRotated(Game::renderer, texture, src, dest, angle, center, flip);
 }

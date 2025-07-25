@@ -7,15 +7,15 @@ Mouse::Mouse(std::string str) {
 }
 
 void Mouse::Update() {
-    SDL_GetMouseState(&(destRect.x), &(destRect.y));
+    SDL_GetMouseState(&(destFRect.x), &(destFRect.y));
     SDL_GetMouseState(&(tip.x), &(tip.y));
 
-    destRect.x -= 23;
-    destRect.y -= 23;
+    destFRect.x -= 23;
+    destFRect.y -= 23;
     tip.x -= 22;
     tip.y -= 22;
 }
 
-SDL_Rect* Mouse::getTip() {
+SDL_FRect* Mouse::getTip() {
     return &tip;
 }

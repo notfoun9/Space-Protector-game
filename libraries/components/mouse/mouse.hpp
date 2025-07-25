@@ -10,7 +10,7 @@ public:
 
     void Update() override;
 
-    SDL_Rect* getTip();
+    SDL_FRect* getTip();
 private:
-    SDL_Rect tip;
+    SDL_FRect tip;
 } ; 

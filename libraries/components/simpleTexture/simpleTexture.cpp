@@ -10,10 +10,10 @@ SimpleTexture::SimpleTexture(std::string texName) {
 void SimpleTexture::Init() {
     if (owner->HasComponent<PositionComponent>()) {
         auto& pos = owner->GetComponent<PositionComponent>();
-        destRect.x = std::round(pos.X());
-        destRect.y = std::round(pos.Y());
-        destRect.w = std::round(pos.Width());
-        destRect.h = std::round(pos.Height());      
+        destFRect.x = std::round(pos.X());
+        destFRect.y = std::round(pos.Y());
+        destFRect.w = std::round(pos.Width());
+        destFRect.h = std::round(pos.Height());      
     }
 }
 
@@ -22,18 +22,19 @@ SimpleTexture::~SimpleTexture() {
 }
 
 void SimpleTexture::Draw() {
-    TextureManager::Draw(tex, &srcRect, &destRect, flip);
-}
-void SimpleTexture::Update() {
-    auto& pos = owner->GetComponent<PositionComponent>();
-    destRect.x = std::round(pos.X() + diff.x);
-    destRect.y = std::round(pos.Y() + diff.y);
-    destRect.w = std::round(pos.Width());
-    destRect.h = std::round(pos.Height());
+    TextureManager::Draw(tex, &srcFRect, &destFRect, flip);
 }
 
-void SimpleTexture::SetBoarders(int x, int y, int w, int h) {
-    srcRect = {x, y, w, h};
+void SimpleTexture::Update() {
+    auto& pos = owner->GetComponent<PositionComponent>();
+    destFRect.x = std::round(pos.X() + diff.x);
+    destFRect.y = std::round(pos.Y() + diff.y);
+    destFRect.w = std::round(pos.Width());
+    destFRect.h = std::round(pos.Height());
+}
+
+void SimpleTexture::SetBoarders(float x, float y, float w, float h) {
+    srcFRect = {x, y, w, h};
 }
 
 
