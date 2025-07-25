@@ -1,3 +1,4 @@
+#include "time/time.hpp"
 #include <party/party.hpp>
 #include <components/components.hpp>
 #include <utilities/utilities.hpp>
@@ -61,12 +62,12 @@ void Party::Run() {
 
     Life::SetHP(game->Setting(LIVES));
 
-
-
+    FPSController fpsController{60};
     while (game->inParty) {
-        FPSController fpsController;
+
         SDL_Event e;
         SDL_PollEvent(&e);
+
         if (e.type == SDL_EVENT_MOUSE_BUTTON_UP && e.button.button == SDL_BUTTON_LEFT) {
             launcher.GetComponent<Shooter>().Shoot();
         }
@@ -100,6 +101,8 @@ void Party::Run() {
 
         Update();
         Render();
+
+        fpsController.EndFrame();
     }
 }
 

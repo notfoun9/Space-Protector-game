@@ -1,15 +1,17 @@
 #pragma once
 
-#include <game/game.hpp>
+#include <chrono>
 
 class FPSController {
 public:
-    FPSController() noexcept;
-    ~FPSController() noexcept;
-    
-    inline static const int FPS = 90;
+    FPSController(size_t fps);
+    ~FPSController() = default;
+
+    void EndFrame();
 private:
-    const int frameDelay = 1000 / FPS;
-    uint32_t frameStart = 0;
-    int frameTime = 0;
-} ;
+    size_t fps;
+    size_t frameDurationNs;
+
+    std::chrono::time_point<
+        std::chrono::steady_clock> lastFrame;
+};

@@ -29,12 +29,14 @@ Levels::Levels(Game* game_, SDL_Renderer* renderer_) : game(game_), renderer(ren
 
 void Levels::Run() {
     ticksSinceJoined = SDL_GetTicks();
-    std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
     SDL_ShowCursor();
+
+    FPSController fpsController{60};
     while (game->inMenu) {
-        std::shared_ptr<FPSController> fpsController = std::make_shared<FPSController>();
         Update();
         Render();
+
+        fpsController.EndFrame();
     }
 }
 
